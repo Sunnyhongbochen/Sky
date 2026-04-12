@@ -1,0 +1,70 @@
+baseURL = "https://summer-hu.github.io/"
+languageCode = "zh-cn"
+defaultContentLanguage = "zh"
+title = "夏天的小站"
+theme = "PaperMod"
+
+[params]
+  author = "胡夏天"
+  description = "记录思考，沉淀成长"
+  keywords = ["博客", "笔记", "成长"]
+  
+  [params.profileMode]
+    enabled = true
+    title = "夏天的小站"
+    subtitle = "记录思考，沉淀成长"
+    imageUrl = ""
+    imageTitle = ""
+    imageWidth = 120
+    imageHeight = 120
+  
+  [params.socialIcons]
+    - name = "github"
+      url = "https://github.com/summer-hu"
+    - name = "email"
+      url = "mailto:summer.hongbochen@gmail.com"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "偶得碎语"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    identifier = "notes"
+    name = "知学札记"
+    url = "/notes/"
+    weight = 2
+  [[menu.main]]
+    identifier = "moments"
+    name = "时光印记"
+    url = "/moments/"
+    weight = 3
+  [[menu.main]]
+    identifier = "worklog"
+    name = "工作日志"
+    url = "/worklog/"
+    weight = 4
+  [[menu.main]]
+    identifier = "archives"
+    name = "归档"
+    url = "/archives/"
+    weight = 5
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    style = "github-dark"
+    tabWidth = 4
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
