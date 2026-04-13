@@ -14,9 +14,9 @@
 ## 🛠️ 技术栈
 
 - **静态网站生成器**：Hugo
-- **托管平台**：GitHub Pages
+- **托管平台**：Gitee Pages
 - **主题**：PaperMod
-- **访问控制**：密码保护（方案B）
+- **访问控制**：Gitee 私有仓库 + 密码保护（方案B）
 
 ## 📁 项目结构
 
@@ -77,11 +77,11 @@ hugo
 
 生成的文件在 `public/` 目录
 
-### 5. 部署到 GitHub Pages
+### 5. 部署到 Gitee Pages
 
-1. 创建 GitHub 仓库
+1. 创建 Gitee 仓库（设为私有）
 2. 将项目推送到仓库
-3. 在仓库设置中启用 GitHub Pages
+3. 在仓库设置中启用 Gitee Pages
 4. 选择 `gh-pages` 分支作为源
 
 ## ✍️ 写文章
