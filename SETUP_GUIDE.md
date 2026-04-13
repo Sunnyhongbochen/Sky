@@ -11,9 +11,9 @@
 - ✅ 初始化 Git 仓库
 - ✅ 提交第一版代码
 
-### 第二阶段：Gitee 准备（进行中）
+### 第二阶段：Gitee 准备（已完成）
 - ✅ Gitee 仓库已创建：https://gitee.com/sunny_hongbo/summer-website
-- ⏳ 推送代码到 Gitee（需要你操作）
+- ✅ 配置文件已更新为 Gitee Pages
 
 ---
 
@@ -28,11 +28,12 @@
 - [ ] 安装 PaperMod 主题
 - [ ] 本地预览网站
 
-### 第五阶段：部署到 Netlify
-- [ ] 注册 Netlify 账号
-- [ ] 连接 Gitee 仓库
-- [ ] 配置自动部署
-- [ ] 开启密码保护（方案B）
+### 第五阶段：部署到 Gitee Pages
+- [ ] 生成静态文件（hugo）
+- [ ] 创建 gh-pages 分支
+- [ ] 推送 public 目录到 gh-pages 分支
+- [ ] 在 Gitee 仓库设置中开启 Gitee Pages
+- [ ] 配置访问密码（方案B）
 
 ### 第六阶段：正式发布
 - [ ] 测试网站访问
@@ -41,85 +42,178 @@
 
 ---
 
-## 🎯 下一步行动：推送代码到 Gitee
+## 🎯 完整操作步骤
 
-### 方式一：在你本地机器上操作（推荐）
+### 步骤 1：推送代码到 Gitee
 
-如果你有自己的电脑，可以：
+在你本地电脑上操作：
 
-1. **克隆仓库到本地**
-   ```bash
-   git clone https://gitee.com/sunny_hongbo/summer-website.git
-   cd summer-website
-   ```
+```bash
+# 1. 先把 summer-website 文件夹复制到你的电脑
+# 可以从服务器下载，或者直接接收我发给你的文件
 
-2. **把我创建的文件复制进去**
-   - 从服务器下载 `summer-website/` 文件夹
-   - 或者直接在本地重新创建（我可以提供所有文件内容）
+# 2. 进入目录
+cd summer-website
 
-3. **提交并推送**
-   ```bash
-   git add .
-   git commit -m "Initial commit: 夏天的小站基础结构"
-   git push -u origin master
-   ```
+# 3. 配置远程仓库（如果还没配置）
+git remote add origin https://gitee.com/sunny_hongbo/summer-website.git
 
-### 方式二：配置 Gitee 私人令牌（在服务器上）
+# 4. 推送代码
+git push -u origin master
+```
 
-如果你想在服务器上直接推送：
+### 步骤 2：安装 Hugo 和主题
 
-1. **创建 Gitee 私人令牌**
-   - 访问：https://gitee.com/profile/personal_access_tokens
-   - 点击"生成新令牌"
-   - 选择权限：`projects`、`pull_requests`、`issues`
-   - 复制生成的令牌
+```bash
+# 安装 Hugo（以 macOS 为例）
+brew install hugo
 
-2. **在 URL 中使用令牌**
-   ```bash
-   git remote set-url origin https://你的私人令牌@gitee.com/sunny_hongbo/summer-website.git
-   git push -u origin master
-   ```
+# 或者 Linux
+sudo apt-get install hugo
+
+# 安装 PaperMod 主题
+cd summer-website
+git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+
+# 本地预览
+hugo server -D
+# 然后访问 http://localhost:1313
+```
+
+### 步骤 3：部署到 Gitee Pages
+
+#### 方式一：手动部署（推荐，简单直接）
+
+```bash
+# 1. 生成静态文件
+hugo
+
+# 2. 进入 public 目录
+cd public
+
+# 3. 初始化 git 并推送到 gh-pages 分支
+git init
+git add .
+git commit -m "Deploy to Gitee Pages"
+git remote add origin https://gitee.com/sunny_hongbo/summer-website.git
+git checkout -b gh-pages
+git push -u origin gh-pages
+```
+
+#### 方式二：使用脚本自动部署
+
+创建一个 `deploy.sh` 脚本：
+
+```bash
+#!/bin/bash
+
+echo "🚀 开始部署到 Gitee Pages..."
+
+# 1. 生成静态文件
+hugo
+
+# 2. 进入 public 目录
+cd public
+
+# 3. 初始化 git
+git init
+git add .
+git commit -m "Deploy to Gitee Pages $(date '+%Y-%m-%d %H:%M:%S')"
+git remote add origin https://gitee.com/sunny_hongbo/summer-website.git
+
+# 4. 强制推送到 gh-pages 分支
+git push -f origin master:gh-pages
+
+echo "✅ 部署完成！"
+```
+
+### 步骤 4：开启 Gitee Pages
+
+1. 访问：https://gitee.com/sunny_hongbo/summer-website
+2. 点击顶部的「服务」→「Gitee Pages」
+3. 选择分支：`gh-pages`
+4. 点击「启动」
+5. 等待部署完成，会给你一个访问地址：`https://sunny_hongbo.gitee.io/summer-website`
+
+### 步骤 5：配置访问控制（方案B）
+
+因为 Gitee Pages 不支持直接密码保护，我们用 **Gitee 私有仓库 + 访问密码** 的方案：
+
+#### 方案：静态密码保护脚本
+
+1. 使用 `pagecrypt` 工具加密：
+
+```bash
+# 安装 pagecrypt
+npm install -g pagecrypt
+
+# 加密 index.html
+pagecrypt public/index.html public/index.html 你的密码
+```
+
+2. 或者使用简单的 JavaScript 密码保护：
+
+在 `static/` 目录下创建 `password.html`，然后在网站入口添加密码验证。
 
 ---
 
-## 🚀 快速开始（简化版）
+## 🔐 Gitee Pages 的优势
 
-**最简单的方式：**
-
-1. 在你的电脑上访问：https://gitee.com/sunny_hongbo/summer-website
-2. 点击"上传文件"按钮
-3. 手动上传我创建的文件（需要的话，我可以逐个发给你）
-
-或者：
-
-1. 你在本地新建一个文件夹
-2. 我把所有文件内容发给你
-3. 你在本地创建文件，然后 commit + push
+| 特性 | 说明 |
+|------|------|
+| 国内访问速度 | ⚡⚡⚡⚡⚡ 很快 |
+| 免费额度 | ✅ 完全免费 |
+| 自定义域名 | ✅ 支持 |
+| HTTPS | ✅ 自动提供 |
+| 自动部署 | ⚠️ 需要手动或脚本 |
 
 ---
 
-## 🔐 访问控制方案（Netlify）
+## 💡 日常使用流程
 
-### 为什么选 Netlify？
-- ✅ 国内访问速度不错
-- ✅ 自带密码保护功能（一键开启）
-- ✅ 自动部署（push 代码自动更新）
-- ✅ 完全免费
+### 写新文章
 
-### 配置步骤（后续）
-1. 访问 https://netlify.com
-2. 用 GitHub/Gitee 账号登录
-3. 导入你的仓库
-4. 在设置中开启密码保护
+```bash
+# 偶得碎语
+hugo new posts/文章标题.md
+
+# 知学札记
+hugo new notes/文章标题.md
+
+# 时光印记
+hugo new moments/文章标题.md
+
+# 工作日志
+hugo new worklog/文章标题.md
+```
+
+### 发布更新
+
+```bash
+# 1. 写好文章
+# 2. 本地预览确认
+hugo server -D
+
+# 3. 生成静态文件并部署
+./deploy.sh
+```
 
 ---
 
-## 💡 提示
+## 🎉 总结
 
-- 网站配置可以随时修改（`config.toml`）
-- 文章模板可以根据你的使用习惯调整
-- 访问控制可以上线后再优化，先让网站跑起来！
-- 如果需要，我可以把所有文件内容逐发给你，你在本地操作更简单！
+现在的方案：
+- ✅ **代码托管**：Gitee
+- ✅ **网站托管**：Gitee Pages
+- ✅ **访问控制**：Gitee 私有仓库 + 密码保护
+
+后续你只需要：
+1. 在本地电脑上把代码推送到 Gitee
+2. 安装 Hugo 和主题
+3. 生成静态文件并推送到 gh-pages 分支
+4. 在 Gitee 开启 Pages 服务
+
+需要我把完整的文件打包发给你吗？或者需要我帮你写部署脚本？
 
 ---
 
@@ -128,4 +222,4 @@
 ---
 
 *创建于 2026年04月12日*
-*更新于 2026年04月12日 - Gitee 仓库已创建*
+*更新于 2026年04月13日 - 改为 Gitee Pages 方案*
