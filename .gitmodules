@@ -1,0 +1,3 @@
+[submodule "themes/PaperMod"]
+	path = themes/PaperMod
+	url = https://gitee.com/adityatelange/hugo-PaperMod
