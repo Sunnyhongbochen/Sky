@@ -1,0 +1,9 @@
+# 夏天的小站 - 自定义主题
+name = "summer"
+license = "MIT"
+description = "夏天的小站自定义主题——青蓝系 · 单页简洁"
+min_version = "0.120.0"
+
+[author]
+  name = "sunny"
+  homepage = "https://summer-website.pages.dev"
