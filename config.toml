@@ -8,7 +8,7 @@ theme = "PaperMod"
   author = "胡夏天"
   description = "记录思考，沉淀成长"
   keywords = ["博客", "笔记", "成长"]
-  
+
   [params.profileMode]
     enabled = true
     title = "夏天的小站"
@@ -17,39 +17,36 @@ theme = "PaperMod"
     imageTitle = ""
     imageWidth = 120
     imageHeight = 120
-  
-  [params.socialIcons]
-    - name = "github"
-      url = "https://github.com/summer-hu"
-    - name = "email"
-      url = "mailto:summer.hongbochen@gmail.com"
 
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    name = "偶得碎语"
-    url = "/posts/"
-    weight = 1
-  [[menu.main]]
-    identifier = "notes"
-    name = "知学札记"
-    url = "/notes/"
-    weight = 2
-  [[menu.main]]
-    identifier = "moments"
-    name = "时光印记"
-    url = "/moments/"
-    weight = 3
-  [[menu.main]]
-    identifier = "worklog"
-    name = "工作日志"
-    url = "/worklog/"
-    weight = 4
-  [[menu.main]]
-    identifier = "archives"
-    name = "归档"
-    url = "/archives/"
-    weight = 5
+[[menu.main]]
+  identifier = "posts"
+  name = "偶得碎语"
+  url = "/posts/"
+  weight = 1
+
+[[menu.main]]
+  identifier = "notes"
+  name = "知学札记"
+  url = "/notes/"
+  weight = 2
+
+[[menu.main]]
+  identifier = "moments"
+  name = "时光印记"
+  url = "/moments/"
+  weight = 3
+
+[[menu.main]]
+  identifier = "ai-growth"
+  name = "AI成长"
+  url = "/ai-growth/"
+  weight = 4
+
+[[menu.main]]
+  identifier = "links"
+  name = "链接"
+  url = "/links/"
+  weight = 5
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
