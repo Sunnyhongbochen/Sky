@@ -1,6 +1,13 @@
 {{ define "main" }}
 <section class="section-page">
+  {{ if .Parent.IsHome }}
   <h1 class="section-page-title">{{ .Title }}</h1>
+  {{ else }}
+  <nav class="breadcrumb">
+    <a href="{{ .Parent.Permalink }}">← {{ .Parent.Title }}</a>
+  </nav>
+  <h1 class="section-page-title">{{ .Title }}</h1>
+  {{ end }}
   <div class="post-list">
     {{ range .Pages.ByDate.Reverse }}
     <article class="post-item">
@@ -11,16 +18,13 @@
         <h2 class="post-title">
           <a href="{{ .RelPermalink }}">{{ .Title }}</a>
         </h2>
-        {{ with .Description }}
-        <p class="post-desc">{{ . }}</p>
-        {{ end }}
       </div>
     </article>
     {{ end }}
   </div>
   {{ range .Sections }}
   <div class="section-subsection">
-    <h2 class="subsection-title">{{ .Title }}</h2>
+    <h2 class="subsection-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     <div class="post-list">
       {{ range .Pages.ByDate.Reverse }}
       <article class="post-item">
@@ -31,9 +35,6 @@
           <h2 class="post-title">
             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
           </h2>
-          {{ with .Description }}
-          <p class="post-desc">{{ . }}</p>
-          {{ end }}
         </div>
       </article>
       {{ end }}

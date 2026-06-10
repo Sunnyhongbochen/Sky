@@ -1,55 +1,44 @@
 {{ define "main" }}
-<!-- 模块导航卡片 -->
+{{ $pages := where .Site.RegularPages "Type" "in" (slice "posts" "notes" "moments" "ai-growth") }}
+<main>
 <section class="module-cards">
   <div class="cards-grid">
     <a href="/posts/" class="module-card">
-      <span class="card-icon">✍️</span>
       <h2 class="card-title">偶得碎语</h2>
-      <p class="card-desc">随笔、灵感、情绪碎片</p>
+      <p class="card-desc">随笔 · 灵感 · 碎片</p>
     </a>
     <a href="/notes/" class="module-card">
-      <span class="card-icon">📝</span>
       <h2 class="card-title">知学札记</h2>
-      <p class="card-desc">学习笔记、干货沉淀</p>
+      <p class="card-desc">学习笔记 · 干货沉淀</p>
     </a>
     <a href="/moments/" class="module-card">
-      <span class="card-icon">📸</span>
       <h2 class="card-title">时光印记</h2>
-      <p class="card-desc">生活纪事、小确幸</p>
+      <p class="card-desc">生活纪事 · 小确幸</p>
     </a>
     <a href="/ai-growth/" class="module-card">
-      <span class="card-icon">🤖</span>
       <h2 class="card-title">AI 成长</h2>
-      <p class="card-desc">AI 学习之路</p>
+      <p class="card-desc">技术应用 · 资讯情报 · 日志记录</p>
     </a>
     <a href="/links/" class="module-card">
-      <span class="card-icon">🔗</span>
       <h2 class="card-title">链接</h2>
       <p class="card-desc">有趣的灵魂与分享</p>
     </a>
   </div>
 </section>
-
-<!-- 最新文章 -->
-{{ $pages := where .Site.RegularPages "Type" "in" (slice "posts" "notes" "moments" "ai-growth") }}
 {{ if gt (len $pages) 0 }}
 <section class="recent-posts">
-  <h2 class="section-title">📄 最新文章</h2>
+  <h2 class="section-title">最新文章</h2>
   <div class="post-list">
     {{ range first 6 $pages.ByDate.Reverse }}
     <article class="post-item">
-      <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
-        {{ .Date.Format "01-02" }}
-      </time>
+      <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "01-02" }}</time>
       <div class="post-info">
-        <h3 class="post-title">
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </h3>
-        <span class="post-section">{{ .Section }}</span>
+        <h3 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
       </div>
     </article>
     {{ end }}
   </div>
 </section>
 {{ end }}
+</main>
 {{ end }}
