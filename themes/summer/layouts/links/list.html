@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="section-page">
+  <nav class="breadcrumb">
+    <a href="{{ .Site.BaseURL }}">← 首页</a>
+  </nav>
+  <h1 class="section-page-title">{{ .Title }}</h1>
+  <div class="links-grid">
+    {{ with .Site.Data.links.sites }}
+    {{ range . }}
+    <a href="{{ .url }}" class="link-card" target="_blank" rel="noopener">
+      <h3 class="link-name">{{ .name }}</h3>
+      <p class="link-desc">{{ .desc }}</p>
+    </a>
+    {{ end }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}
