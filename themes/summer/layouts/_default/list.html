@@ -9,34 +9,7 @@
   <h1 class="section-page-title">{{ .Title }}</h1>
   {{ end }}
 
-  {{ $paginator := .Paginate .Pages.ByDate.Reverse 10 }}
-  <div class="post-list">
-    {{ range $paginator.Pages }}
-    <article class="post-item">
-      <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
-        {{ .Date.Format "2006-01-02" }}
-      </time>
-      <div class="post-info">
-        <h2 class="post-title">
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </h2>
-      </div>
-    </article>
-    {{ end }}
-  </div>
-
-  {{ if gt $paginator.TotalPages 1 }}
-  <nav class="pagination">
-    {{ if $paginator.HasPrev }}
-    <a href="{{ $paginator.Prev.URL }}" class="page-btn">← 上一页</a>
-    {{ end }}
-    <span class="page-info">{{ $paginator.PageNumber }} / {{ $paginator.TotalPages }}</span>
-    {{ if $paginator.HasNext }}
-    <a href="{{ $paginator.Next.URL }}" class="page-btn">下一页 →</a>
-    {{ end }}
-  </nav>
-  {{ end }}
-
+  {{ if .Sections }}
   {{ range .Sections }}
   <div class="section-subsection">
     <h2 class="subsection-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
@@ -67,6 +40,34 @@
     </nav>
     {{ end }}
   </div>
+  {{ end }}
+  {{ else }}
+  {{ $paginator := .Paginate .Pages.ByDate.Reverse 10 }}
+  <div class="post-list">
+    {{ range $paginator.Pages }}
+    <article class="post-item">
+      <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
+        {{ .Date.Format "2006-01-02" }}
+      </time>
+      <div class="post-info">
+        <h2 class="post-title">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h2>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+  {{ if gt $paginator.TotalPages 1 }}
+  <nav class="pagination">
+    {{ if $paginator.HasPrev }}
+    <a href="{{ $paginator.Prev.URL }}" class="page-btn">← 上一页</a>
+    {{ end }}
+    <span class="page-info">{{ $paginator.PageNumber }} / {{ $paginator.TotalPages }}</span>
+    {{ if $paginator.HasNext }}
+    <a href="{{ $paginator.Next.URL }}" class="page-btn">下一页 →</a>
+    {{ end }}
+  </nav>
+  {{ end }}
   {{ end }}
 </section>
 {{ end }}
