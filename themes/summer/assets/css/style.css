@@ -226,6 +226,20 @@ main {
 
 .subsection-title a:hover { color: var(--color-primary); border-bottom-color: var(--color-primary); }
 
+/* -- 返回链接 -- */
+.back-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  padding: 0.35rem 0.75rem;
+  background: var(--color-bg);
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+  transition: all 0.2s;
+}
+
+.back-link:hover { color: var(--color-primary); background: var(--color-card); box-shadow: var(--shadow-card); }
+
 /* -- 单篇文章 -- */
 .single-post {
   background: var(--color-card);

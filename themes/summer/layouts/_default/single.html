@@ -1,5 +1,7 @@
 {{ define "main" }}
 <article class="single-post">
+  {{ $current := . }}
+  <a href="{{ .CurrentSection.Permalink }}" class="back-link">← 返回{{ .CurrentSection.Title }}</a>
   <header class="post-header">
     <h1 class="post-title-main">{{ .Title }}</h1>
     <div class="post-meta">
