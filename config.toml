@@ -8,6 +8,7 @@ theme = "summer"
   author = "胡夏天"
   description = "记录思考，沉淀成长"
   keywords = ["博客", "笔记", "成长"]
+  DateFormat = "2006-01-02 15:04"
 
   [params.profileMode]
     enabled = true

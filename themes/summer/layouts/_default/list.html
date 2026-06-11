@@ -1,13 +1,13 @@
 {{ define "main" }}
 <section class="section-page">
-  {{ if .Parent.IsHome }}
-  <h1 class="section-page-title">{{ .Title }}</h1>
-  {{ else }}
   <nav class="breadcrumb">
+    {{ if .Parent.IsHome }}
+    <a href="{{ .Site.BaseURL }}">← 首页</a>
+    {{ else }}
     <a href="{{ .Parent.Permalink }}">← {{ .Parent.Title }}</a>
+    {{ end }}
   </nav>
   <h1 class="section-page-title">{{ .Title }}</h1>
-  {{ end }}
 
   {{ if .Sections }}
   {{ range .Sections }}
