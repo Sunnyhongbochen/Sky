@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术框架 on 夏天的小站</title>
+    <link>https://summer-website.pages.dev/tags/%E6%8A%80%E6%9C%AF%E6%A1%86%E6%9E%B6/</link>
+    <description>Recent content in 技术框架 on 夏天的小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 02 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://summer-website.pages.dev/tags/%E6%8A%80%E6%9C%AF%E6%A1%86%E6%9E%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>夏天的小站 — 技术框架全览</title>
+      <link>https://summer-website.pages.dev/ai-growth/tech/site-framework/</link>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://summer-website.pages.dev/ai-growth/tech/site-framework/</guid>
+      <description>一、访问地址 🌐 主域名： https://summer-website.pages.dev&#xA;特性：&#xA;Cloudflare 全球 CDN 加速，国内访问流畅 自动 SSL 证书，HTTPS 加密 免费无限带宽、无限请求、无限站点 GitHub 推送代码自动触发部署 二、整体架构 网站采用静态生成 + CDN 分发 + Git 驱动的自动部署三层架构：&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 ┌──────────────────────────────────────────┐ │ 用户访问 │ │ https://summer-website.pages.dev │ └──────────────────┬───────────────────────┘ │ ┌──────────────────▼───────────────────────┐ │ Cloudflare Pages CDN │ │ 全球边缘节点分发 · 自动 SSL · 缓存 │ └──────────────────┬───────────────────────┘ │ ┌──────────────────▼───────────────────────┐ │ GitHub Actions 自动构建 │ │ push → Setup Hugo → hugo --minify │ │ → wrangler pages deploy │ └──────────────────┬───────────────────────┘ │ ┌──────────────────▼───────────────────────┐ │ GitHub 代码仓库 │ │ Sunnyhongbochen/summer-website │ │ Gitee 镜像：sunny_hongbo/summer-website│ └──────────────────┬───────────────────────┘ │ ┌──────────────────▼───────────────────────┐ │ Hugo 静态网站生成器 │ │ Markdown 内容 → 自定义 summer 主题 → HTML │ └──────────────────────────────────────────┘ 各层职责 层 技术 职责 内容层 Markdown 文章编写，纯文本，Git 版本管理 生成层 Hugo v0.</description>
+    </item>
+  </channel>
+</rss>

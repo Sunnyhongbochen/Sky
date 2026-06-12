@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>开发工具 on 夏天的小站</title>
+    <link>https://summer-website.pages.dev/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 开发工具 on 夏天的小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 02 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://summer-website.pages.dev/tags/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenAI Codex 核心知识提炼：下一代 AI 编程 Agent</title>
+      <link>https://summer-website.pages.dev/ai-growth/tech/codex/</link>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://summer-website.pages.dev/ai-growth/tech/codex/</guid>
+      <description>一、Codex 是什么？ Codex 是 OpenAI 推出的开源 AI 编程助手，将 GPT 级推理能力与本地代码执行能力结合。三个关键标签：&#xA;Rust 构建，性能极快，Apache 2.0 开源 本地运行，代码不离开本机，支持 macOS / Linux / Windows 不只写代码，能读、能改、能执行、能部署 三种使用形态：CLI（终端，轻量极客）→ IDE 插件（VS Code / Cursor / Windsurf）→ App 桌面版（多智能体并行 + 自动化）&#xA;二、核心能力速查 三种操作模式 suggest：只建议不执行（最安全） auto-edit：自动编辑需确认（默认推荐） full-auto：全自动执行（谨慎使用） 杀手级功能：自定义斜杠命令 创建 ~/.codex/prompts/，文件名即命令名，用 Markdown 定义工作流。比如：&#xA;/security-audit → 一键安全审计 /daily-report → 自动生成日报 /fix-bug → TDD 式 Bug 修复流程 AGENTS.md：项目的 AI 宪章 定义 Codex 在仓库中的行为规范：目录结构、运行命令、代码规范、禁止事项、PR 期望。多层级（全局 → 项目 → 子目录），优先级：子目录 &amp;gt; 项目根 &amp;gt; 全局。</description>
+    </item>
+  </channel>
+</rss>

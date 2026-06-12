@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术应用 on 夏天的小站</title>
+    <link>https://summer-website.pages.dev/ai-growth/tech/</link>
+    <description>Recent content in 技术应用 on 夏天的小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 02 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://summer-website.pages.dev/ai-growth/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hermes Agent 核心知识提炼：自我进化的 AI Agent</title>
+      <link>https://summer-website.pages.dev/ai-growth/tech/hermes-agent/</link>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://summer-website.pages.dev/ai-growth/tech/hermes-agent/</guid>
+      <description>一、Hermes Agent 是什么？ Hermes Agent 由 Nous Research（Hermes / Nomos / Psyche 模型背后的实验室）打造，是一个会自我进化的 AI Agent。它运行时间越长，能力越强。&#xA;核心定位：Agent-first 架构——以单个 Python Agent 为中心，向外扩展消息网关、ACP、MCP、Cron、Skills 等能力。&#xA;与 OpenClaw 的定位差异：Hermes 更像&amp;quot;自进化工作型 Agent&amp;quot;，OpenClaw 更像&amp;quot;本地 AI 操作系统 / Control Plane&amp;quot;。&#xA;二、五大核心特性 1. 闭合学习闭环（最核心的优势） 这是 Hermes 与所有其他 Agent 最本质的区别：&#xA;自主创建 Skill：复杂任务成功后、踩坑后、修正后，自动沉淀为 Skill 自我完善：发现 Skill 过时或有问题，主动 patch 修正 周期性记忆持久化：主动提示知识固化，防止遗忘 跨 Session 检索：基于 SQLite FTS5 检索历史，结合 LLM 总结 辩证式用户建模：基于 Honcho 构建对你的深度理解 用一句话概括就是：Hermes 把 Skill 视为&amp;quot;程序性记忆&amp;quot;（procedural memory），Agent 有正式运行时接口去创建、编辑、补丁自己的技能。&#xA;2. 随处运行，不依赖本地电脑 6 种终端后端：本地、Docker、SSH、Daytona、Singularity、Modal。其中 Daytona 和 Modal 提供无服务器持久化——环境闲置时自动休眠，几乎零成本。</description>
+    </item>
+    <item>
+      <title>OpenAI Codex 核心知识提炼：下一代 AI 编程 Agent</title>
+      <link>https://summer-website.pages.dev/ai-growth/tech/codex/</link>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://summer-website.pages.dev/ai-growth/tech/codex/</guid>
+      <description>一、Codex 是什么？ Codex 是 OpenAI 推出的开源 AI 编程助手，将 GPT 级推理能力与本地代码执行能力结合。三个关键标签：&#xA;Rust 构建，性能极快，Apache 2.0 开源 本地运行，代码不离开本机，支持 macOS / Linux / Windows 不只写代码，能读、能改、能执行、能部署 三种使用形态：CLI（终端，轻量极客）→ IDE 插件（VS Code / Cursor / Windsurf）→ App 桌面版（多智能体并行 + 自动化）&#xA;二、核心能力速查 三种操作模式 suggest：只建议不执行（最安全） auto-edit：自动编辑需确认（默认推荐） full-auto：全自动执行（谨慎使用） 杀手级功能：自定义斜杠命令 创建 ~/.codex/prompts/，文件名即命令名，用 Markdown 定义工作流。比如：&#xA;/security-audit → 一键安全审计 /daily-report → 自动生成日报 /fix-bug → TDD 式 Bug 修复流程 AGENTS.md：项目的 AI 宪章 定义 Codex 在仓库中的行为规范：目录结构、运行命令、代码规范、禁止事项、PR 期望。多层级（全局 → 项目 → 子目录），优先级：子目录 &amp;gt; 项目根 &amp;gt; 全局。</description>
+    </item>
+    <item>
+      <title>OpenClaw 核心知识提炼：你的本地 AI 操作系统</title>
+      <link>https://summer-website.pages.dev/ai-growth/tech/openclaw/</link>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://summer-website.pages.dev/ai-growth/tech/openclaw/</guid>
+      <description>一、OpenClaw 是什么？ OpenClaw（曾用名 Clawdbot）是由 PSPDFKit 创始人 Peter Steinberger 开发的开源个人 AI 助手。它不是聊天机器人，而是一个跑在你自己电脑上的 AI Agent 操作系统。&#xA;核心理念：让 AI 从&amp;quot;提供建议&amp;quot;进阶到&amp;quot;直接完成任务&amp;quot;。&#xA;关键特征 无头架构：后台守护进程，通过 WhatsApp / Telegram / Discord / 飞书等 IM 工具交互 持久记忆：交互历史存储在本地文件系统，跨会话保持上下文 永远在线：24 小时运行，你睡觉它干活 最小硬件要求：单核 CPU、1GB 内存、500MB 磁盘 二、核心架构：Gateway + Nodes + Canvas OpenClaw 采用以网关为中心的分布式微服务架构：&#xA;Gateway（大脑）：Node.js v22+ 守护进程，绑定 127.0.0.1:18789，独占管理所有 Channel 连接。包含 WebSocket API、事件总线、Cron 定时任务 Nodes（手脚）：运行在手机等终端的轻量客户端，通过 Tailscale Mesh 网络连接 Gateway。提供摄像头调用、GPS 定位、屏幕录制等物理能力 Canvas（画布）：Agent 驱动的动态 HTML/JS 界面，突破纯文本交互 与其他 AI 的本质区别 OpenClaw 不是 AI 模型，而是一个 AI 网关——连接你的聊天软件和 AI 大模型 API。</description>
+    </item>
+    <item>
+      <title>Trilium Notes 本地知识库 — 部署与使用完全指南</title>
+      <link>https://summer-website.pages.dev/ai-growth/tech/trilium-guide/</link>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://summer-website.pages.dev/ai-growth/tech/trilium-guide/</guid>
+      <description>一、知识库地址 项目 详情 🌐 访问地址 http://82.157.103.93:3002 🔐 初始密码 首次启动时在日志中生成，需及时保存 ⚙️ 服务管理 systemctl restart trilium 二、Trilium 是什么？ Trilium Notes 是一个树形层级个人知识库，开源免费（AGPL 协议），GitHub 28K+ Star。&#xA;核心定位： 不是又一个 Markdown 编辑器，而是一个知识管理中枢——所有笔记以树形结构组织，支持无限嵌套、双向链接、关系图谱、全文搜索、脚本自动化。&#xA;与普通笔记工具的区别 特性 普通笔记（如备忘录） Trilium 组织方式 平铺列表 树形层级，无限嵌套 关联能力 无 关系图谱，双向链接 检索 标题搜索 全文检索 + 标签过滤 自动化 无 内置脚本引擎，自定义工作流 数据归属 云端 自托管，数据完全归你 多端访问 取决于服务 Web + 桌面客户端同步 三、核心功能 3.1 树形笔记组织 笔记以树形结构排列，可以无限嵌套子节点。结构示意如下：&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 📁 工作 ├── 📁 项目方案 │ ├── 📄 智能体协同方案 │ ├── 📄 数据要素方案 │ └── 📄 AI 应用方案 ├── 📁 会议记录 │ ├── 📄 2026-06-02 周会 │ └── 📄 2026-05-28 复盘 └── 📁 行业调研 ├── 📄 AI Agent 趋势 └── 📄 政务信息化政策 📁 学习 ├── 📁 AI 技术 ├── 📁 产品方法论 └── 📁 读书笔记 📁 生活 ├── 📁 旅行计划 └── 📁 健康记录 3.</description>
+    </item>
+    <item>
+      <title>夏天的小站 — 技术框架全览</title>
+      <link>https://summer-website.pages.dev/ai-growth/tech/site-framework/</link>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://summer-website.pages.dev/ai-growth/tech/site-framework/</guid>
+      <description>一、访问地址 🌐 主域名： https://summer-website.pages.dev&#xA;特性：&#xA;Cloudflare 全球 CDN 加速，国内访问流畅 自动 SSL 证书，HTTPS 加密 免费无限带宽、无限请求、无限站点 GitHub 推送代码自动触发部署 二、整体架构 网站采用静态生成 + CDN 分发 + Git 驱动的自动部署三层架构：&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 ┌──────────────────────────────────────────┐ │ 用户访问 │ │ https://summer-website.pages.dev │ └──────────────────┬───────────────────────┘ │ ┌──────────────────▼───────────────────────┐ │ Cloudflare Pages CDN │ │ 全球边缘节点分发 · 自动 SSL · 缓存 │ └──────────────────┬───────────────────────┘ │ ┌──────────────────▼───────────────────────┐ │ GitHub Actions 自动构建 │ │ push → Setup Hugo → hugo --minify │ │ → wrangler pages deploy │ └──────────────────┬───────────────────────┘ │ ┌──────────────────▼───────────────────────┐ │ GitHub 代码仓库 │ │ Sunnyhongbochen/summer-website │ │ Gitee 镜像：sunny_hongbo/summer-website│ └──────────────────┬───────────────────────┘ │ ┌──────────────────▼───────────────────────┐ │ Hugo 静态网站生成器 │ │ Markdown 内容 → 自定义 summer 主题 → HTML │ └──────────────────────────────────────────┘ 各层职责 层 技术 职责 内容层 Markdown 文章编写，纯文本，Git 版本管理 生成层 Hugo v0.</description>
+    </item>
+  </channel>
+</rss>

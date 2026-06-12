@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>夏天的小站 — 技术框架全览 · 夏天的小站</title>
+<meta name="description" content="从静态生成到自动部署，记录夏天的小站完整技术框架与实施路径">
+<meta name="author" content="胡夏天">
+
+
+
+<link rel="stylesheet" href="/css/style.min.d62816a176441f6b5765123c40c2678d8ad5a0af87f000dadf888e52746c5cf9.css">
+
+
+
+</head>
+<body>
+  <header class="site-hero">
+  <div class="hero-inner">
+    <h1 class="site-title">
+      <a href="https://summer-website.pages.dev/">夏天的小站</a>
+    </h1>
+    <p class="site-desc">记录思考，沉淀成长</p>
+  </div>
+</header>
+  <main>
+    
+<article class="single-post">
+  
+  <a href="https://summer-website.pages.dev/ai-growth/tech/" class="back-link">← 返回技术应用</a>
+  <header class="post-header">
+    <h1 class="post-title-main">夏天的小站 — 技术框架全览</h1>
+    <div class="post-meta">
+      <time datetime="2026-06-02">2026-06-02</time>
+      <span class="post-section-tag">ai-growth</span>
+    </div>
+  </header>
+  <div class="post-content">
+    <h2 id="一访问地址">一、访问地址</h2>
+<p><strong>🌐 主域名：</strong> <a href="https://summer-website.pages.dev">https://summer-website.pages.dev</a></p>
+<p><strong>特性：</strong></p>
+<ul>
+<li>Cloudflare 全球 CDN 加速，国内访问流畅</li>
+<li>自动 SSL 证书，HTTPS 加密</li>
+<li>免费无限带宽、无限请求、无限站点</li>
+<li>GitHub 推送代码自动触发部署</li>
+</ul>
+<h2 id="二整体架构">二、整体架构</h2>
+<p>网站采用<strong>静态生成 + CDN 分发 + Git 驱动的自动部署</strong>三层架构：</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">18
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">19
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">20
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">21
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">22
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">23
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">24
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">25
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">26
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>┌──────────────────────────────────────────┐
+</span></span><span style="display:flex;"><span>│                 用户访问                   │
+</span></span><span style="display:flex;"><span>│     https://summer-website.pages.dev      │
+</span></span><span style="display:flex;"><span>└──────────────────┬───────────────────────┘
+</span></span><span style="display:flex;"><span>                   │
+</span></span><span style="display:flex;"><span>┌──────────────────▼───────────────────────┐
+</span></span><span style="display:flex;"><span>│          Cloudflare Pages CDN             │
+</span></span><span style="display:flex;"><span>│     全球边缘节点分发 · 自动 SSL · 缓存     │
+</span></span><span style="display:flex;"><span>└──────────────────┬───────────────────────┘
+</span></span><span style="display:flex;"><span>                   │
+</span></span><span style="display:flex;"><span>┌──────────────────▼───────────────────────┐
+</span></span><span style="display:flex;"><span>│          GitHub Actions 自动构建           │
+</span></span><span style="display:flex;"><span>│   push → Setup Hugo → hugo --minify      │
+</span></span><span style="display:flex;"><span>│        → wrangler pages deploy           │
+</span></span><span style="display:flex;"><span>└──────────────────┬───────────────────────┘
+</span></span><span style="display:flex;"><span>                   │
+</span></span><span style="display:flex;"><span>┌──────────────────▼───────────────────────┐
+</span></span><span style="display:flex;"><span>│            GitHub 代码仓库                │
+</span></span><span style="display:flex;"><span>│    Sunnyhongbochen/summer-website         │
+</span></span><span style="display:flex;"><span>│    Gitee 镜像：sunny_hongbo/summer-website│
+</span></span><span style="display:flex;"><span>└──────────────────┬───────────────────────┘
+</span></span><span style="display:flex;"><span>                   │
+</span></span><span style="display:flex;"><span>┌──────────────────▼───────────────────────┐
+</span></span><span style="display:flex;"><span>│          Hugo 静态网站生成器               │
+</span></span><span style="display:flex;"><span>│  Markdown 内容 → 自定义 summer 主题 → HTML │
+</span></span><span style="display:flex;"><span>└──────────────────────────────────────────┘
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="各层职责">各层职责</h3>
+<table>
+<thead>
+<tr>
+<th>层</th>
+<th>技术</th>
+<th>职责</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>内容层</td>
+<td>Markdown</td>
+<td>文章编写，纯文本，Git 版本管理</td>
+</tr>
+<tr>
+<td>生成层</td>
+<td>Hugo v0.123.7 extended</td>
+<td>将 Markdown + 主题模板编译为静态 HTML/CSS</td>
+</tr>
+<tr>
+<td>主题层</td>
+<td>自定义 <code>summer</code> 主题</td>
+<td>青蓝配色、单页五模块卡片、响应式布局</td>
+</tr>
+<tr>
+<td>代码层</td>
+<td>GitHub + Gitee 双推</td>
+<td>版本控制 + 协作 + 备份</td>
+</tr>
+<tr>
+<td>构建层</td>
+<td>GitHub Actions</td>
+<td>push 触发自动编译部署</td>
+</tr>
+<tr>
+<td>分发层</td>
+<td>Cloudflare Pages</td>
+<td>全球 CDN，免费无限流量</td>
+</tr>
+</tbody>
+</table>
+<h2 id="三技术路线">三、技术路线</h2>
+<h3 id="31-选型理由">3.1 选型理由</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>选择</th>
+<th>为什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>静态生成器</td>
+<td><strong>Hugo</strong></td>
+<td>Go 语言编写，毫秒级编译，单二进制文件，零依赖</td>
+</tr>
+<tr>
+<td>托管平台</td>
+<td><strong>Cloudflare Pages</strong></td>
+<td>免费无限带宽/请求，国内可访问，自动 SSL</td>
+</tr>
+<tr>
+<td>主题</td>
+<td><strong>自定义开发</strong></td>
+<td>放弃 PaperMod，从零手写，完全可控</td>
+</tr>
+<tr>
+<td>自动部署</td>
+<td><strong>GitHub Actions + wrangler</strong></td>
+<td>push 即部署，无需手动操作</td>
+</tr>
+<tr>
+<td>代码托管</td>
+<td><strong>GitHub 主 + Gitee 备</strong></td>
+<td>双保险，国内访问备用</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-对比旧方案-vs-新方案">3.2 对比：旧方案 vs 新方案</h3>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>旧方案</th>
+<th>新方案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>托管</td>
+<td>Netlify（100GB 流量限制）</td>
+<td>Cloudflare Pages（<strong>无限</strong>）</td>
+</tr>
+<tr>
+<td>主题</td>
+<td>PaperMod（暗色，臃肿）</td>
+<td>自定义 summer（青蓝，轻量）</td>
+</tr>
+<tr>
+<td>部署</td>
+<td>手动 wrangler 上传</td>
+<td>GitHub Actions <strong>自动触发</strong></td>
+</tr>
+<tr>
+<td>配色</td>
+<td>灰暗单调</td>
+<td>青蓝系，清新明快</td>
+</tr>
+<tr>
+<td>布局</td>
+<td>传统博客列表</td>
+<td>单页五模块卡片，一目了然</td>
+</tr>
+<tr>
+<td>域名</td>
+<td>summer-website-599.netlify.app</td>
+<td>summer-website.pages.dev</td>
+</tr>
+</tbody>
+</table>
+<h2 id="四技术路线的实现">四、技术路线的实现</h2>
+<h3 id="41-hugo-自定义主题开发">4.1 Hugo 自定义主题开发</h3>
+<p>从零搭建 <code>themes/summer/</code> 目录，核心文件结构：</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">13
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>themes/summer/
+</span></span><span style="display:flex;"><span>├── theme.toml                     # 主题元数据
+</span></span><span style="display:flex;"><span>├── assets/css/style.css           # 样式（CSS 变量 + 响应式网格）
+</span></span><span style="display:flex;"><span>└── layouts/
+</span></span><span style="display:flex;"><span>    ├── _default/
+</span></span><span style="display:flex;"><span>    │   ├── baseof.html            # HTML 骨架
+</span></span><span style="display:flex;"><span>    │   ├── home.html              # 首页（模块卡片 + 最新文章）
+</span></span><span style="display:flex;"><span>    │   ├── list.html              # 分区列表页
+</span></span><span style="display:flex;"><span>    │   └── single.html            # 文章详情页
+</span></span><span style="display:flex;"><span>    └── partials/
+</span></span><span style="display:flex;"><span>        ├── head.html              # &lt;head&gt; 元数据
+</span></span><span style="display:flex;"><span>        ├── header.html            # Hero 头图
+</span></span><span style="display:flex;"><span>        └── footer.html            # 页脚
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>配色方案（青蓝系）：</strong></p>
+<table>
+<thead>
+<tr>
+<th>用途</th>
+<th>色值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主色</td>
+<td><code>#2B8CBE</code></td>
+<td>青蓝色，标题/链接/强调</td>
+</tr>
+<tr>
+<td>辅色</td>
+<td><code>#5BB5D6</code></td>
+<td>浅青色，hover/高亮</td>
+</tr>
+<tr>
+<td>背景</td>
+<td><code>#F5F9FC</code></td>
+<td>淡青白底</td>
+</tr>
+<tr>
+<td>卡片</td>
+<td><code>#FFFFFF</code></td>
+<td>纯白 + <code>box-shadow</code> 投影</td>
+</tr>
+<tr>
+<td>文字</td>
+<td><code>#2C3E50</code></td>
+<td>深蓝灰，比纯黑柔和</td>
+</tr>
+</tbody>
+</table>
+<p><strong>布局方案：</strong></p>
+<ul>
+<li>Hero 头图（青蓝渐变背景 + 站名/副标题）</li>
+<li>五模块导航卡片横排（偶得碎语 / 知学札记 / 时光印记 / AI成长 / 链接）</li>
+<li>最新文章列表（取最近 6 篇）</li>
+<li>Footer 页脚</li>
+<li>响应式：桌面 5 列 → 平板 3 列 → 手机 2 列</li>
+</ul>
+<p><strong>字体策略：</strong> 系统字体栈，不加载外部字体文件，零额外请求，确保国内访问速度。</p>
+<h3 id="42-cloudflare-pages-部署配置">4.2 Cloudflare Pages 部署配置</h3>
+<p>通过 Cloudflare API 完成项目创建和构建配置：</p>
+<ul>
+<li><strong>项目名：</strong> summer-website</li>
+<li><strong>生产分支：</strong> master</li>
+<li><strong>构建命令：</strong> <code>hugo</code></li>
+<li><strong>输出目录：</strong> <code>public</code></li>
+<li><strong>环境变量：</strong> <code>HUGO_VERSION = 0.145.0</code></li>
+</ul>
+<h3 id="43-github-actions-自动部署流水线">4.3 GitHub Actions 自动部署流水线</h3>
+<p><code>.github/workflows/deploy.yml</code> 实现 push 自动部署：</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#7ee787">name</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">Deploy to Cloudflare Pages</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">on</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">push</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">branches</span>:<span style="color:#6e7681"> </span>[<span style="color:#a5d6ff">master]</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681"></span><span style="color:#7ee787">jobs</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">  </span><span style="color:#7ee787">deploy</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">    </span><span style="color:#7ee787">steps</span>:<span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">      </span>- <span style="color:#7ee787">uses</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">actions/checkout@v4   </span><span style="color:#6e7681"> </span><span style="color:#8b949e;font-style:italic"># 拉代码</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">      </span>- <span style="color:#7ee787">uses</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">peaceiris/actions-hugo@v3 </span><span style="color:#6e7681"> </span><span style="color:#8b949e;font-style:italic"># 安装 Hugo</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">      </span>- <span style="color:#7ee787">run</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">hugo --minify          </span><span style="color:#6e7681"> </span><span style="color:#8b949e;font-style:italic"># 构建</span><span style="color:#6e7681">
+</span></span></span><span style="display:flex;"><span><span style="color:#6e7681">      </span>- <span style="color:#7ee787">uses</span>:<span style="color:#6e7681"> </span><span style="color:#a5d6ff">cloudflare/wrangler-action@v3 </span><span style="color:#6e7681"> </span><span style="color:#8b949e;font-style:italic"># 部署到 Cloudflare</span><span style="color:#6e7681">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Secret 配置：</strong> <code>CLOUDFLARE_API_TOKEN</code> 通过 GitHub API 加密写入仓库 Secrets，保障安全。</p>
+<h3 id="44-内容管理">4.4 内容管理</h3>
+<p>所有文章以 Markdown 格式存放在 <code>content/</code> 目录：</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>content/
+</span></span><span style="display:flex;"><span>├── posts/      → 「偶得碎语」随笔灵感
+</span></span><span style="display:flex;"><span>├── notes/      → 「知学札记」学习笔记
+</span></span><span style="display:flex;"><span>├── moments/    → 「时光印记」生活纪事
+</span></span><span style="display:flex;"><span>└── ai-growth/  → 「AI成长」学习记录
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>每篇文章包含 Front Matter 元数据（标题、日期、描述、标签），Hugo 自动生成页面和索引。</p>
+<h3 id="45-发布流程">4.5 发布流程</h3>
+<p><strong>最简单的发布流程：</strong></p>
+<ol>
+<li>在 <code>content/</code> 对应目录写好 Markdown 文章</li>
+<li><code>git add → commit → push</code> 推送到 GitHub</li>
+<li>GitHub Actions 自动触发：Hugo 构建 → wrangler 部署</li>
+<li>几分钟后 Cloudflare Pages CDN 全球生效</li>
+</ol>
+<p>全程<strong>不需要手动构建、不需要登录服务器、不需要操作 Cloudflare 后台</strong>。</p>
+<hr>
+<h2 id="总结">总结</h2>
+<p>夏天的小站从 Netlify + PaperMod 迁移到 Cloudflare Pages + 自定义 summer 主题后：</p>
+<ul>
+<li><strong>零成本托管</strong>，告别 100GB 流量焦虑</li>
+<li><strong>自定义青蓝主题</strong>，告别灰暗丑</li>
+<li><strong>Git 驱动全自动部署</strong>，告别手动上传</li>
+<li><strong>GitHub + Gitee 双备份</strong>，数据安全</li>
+<li><strong>3 篇 AI 知识文章上线</strong>，开始内容积累</li>
+</ul>
+<p>下一步：持续输出内容，让夏天的小站真正&quot;活&quot;起来 🌸</p>
+
+  </div>
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+      <a href="/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99" class="tag">#个人网站</a>
+      
+      <a href="/tags/hugo" class="tag">#Hugo</a>
+      
+      <a href="/tags/cloudflare" class="tag">#Cloudflare</a>
+      
+      <a href="/tags/%E6%8A%80%E6%9C%AF%E6%A1%86%E6%9E%B6" class="tag">#技术框架</a>
+      
+    </div>
+    
+  </footer>
+</article>
+
+  </main>
+  <footer class="site-footer">
+  <p>© 2026 夏天的小站 · 
+    <a href="https://summer-website.pages.dev">summer-website.pages.dev</a>
+  </p>
+</footer>
+
+</body>
+</html>

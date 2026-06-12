@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trilium Notes 本地知识库 — 部署与使用完全指南 · 夏天的小站</title>
+<meta name="description" content="从零搭建个人知识库：TriliumNext 部署、核心功能、使用技巧与最佳实践">
+<meta name="author" content="胡夏天">
+
+
+
+<link rel="stylesheet" href="/css/style.min.d62816a176441f6b5765123c40c2678d8ad5a0af87f000dadf888e52746c5cf9.css">
+
+
+
+</head>
+<body>
+  <header class="site-hero">
+  <div class="hero-inner">
+    <h1 class="site-title">
+      <a href="https://summer-website.pages.dev/">夏天的小站</a>
+    </h1>
+    <p class="site-desc">记录思考，沉淀成长</p>
+  </div>
+</header>
+  <main>
+    
+<article class="single-post">
+  
+  <a href="https://summer-website.pages.dev/ai-growth/tech/" class="back-link">← 返回技术应用</a>
+  <header class="post-header">
+    <h1 class="post-title-main">Trilium Notes 本地知识库 — 部署与使用完全指南</h1>
+    <div class="post-meta">
+      <time datetime="2026-06-02">2026-06-02</time>
+      <span class="post-section-tag">ai-growth</span>
+    </div>
+  </header>
+  <div class="post-content">
+    <h2 id="一知识库地址">一、知识库地址</h2>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>详情</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🌐 访问地址</td>
+<td><code>http://82.157.103.93:3002</code></td>
+</tr>
+<tr>
+<td>🔐 初始密码</td>
+<td>首次启动时在日志中生成，需及时保存</td>
+</tr>
+<tr>
+<td>⚙️ 服务管理</td>
+<td><code>systemctl restart trilium</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="二trilium-是什么">二、Trilium 是什么？</h2>
+<p>Trilium Notes 是一个<strong>树形层级个人知识库</strong>，开源免费（AGPL 协议），GitHub 28K+ Star。</p>
+<p><strong>核心定位：</strong> 不是又一个 Markdown 编辑器，而是一个<strong>知识管理中枢</strong>——所有笔记以树形结构组织，支持无限嵌套、双向链接、关系图谱、全文搜索、脚本自动化。</p>
+<h3 id="与普通笔记工具的区别">与普通笔记工具的区别</h3>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>普通笔记（如备忘录）</th>
+<th>Trilium</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>组织方式</td>
+<td>平铺列表</td>
+<td><strong>树形层级</strong>，无限嵌套</td>
+</tr>
+<tr>
+<td>关联能力</td>
+<td>无</td>
+<td><strong>关系图谱</strong>，双向链接</td>
+</tr>
+<tr>
+<td>检索</td>
+<td>标题搜索</td>
+<td><strong>全文检索</strong> + 标签过滤</td>
+</tr>
+<tr>
+<td>自动化</td>
+<td>无</td>
+<td><strong>内置脚本引擎</strong>，自定义工作流</td>
+</tr>
+<tr>
+<td>数据归属</td>
+<td>云端</td>
+<td><strong>自托管</strong>，数据完全归你</td>
+</tr>
+<tr>
+<td>多端访问</td>
+<td>取决于服务</td>
+<td>Web + 桌面客户端同步</td>
+</tr>
+</tbody>
+</table>
+<h2 id="三核心功能">三、核心功能</h2>
+<h3 id="31-树形笔记组织">3.1 树形笔记组织</h3>
+<p>笔记以树形结构排列，可以无限嵌套子节点。结构示意如下：</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 8
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679"> 9
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">10
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">11
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">12
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">13
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">14
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">15
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">16
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">17
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">18
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>📁 工作
+</span></span><span style="display:flex;"><span>  ├── 📁 项目方案
+</span></span><span style="display:flex;"><span>  │   ├── 📄 智能体协同方案
+</span></span><span style="display:flex;"><span>  │   ├── 📄 数据要素方案
+</span></span><span style="display:flex;"><span>  │   └── 📄 AI 应用方案
+</span></span><span style="display:flex;"><span>  ├── 📁 会议记录
+</span></span><span style="display:flex;"><span>  │   ├── 📄 2026-06-02 周会
+</span></span><span style="display:flex;"><span>  │   └── 📄 2026-05-28 复盘
+</span></span><span style="display:flex;"><span>  └── 📁 行业调研
+</span></span><span style="display:flex;"><span>      ├── 📄 AI Agent 趋势
+</span></span><span style="display:flex;"><span>      └── 📄 政务信息化政策
+</span></span><span style="display:flex;"><span>📁 学习
+</span></span><span style="display:flex;"><span>  ├── 📁 AI 技术
+</span></span><span style="display:flex;"><span>  ├── 📁 产品方法论
+</span></span><span style="display:flex;"><span>  └── 📁 读书笔记
+</span></span><span style="display:flex;"><span>📁 生活
+</span></span><span style="display:flex;"><span>  ├── 📁 旅行计划
+</span></span><span style="display:flex;"><span>  └── 📁 健康记录
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="32-笔记类型">3.2 笔记类型</h3>
+<p>Trilium 支持多种笔记类型，右键节点可选择：</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>用途</th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>📝 文本笔记</td>
+<td>日常记录</td>
+<td>富文本 + Markdown 混用</td>
+</tr>
+<tr>
+<td>💻 代码笔记</td>
+<td>代码片段</td>
+<td>语法高亮</td>
+</tr>
+<tr>
+<td>📊 表格</td>
+<td>结构化数据</td>
+<td>类似 Excel</td>
+</tr>
+<tr>
+<td>🖼️ 文件</td>
+<td>附件管理</td>
+<td>图片、PDF 等</td>
+</tr>
+<tr>
+<td>🔗 关系图</td>
+<td>知识图谱</td>
+<td>可视化关联</td>
+</tr>
+<tr>
+<td>📖 书本笔记</td>
+<td>长文档</td>
+<td>章节自动拆分</td>
+</tr>
+<tr>
+<td>🎨 画布</td>
+<td>自由绘图</td>
+<td>思维导图风格</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-双向链接与关系图谱">3.3 双向链接与关系图谱</h3>
+<p>在笔记中输入 <code>@</code> 或 <code>Ctrl+L</code> 可以创建到其他笔记的链接。所有链接关系自动形成<strong>知识图谱</strong>，点击任意笔记的「关系图」按钮即可可视化查看。</p>
+<p>这个功能的价值：当你积累了几百条笔记后，关系图谱能帮你发现&quot;原来 A 和 B 有关联&quot;——这是平铺列表做不到的。</p>
+<h3 id="34-全文搜索">3.4 全文搜索</h3>
+<p>Ctrl+S 或点击搜索框，输入关键词即可在所有笔记中全文检索。支持正则表达式。</p>
+<h3 id="35-脚本自动化">3.5 脚本自动化</h3>
+<p>Trilium 内置 JavaScript 脚本引擎，可以编写自动化规则。例如：</p>
+<ul>
+<li>自动为特定标签的笔记设置提醒</li>
+<li>每天自动生成日记模板</li>
+<li>批量修改笔记属性</li>
+</ul>
+<h3 id="36-版本历史">3.6 版本历史</h3>
+<p>每次修改自动保存历史版本，出错了可以随时回滚。</p>
+<h2 id="四日常使用流程">四、日常使用流程</h2>
+<h3 id="41-快速记录">4.1 快速记录</h3>
+<ol>
+<li>打开浏览器访问知识库</li>
+<li>在左侧树中选中要添加笔记的节点</li>
+<li>按 <code>Enter</code> 创建子节点，或 <code>Ctrl+O</code> 搜索并跳转</li>
+<li>开始写内容</li>
+</ol>
+<h3 id="42-组织整理">4.2 组织整理</h3>
+<p><strong>建议的组织原则：</strong></p>
+<ul>
+<li>第一层：按领域分类（工作 / 学习 / 生活）</li>
+<li>第二层：按项目或主题分类</li>
+<li>第三层：具体笔记</li>
+<li>不要超过 4 层深度</li>
+</ul>
+<p><strong>标签系统：</strong> 在笔记属性面板中添加标签，可以跨树形结构检索。标签命名建议用短横线连接，如 <code>ai-agent</code>、<code>weekly-review</code>。</p>
+<h3 id="43-日周记模板">4.3 日/周记模板</h3>
+<p>推荐在「日志」节点下按日期创建日记：</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>📁 日志
+</span></span><span style="display:flex;"><span>  ├── 📁 2026-06
+</span></span><span style="display:flex;"><span>  │   ├── 📄 06-01
+</span></span><span style="display:flex;"><span>  │   ├── 📄 06-02
+</span></span><span style="display:flex;"><span>  │   └── ...
+</span></span><span style="display:flex;"><span>  └── 📁 2026-05
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>每天记录：今天做了什么、学到了什么、明天要做什么。</p>
+<h3 id="44-知识提炼流程">4.4 知识提炼流程</h3>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>碎片信息（网页/对话/灵感）
+</span></span><span style="display:flex;"><span>  → 快速录入 Trilium（临时节点）
+</span></span><span style="display:flex;"><span>  → 定期整理（每周日）
+</span></span><span style="display:flex;"><span>  → 归类、合并、关联
+</span></span><span style="display:flex;"><span>  → 形成结构化知识
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="五快捷键速查">五、快捷键速查</h2>
+<table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Enter</code></td>
+<td>在当前节点下创建子节点</td>
+</tr>
+<tr>
+<td><code>Ctrl+O</code></td>
+<td>搜索并跳转笔记</td>
+</tr>
+<tr>
+<td><code>Ctrl+S</code></td>
+<td>全文搜索</td>
+</tr>
+<tr>
+<td><code>Ctrl+L</code></td>
+<td>创建内部链接</td>
+</tr>
+<tr>
+<td><code>Ctrl+Enter</code></td>
+<td>创建同级节点</td>
+</tr>
+<tr>
+<td><code>Ctrl+↑/↓</code></td>
+<td>上下移动节点</td>
+</tr>
+<tr>
+<td><code>F2</code></td>
+<td>重命名当前节点</td>
+</tr>
+<tr>
+<td><code>Ctrl+Z</code></td>
+<td>撤销</td>
+</tr>
+<tr>
+<td><code>F5</code></td>
+<td>重新加载树</td>
+</tr>
+</tbody>
+</table>
+<h2 id="六备份与安全">六、备份与安全</h2>
+<h3 id="自动备份">自动备份</h3>
+<p>Trilium 数据存储在服务器的 <code>/opt/trilium-data/</code> 目录，建议定期备份：</p>
+<div class="highlight"><div style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#737679">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 手动备份</span>
+</span></span><span style="display:flex;"><span>tar -czf trilium-backup-<span style="color:#ff7b72">$(</span>date +%Y%m%d<span style="color:#ff7b72">)</span>.tar.gz /opt/trilium-data/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic"># 设置 crontab 每周自动备份</span>
+</span></span><span style="display:flex;"><span><span style="color:#a5d6ff">0</span> <span style="color:#a5d6ff">3</span> * * <span style="color:#a5d6ff">0</span> tar -czf /opt/backups/trilium-<span style="color:#ff7b72">$(</span>date +%Y%m%d<span style="color:#ff7b72">)</span>.tar.gz /opt/trilium-data/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="密码保护">密码保护</h3>
+<p>首次登录后，在右上角「选项」→「密码」中设置登录密码，保护知识库安全。</p>
+<h2 id="七与现有工具的配合">七、与现有工具的配合</h2>
+<h3 id="与小站的关系">与小站的关系</h3>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>用 Trilium</th>
+<th>用小站</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>草稿、碎片想法</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>项目过程记录</td>
+<td>✅</td>
+<td>❌</td>
+</tr>
+<tr>
+<td>整理完成的文章</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>公开分享的内容</td>
+<td>❌</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<p><strong>工作流：</strong> Trilium 中写草稿 → 整理完善 → 导出 Markdown → 发布到小站</p>
+<h3 id="与飞书的关系">与飞书的关系</h3>
+<p>日常聊天中的灵感、好文章 → 随手丢进 Trilium → 周末统一整理，这样不会丢了。</p>
+<h2 id="八常见问题">八、常见问题</h2>
+<p><strong>Q: 数据存在哪里？</strong>
+A: 服务器 <code>/opt/trilium-data/</code>，完全归你控制。</p>
+<p><strong>Q: 能多人协作吗？</strong>
+A: 当前部署为单用户模式。如需多人，需要额外配置。</p>
+<p><strong>Q: 手机能访问吗？</strong>
+A: 可以！手机浏览器打开 <code>http://82.157.103.93:3002</code>，界面自适应。</p>
+<p><strong>Q: 会丢失数据吗？</strong>
+A: 数据实时写入磁盘，还有自动备份机制。建议定期手动备份一份到其他地方。</p>
+<h2 id="九推荐起步计划">九、推荐起步计划</h2>
+<ol>
+<li><strong>第 1 周：</strong> 每天记录 3 条以上笔记，熟悉基本操作</li>
+<li><strong>第 2 周：</strong> 建立分类体系，开始使用标签和链接</li>
+<li><strong>第 3 周：</strong> 做第一次知识整理，合并碎片、建立关联</li>
+<li><strong>第 4 周：</strong> 形成每日记录习惯，尝试脚本自动化</li>
+</ol>
+<p>一个月后，你就拥有一个结构化、可检索、有关系的个人知识体系 🌱</p>
+
+  </div>
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+      <a href="/tags/%E7%9F%A5%E8%AF%86%E5%BA%93" class="tag">#知识库</a>
+      
+      <a href="/tags/trilium" class="tag">#Trilium</a>
+      
+      <a href="/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7" class="tag">#效率工具</a>
+      
+      <a href="/tags/%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97" class="tag">#部署指南</a>
+      
+    </div>
+    
+  </footer>
+</article>
+
+  </main>
+  <footer class="site-footer">
+  <p>© 2026 夏天的小站 · 
+    <a href="https://summer-website.pages.dev">summer-website.pages.dev</a>
+  </p>
+</footer>
+
+</body>
+</html>

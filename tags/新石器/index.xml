@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>新石器 on 夏天的小站</title>
+    <link>https://summer-website.pages.dev/tags/%E6%96%B0%E7%9F%B3%E5%99%A8/</link>
+    <description>Recent content in 新石器 on 夏天的小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 12 Jun 2026 17:15:00 +0800</lastBuildDate>
+    <atom:link href="https://summer-website.pages.dev/tags/%E6%96%B0%E7%9F%B3%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>中国低速无人车市场分析报告（2025年）</title>
+      <link>https://summer-website.pages.dev/ai-growth/intelligence/2026-06-12-%E6%97%A0%E4%BA%BA%E8%BD%A6%E5%B8%82%E5%9C%BA%E5%88%86%E6%9E%90/</link>
+      <pubDate>Fri, 12 Jun 2026 17:15:00 +0800</pubDate>
+      <guid>https://summer-website.pages.dev/ai-growth/intelligence/2026-06-12-%E6%97%A0%E4%BA%BA%E8%BD%A6%E5%B8%82%E5%9C%BA%E5%88%86%E6%9E%90/</guid>
+      <description>一、市场概况 1.1 定义与范畴 低速自动驾驶（Low-Speed Autonomous Driving, LSAD）：&#xA;行驶速度通常 ≤ 30km/h 主要应用于封闭/半封闭场景（园区、厂区、社区、校园等） 技术复杂度低于乘用车高速公路自动驾驶 信息来源：行业通用定义，参考《中国低速无人车产业发展白皮书（2024）》&#xA;1.2 市场规模与增长 指标 数据 数据说明 2025年市场规模 约 150-200亿元 人民币 基于头部公司营收 × 行业集中度估算。新石器约 10-15 亿营收，CR3（前三家）约占 40-50% 年复合增长率 40-50% 2020-2025年行业增长速度。来源：各家公司融资材料披露 累计运营车辆 约 5000-8000辆 新石器3000+、九识1000、白犀牛600、其他公司合计约2000-3000 主要落地场景 末端配送、安防巡逻、清洁环卫、园区通勤 行业共识 信息来源：&#xA;各家公司公开披露的运营数据、融资新闻 《2024中国自动驾驶产业发展报告》（亿欧智库） 笔者基于公开信息的合理估算 二、技术积累与发展阶段 2.1 技术栈构成 技术模块 核心内容 成熟度 说明 感知 激光雷达 + 摄像头 + 毫米波雷达多传感器融合 ★★★★★ 已基本成熟，难点在极端天气（暴雨、大雪） 定位 GPS/RTK + 惯导 + 高精地图 ★★★★★ 技术成熟，成本持续下降 决策 路径规划、行为预测、障碍物规避 ★★★★☆ 常规场景成熟，极端长尾场景仍需优化 控制 线控底盘、车辆控制算法 ★★★★★ 非常成熟 远程接管 5G远程驾驶、人工介入机制 ★★★★☆ 5G覆盖下稳定，信号弱区域仍有风险 车联网 车队管理平台、调度系统 ★★★★☆ 各家都有，差异在调度效率 信息来源：行业技术白皮书、公司技术博客、投资人访谈</description>
+    </item>
+  </channel>
+</rss>

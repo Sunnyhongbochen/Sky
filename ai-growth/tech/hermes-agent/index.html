@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hermes Agent 核心知识提炼：自我进化的 AI Agent · 夏天的小站</title>
+<meta name="description" content="从 Nous Research 打造的 Hermes Agent 深度学习笔记：架构、技能自我进化、与 OpenClaw 对比、实战要领">
+<meta name="author" content="胡夏天">
+
+
+
+<link rel="stylesheet" href="/css/style.min.d62816a176441f6b5765123c40c2678d8ad5a0af87f000dadf888e52746c5cf9.css">
+
+
+
+</head>
+<body>
+  <header class="site-hero">
+  <div class="hero-inner">
+    <h1 class="site-title">
+      <a href="https://summer-website.pages.dev/">夏天的小站</a>
+    </h1>
+    <p class="site-desc">记录思考，沉淀成长</p>
+  </div>
+</header>
+  <main>
+    
+<article class="single-post">
+  
+  <a href="https://summer-website.pages.dev/ai-growth/tech/" class="back-link">← 返回技术应用</a>
+  <header class="post-header">
+    <h1 class="post-title-main">Hermes Agent 核心知识提炼：自我进化的 AI Agent</h1>
+    <div class="post-meta">
+      <time datetime="2026-06-02">2026-06-02</time>
+      <span class="post-section-tag">ai-growth</span>
+    </div>
+  </header>
+  <div class="post-content">
+    <h2 id="一hermes-agent-是什么">一、Hermes Agent 是什么？</h2>
+<p>Hermes Agent 由 <strong>Nous Research</strong>（Hermes / Nomos / Psyche 模型背后的实验室）打造，是一个<strong>会自我进化的 AI Agent</strong>。它运行时间越长，能力越强。</p>
+<p>核心定位：<strong>Agent-first 架构</strong>——以单个 Python Agent 为中心，向外扩展消息网关、ACP、MCP、Cron、Skills 等能力。</p>
+<p>与 OpenClaw 的定位差异：Hermes 更像&quot;自进化工作型 Agent&quot;，OpenClaw 更像&quot;本地 AI 操作系统 / Control Plane&quot;。</p>
+<h2 id="二五大核心特性">二、五大核心特性</h2>
+<h3 id="1-闭合学习闭环最核心的优势">1. 闭合学习闭环（最核心的优势）</h3>
+<p>这是 Hermes 与所有其他 Agent 最本质的区别：</p>
+<ul>
+<li><strong>自主创建 Skill</strong>：复杂任务成功后、踩坑后、修正后，自动沉淀为 Skill</li>
+<li><strong>自我完善</strong>：发现 Skill 过时或有问题，主动 patch 修正</li>
+<li><strong>周期性记忆持久化</strong>：主动提示知识固化，防止遗忘</li>
+<li><strong>跨 Session 检索</strong>：基于 SQLite FTS5 检索历史，结合 LLM 总结</li>
+<li><strong>辩证式用户建模</strong>：基于 Honcho 构建对你的深度理解</li>
+</ul>
+<p>用一句话概括就是：Hermes 把 Skill 视为&quot;程序性记忆&quot;（procedural memory），Agent 有正式运行时接口去创建、编辑、补丁自己的技能。</p>
+<h3 id="2-随处运行不依赖本地电脑">2. 随处运行，不依赖本地电脑</h3>
+<p>6 种终端后端：本地、Docker、SSH、Daytona、Singularity、Modal。其中 Daytona 和 Modal 提供<strong>无服务器持久化</strong>——环境闲置时自动休眠，几乎零成本。</p>
+<h3 id="3-跨平台消息网关">3. 跨平台消息网关</h3>
+<p>内置支持 15+ 个平台：CLI、Telegram、Discord、Slack、WhatsApp、Signal、Matrix、Mattermost、Email、SMS、钉钉、飞书、企业微信、BlueBubbles、Home Assistant。</p>
+<h3 id="4-委托与并行">4. 委托与并行</h3>
+<p>通过 <code>delegate_task</code> 派生隔离的子 Agent 执行并行工作流，<code>execute_code</code> 实现编程式工具调用，将多步骤 pipeline 压缩为单次推理调用。</p>
+<h3 id="5-完整的-web-控制--mcp-支持">5. 完整的 Web 控制 + MCP 支持</h3>
+<p>搜索、提取、浏览、视觉识别、图像生成、TTS、MCP 服务器连接，全部内置。</p>
+<h2 id="三hermes-vs-openclaw-核心差异速查">三、Hermes vs OpenClaw 核心差异速查</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>Hermes Agent</th>
+<th>OpenClaw</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>语言</strong></td>
+<td>Python</td>
+<td>TypeScript</td>
+</tr>
+<tr>
+<td><strong>定位</strong></td>
+<td>Agent-first，自进化工作型</td>
+<td>Control-plane-first，本地 AI 操作系统</td>
+</tr>
+<tr>
+<td><strong>架构复杂度</strong></td>
+<td>中等，主干清晰，容易通读</td>
+<td>高，层次多，子系统多</td>
+</tr>
+<tr>
+<td><strong>核心优势</strong></td>
+<td><strong>Skill 自我进化</strong>（创建/编辑/补丁）</td>
+<td>平台化（多 Agent 编排、插件生态、分发）</td>
+</tr>
+<tr>
+<td><strong>记忆系统</strong></td>
+<td>内生化 Memory + FTS5 检索</td>
+<td>多维度检索记忆 + 会话 transcript</td>
+</tr>
+<tr>
+<td><strong>适用场景</strong></td>
+<td>个人深度协作、养成型工作搭子</td>
+<td>多 Agent 运营、复杂团队协作</td>
+</tr>
+</tbody>
+</table>
+<p><strong>一句话结论</strong>：想要一个越用越强的工作搭子 → 选 Hermes；想要一个多脑并存的 AI 操作系统 → 选 OpenClaw。</p>
+<h2 id="四为什么-hermes-值得关注">四、为什么 Hermes 值得关注？</h2>
+<ol>
+<li><strong>GitHub 两个月冲上 3.5 万星</strong>，增长曲线陡峭</li>
+<li><strong>OpenRouter 消耗量</strong>同时登顶 Coding Agent 榜和 Productivity 榜</li>
+<li><strong>Nous Research 迭代光速</strong>：Karpathy 的 LLM Wiki 发布次日即被集成</li>
+<li><strong>透明度带来可信度</strong>：所有工作过程打印在聊天界面，像靠谱员工一样可追溯</li>
+</ol>
+<h2 id="五实战要领">五、实战要领</h2>
+<ul>
+<li><strong>上手后先做十件事</strong>：安装 → 配置 LLM → 创建 SOUL.md → 接入消息平台 → 安装基础 Skills → 跑第一个任务 → 让它沉淀第一个 Skill → 配置定时任务 → 设置子 Agent → 定期复盘</li>
+<li><strong>从经验中学习</strong>：每次任务成功或失败都是 Hermes 的学习素材，别跳过它的 Skill 创建提示</li>
+<li><strong>Hermes 擅长长程无监管运行</strong>：实测 2 小时以上任务仍然稳定</li>
+</ul>
+<h2 id="六学习资源">六、学习资源</h2>
+<ul>
+<li>官方文档：https://hermes-agent.nousresearch.com/docs/</li>
+<li>中文文档（日更）：https://hermes-doc.aigc.green/</li>
+<li>创始人推特：@Teknium（Nous Research 联合创始人）</li>
+<li>百度网盘保姆级教程：Hermes-Agent 从入门到精通</li>
+</ul>
+
+  </div>
+  <footer class="post-footer">
+    
+    <div class="post-tags">
+      
+      <a href="/tags/ai-agent" class="tag">#AI Agent</a>
+      
+      <a href="/tags/hermes" class="tag">#Hermes</a>
+      
+      <a href="/tags/%E8%87%AA%E6%88%91%E8%BF%9B%E5%8C%96" class="tag">#自我进化</a>
+      
+    </div>
+    
+  </footer>
+</article>
+
+  </main>
+  <footer class="site-footer">
+  <p>© 2026 夏天的小站 · 
+    <a href="https://summer-website.pages.dev">summer-website.pages.dev</a>
+  </p>
+</footer>
+
+</body>
+</html>

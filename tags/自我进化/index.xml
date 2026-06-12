@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>自我进化 on 夏天的小站</title>
+    <link>https://summer-website.pages.dev/tags/%E8%87%AA%E6%88%91%E8%BF%9B%E5%8C%96/</link>
+    <description>Recent content in 自我进化 on 夏天的小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 02 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://summer-website.pages.dev/tags/%E8%87%AA%E6%88%91%E8%BF%9B%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hermes Agent 核心知识提炼：自我进化的 AI Agent</title>
+      <link>https://summer-website.pages.dev/ai-growth/tech/hermes-agent/</link>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://summer-website.pages.dev/ai-growth/tech/hermes-agent/</guid>
+      <description>一、Hermes Agent 是什么？ Hermes Agent 由 Nous Research（Hermes / Nomos / Psyche 模型背后的实验室）打造，是一个会自我进化的 AI Agent。它运行时间越长，能力越强。&#xA;核心定位：Agent-first 架构——以单个 Python Agent 为中心，向外扩展消息网关、ACP、MCP、Cron、Skills 等能力。&#xA;与 OpenClaw 的定位差异：Hermes 更像&amp;quot;自进化工作型 Agent&amp;quot;，OpenClaw 更像&amp;quot;本地 AI 操作系统 / Control Plane&amp;quot;。&#xA;二、五大核心特性 1. 闭合学习闭环（最核心的优势） 这是 Hermes 与所有其他 Agent 最本质的区别：&#xA;自主创建 Skill：复杂任务成功后、踩坑后、修正后，自动沉淀为 Skill 自我完善：发现 Skill 过时或有问题，主动 patch 修正 周期性记忆持久化：主动提示知识固化，防止遗忘 跨 Session 检索：基于 SQLite FTS5 检索历史，结合 LLM 总结 辩证式用户建模：基于 Honcho 构建对你的深度理解 用一句话概括就是：Hermes 把 Skill 视为&amp;quot;程序性记忆&amp;quot;（procedural memory），Agent 有正式运行时接口去创建、编辑、补丁自己的技能。&#xA;2. 随处运行，不依赖本地电脑 6 种终端后端：本地、Docker、SSH、Daytona、Singularity、Modal。其中 Daytona 和 Modal 提供无服务器持久化——环境闲置时自动休眠，几乎零成本。</description>
+    </item>
+  </channel>
+</rss>

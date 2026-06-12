@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI Agent on 夏天的小站</title>
+    <link>https://summer-website.pages.dev/tags/ai-agent/</link>
+    <description>Recent content in AI Agent on 夏天的小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 02 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://summer-website.pages.dev/tags/ai-agent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hermes Agent 核心知识提炼：自我进化的 AI Agent</title>
+      <link>https://summer-website.pages.dev/ai-growth/tech/hermes-agent/</link>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://summer-website.pages.dev/ai-growth/tech/hermes-agent/</guid>
+      <description>一、Hermes Agent 是什么？ Hermes Agent 由 Nous Research（Hermes / Nomos / Psyche 模型背后的实验室）打造，是一个会自我进化的 AI Agent。它运行时间越长，能力越强。&#xA;核心定位：Agent-first 架构——以单个 Python Agent 为中心，向外扩展消息网关、ACP、MCP、Cron、Skills 等能力。&#xA;与 OpenClaw 的定位差异：Hermes 更像&amp;quot;自进化工作型 Agent&amp;quot;，OpenClaw 更像&amp;quot;本地 AI 操作系统 / Control Plane&amp;quot;。&#xA;二、五大核心特性 1. 闭合学习闭环（最核心的优势） 这是 Hermes 与所有其他 Agent 最本质的区别：&#xA;自主创建 Skill：复杂任务成功后、踩坑后、修正后，自动沉淀为 Skill 自我完善：发现 Skill 过时或有问题，主动 patch 修正 周期性记忆持久化：主动提示知识固化，防止遗忘 跨 Session 检索：基于 SQLite FTS5 检索历史，结合 LLM 总结 辩证式用户建模：基于 Honcho 构建对你的深度理解 用一句话概括就是：Hermes 把 Skill 视为&amp;quot;程序性记忆&amp;quot;（procedural memory），Agent 有正式运行时接口去创建、编辑、补丁自己的技能。&#xA;2. 随处运行，不依赖本地电脑 6 种终端后端：本地、Docker、SSH、Daytona、Singularity、Modal。其中 Daytona 和 Modal 提供无服务器持久化——环境闲置时自动休眠，几乎零成本。</description>
+    </item>
+    <item>
+      <title>OpenClaw 核心知识提炼：你的本地 AI 操作系统</title>
+      <link>https://summer-website.pages.dev/ai-growth/tech/openclaw/</link>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://summer-website.pages.dev/ai-growth/tech/openclaw/</guid>
+      <description>一、OpenClaw 是什么？ OpenClaw（曾用名 Clawdbot）是由 PSPDFKit 创始人 Peter Steinberger 开发的开源个人 AI 助手。它不是聊天机器人，而是一个跑在你自己电脑上的 AI Agent 操作系统。&#xA;核心理念：让 AI 从&amp;quot;提供建议&amp;quot;进阶到&amp;quot;直接完成任务&amp;quot;。&#xA;关键特征 无头架构：后台守护进程，通过 WhatsApp / Telegram / Discord / 飞书等 IM 工具交互 持久记忆：交互历史存储在本地文件系统，跨会话保持上下文 永远在线：24 小时运行，你睡觉它干活 最小硬件要求：单核 CPU、1GB 内存、500MB 磁盘 二、核心架构：Gateway + Nodes + Canvas OpenClaw 采用以网关为中心的分布式微服务架构：&#xA;Gateway（大脑）：Node.js v22+ 守护进程，绑定 127.0.0.1:18789，独占管理所有 Channel 连接。包含 WebSocket API、事件总线、Cron 定时任务 Nodes（手脚）：运行在手机等终端的轻量客户端，通过 Tailscale Mesh 网络连接 Gateway。提供摄像头调用、GPS 定位、屏幕录制等物理能力 Canvas（画布）：Agent 驱动的动态 HTML/JS 界面，突破纯文本交互 与其他 AI 的本质区别 OpenClaw 不是 AI 模型，而是一个 AI 网关——连接你的聊天软件和 AI 大模型 API。</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>效率工具 on 夏天的小站</title>
+    <link>https://summer-website.pages.dev/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 效率工具 on 夏天的小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 02 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://summer-website.pages.dev/tags/%E6%95%88%E7%8E%87%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Trilium Notes 本地知识库 — 部署与使用完全指南</title>
+      <link>https://summer-website.pages.dev/ai-growth/tech/trilium-guide/</link>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://summer-website.pages.dev/ai-growth/tech/trilium-guide/</guid>
+      <description>一、知识库地址 项目 详情 🌐 访问地址 http://82.157.103.93:3002 🔐 初始密码 首次启动时在日志中生成，需及时保存 ⚙️ 服务管理 systemctl restart trilium 二、Trilium 是什么？ Trilium Notes 是一个树形层级个人知识库，开源免费（AGPL 协议），GitHub 28K+ Star。&#xA;核心定位： 不是又一个 Markdown 编辑器，而是一个知识管理中枢——所有笔记以树形结构组织，支持无限嵌套、双向链接、关系图谱、全文搜索、脚本自动化。&#xA;与普通笔记工具的区别 特性 普通笔记（如备忘录） Trilium 组织方式 平铺列表 树形层级，无限嵌套 关联能力 无 关系图谱，双向链接 检索 标题搜索 全文检索 + 标签过滤 自动化 无 内置脚本引擎，自定义工作流 数据归属 云端 自托管，数据完全归你 多端访问 取决于服务 Web + 桌面客户端同步 三、核心功能 3.1 树形笔记组织 笔记以树形结构排列，可以无限嵌套子节点。结构示意如下：&#xA;1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 📁 工作 ├── 📁 项目方案 │ ├── 📄 智能体协同方案 │ ├── 📄 数据要素方案 │ └── 📄 AI 应用方案 ├── 📁 会议记录 │ ├── 📄 2026-06-02 周会 │ └── 📄 2026-05-28 复盘 └── 📁 行业调研 ├── 📄 AI Agent 趋势 └── 📄 政务信息化政策 📁 学习 ├── 📁 AI 技术 ├── 📁 产品方法论 └── 📁 读书笔记 📁 生活 ├── 📁 旅行计划 └── 📁 健康记录 3.</description>
+    </item>
+  </channel>
+</rss>

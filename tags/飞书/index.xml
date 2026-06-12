@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>飞书 on 夏天的小站</title>
+    <link>https://summer-website.pages.dev/tags/%E9%A3%9E%E4%B9%A6/</link>
+    <description>Recent content in 飞书 on 夏天的小站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 02 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://summer-website.pages.dev/tags/%E9%A3%9E%E4%B9%A6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>OpenClaw 核心知识提炼：你的本地 AI 操作系统</title>
+      <link>https://summer-website.pages.dev/ai-growth/tech/openclaw/</link>
+      <pubDate>Tue, 02 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://summer-website.pages.dev/ai-growth/tech/openclaw/</guid>
+      <description>一、OpenClaw 是什么？ OpenClaw（曾用名 Clawdbot）是由 PSPDFKit 创始人 Peter Steinberger 开发的开源个人 AI 助手。它不是聊天机器人，而是一个跑在你自己电脑上的 AI Agent 操作系统。&#xA;核心理念：让 AI 从&amp;quot;提供建议&amp;quot;进阶到&amp;quot;直接完成任务&amp;quot;。&#xA;关键特征 无头架构：后台守护进程，通过 WhatsApp / Telegram / Discord / 飞书等 IM 工具交互 持久记忆：交互历史存储在本地文件系统，跨会话保持上下文 永远在线：24 小时运行，你睡觉它干活 最小硬件要求：单核 CPU、1GB 内存、500MB 磁盘 二、核心架构：Gateway + Nodes + Canvas OpenClaw 采用以网关为中心的分布式微服务架构：&#xA;Gateway（大脑）：Node.js v22+ 守护进程，绑定 127.0.0.1:18789，独占管理所有 Channel 连接。包含 WebSocket API、事件总线、Cron 定时任务 Nodes（手脚）：运行在手机等终端的轻量客户端，通过 Tailscale Mesh 网络连接 Gateway。提供摄像头调用、GPS 定位、屏幕录制等物理能力 Canvas（画布）：Agent 驱动的动态 HTML/JS 界面，突破纯文本交互 与其他 AI 的本质区别 OpenClaw 不是 AI 模型，而是一个 AI 网关——连接你的聊天软件和 AI 大模型 API。</description>
+    </item>
+  </channel>
+</rss>
