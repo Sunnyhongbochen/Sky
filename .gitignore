@@ -20,3 +20,4 @@ Thumbs.db
 # 日志文件
 *.log
 .hugo_build.lock
+.wrangler/
