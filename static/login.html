@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>夏天的小站 · 登录</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 48px 40px;
+    width: 380px;
+    max-width: 90vw;
+    box-shadow: 0 20px 60px rgba(0,0,0,.15);
+    text-align: center;
+  }
+  .card h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  .card .sub {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 32px;
+  }
+  .card .icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+  .input-wrap {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .input-wrap input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e8e8e8;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color .3s;
+    letter-spacing: 2px;
+  }
+  .input-wrap input:focus {
+    border-color: #667eea;
+  }
+  .input-wrap input::placeholder {
+    letter-spacing: 0;
+  }
+  button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity .3s, transform .1s;
+    font-weight: 500;
+  }
+  button:hover { opacity: .9; }
+  button:active { transform: scale(.98); }
+  button:disabled { opacity: .6; cursor: not-allowed; }
+  .error {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 12px;
+    display: none;
+  }
+  .error.show { display: block; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="icon">🔐</div>
+  <h1>夏天的小站</h1>
+  <p class="sub">输入密码以继续访问</p>
+  <div class="input-wrap">
+    <input type="password" id="pwd" placeholder="请输入密码" autofocus>
+  </div>
+  <button id="btn" onclick="login()">进 入</button>
+  <p class="error" id="err">密码不正确，请重试</p>
+</div>
+
+<script>
+const input = document.getElementById('pwd');
+const btn = document.getElementById('btn');
+const err = document.getElementById('err');
+
+// 回车提交
+input.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') login();
+});
+
+async function login() {
+  const pwd = input.value.trim();
+  if (!pwd) return;
+  err.classList.remove('show');
+  btn.disabled = true;
+  btn.textContent = '验证中...';
+
+  try {
+    const res = await fetch('/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ password: pwd }),
+    });
+    const data = await res.json();
+    if (data.success) {
+      window.location.href = '/';
+    } else {
+      err.classList.add('show');
+      input.value = '';
+      input.focus();
+    }
+  } catch {
+    err.textContent = '网络错误，请重试';
+    err.classList.add('show');
+  }
+  btn.disabled = false;
+  btn.textContent = '进 入';
+}
+</script>
+</body>
+</html>
