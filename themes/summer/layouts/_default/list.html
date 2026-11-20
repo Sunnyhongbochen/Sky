@@ -1,73 +1,62 @@
 {{ define "main" }}
 <section class="section-page">
-  <nav class="breadcrumb">
-    {{ if .Parent.IsHome }}
-    <a href="{{ .Site.BaseURL }}">← 首页</a>
-    {{ else }}
-    <a href="{{ .Parent.Permalink }}">← {{ .Parent.Title }}</a>
-    {{ end }}
+  <nav class="breadcrumb" aria-label="面包屑">
+    {{- if .Parent.IsHome }}
+    <a href="{{ site.Home.RelPermalink }}">← 首页</a>
+    {{- else }}
+    <a href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a>
+    {{- end }}
   </nav>
-  <h1 class="section-page-title">{{ .Title }}</h1>
 
-  {{ if .Sections }}
-  {{ range .Sections }}
+  <header class="section-head">
+    <h1 class="section-page-title">{{ .Title }}</h1>
+    <span class="section-count">共 {{ len .RegularPagesRecursive }} 篇</span>
+  </header>
+  {{- with .Params.subtitle }}
+  <p class="section-subtitle">{{ . }}</p>
+  {{- end }}
+
+  {{- if .Sections }}
+  {{- range .Sections }}
   <div class="section-subsection">
-    <h2 class="subsection-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-    {{ $subPaginator := .Paginate .Pages.ByDate.Reverse 10 }}
+    <div class="subsection-head">
+      <h2 class="subsection-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{- with .Params.subtitle }}<span class="subsection-desc">{{ . }}</span>{{ end }}
+      {{- $subCount := len .RegularPagesRecursive }}
+      <a class="subsection-more" href="{{ .RelPermalink }}">全部 {{ $subCount }} 篇 →</a>
+    </div>
     <div class="post-list">
-      {{ range $subPaginator.Pages }}
+      {{- range first 5 (.RegularPagesRecursive.ByDate.Reverse) }}
       <article class="post-item">
-        <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
-          {{ .Date.Format "2006-01-02" }}
-        </time>
+        <time class="post-date" datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format "2006-01-02" }}</time>
         <div class="post-info">
-          <h2 class="post-title">
-            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          </h2>
+          <h3 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
         </div>
       </article>
-      {{ end }}
+      {{- end }}
     </div>
-    {{ if gt $subPaginator.TotalPages 1 }}
-    <nav class="pagination pagination-sub">
-      {{ if $subPaginator.HasPrev }}
-      <a href="{{ $subPaginator.Prev.URL }}" class="page-btn">← 上一页</a>
-      {{ end }}
-      <span class="page-info">{{ $subPaginator.PageNumber }} / {{ $subPaginator.TotalPages }}</span>
-      {{ if $subPaginator.HasNext }}
-      <a href="{{ $subPaginator.Next.URL }}" class="page-btn">下一页 →</a>
-      {{ end }}
-    </nav>
-    {{ end }}
   </div>
-  {{ end }}
-  {{ else }}
-  {{ $paginator := .Paginate .Pages.ByDate.Reverse 10 }}
+  {{- end }}
+  {{- else }}
+  {{- $paginator := .Paginate .RegularPages.ByDate.Reverse }}
+  {{- if eq (len $paginator.Pages) 0 }}
+  <p class="empty-hint">这里还没有内容，敬请期待。</p>
+  {{- else }}
   <div class="post-list">
-    {{ range $paginator.Pages }}
+    {{- range $paginator.Pages }}
     <article class="post-item">
-      <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">
-        {{ .Date.Format "2006-01-02" }}
-      </time>
+      <time class="post-date" datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format "2006-01-02" }}</time>
       <div class="post-info">
-        <h2 class="post-title">
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </h2>
+        <h2 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{- with .Params.tags }}
+        <span class="post-section">#{{ index . 0 }}</span>
+        {{- end }}
       </div>
     </article>
-    {{ end }}
+    {{- end }}
   </div>
-  {{ if gt $paginator.TotalPages 1 }}
-  <nav class="pagination">
-    {{ if $paginator.HasPrev }}
-    <a href="{{ $paginator.Prev.URL }}" class="page-btn">← 上一页</a>
-    {{ end }}
-    <span class="page-info">{{ $paginator.PageNumber }} / {{ $paginator.TotalPages }}</span>
-    {{ if $paginator.HasNext }}
-    <a href="{{ $paginator.Next.URL }}" class="page-btn">下一页 →</a>
-    {{ end }}
-  </nav>
-  {{ end }}
-  {{ end }}
+  {{ partial "pagination.html" $paginator }}
+  {{- end }}
+  {{- end }}
 </section>
 {{ end }}

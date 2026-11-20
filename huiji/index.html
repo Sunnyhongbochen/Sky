@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/huiji/">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="会记 —— 会面记忆与人际关系管理">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="会记">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <title>会记</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="preload" href="main.dart.js" as="script">
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; background: #f5f7fa; }
+    #boot-tip {
+      position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+      font-family: -apple-system, "Microsoft YaHei", sans-serif; color: #1F4E79; font-size: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div id="boot-tip">会记加载中…</div>
+
+  <script>
+  // ===== 语音识别桥：把浏览器 SpeechRecognition 暴露给 Flutter =====
+  // 仅依赖浏览器内置能力（Chrome/Edge 支持中文），不经过任何服务器。
+  (function () {
+    var Rec = window.SpeechRecognition || window.webkitSpeechRecognition;
+    var rec = null;
+    var h = { onText: null, onEnd: null, onError: null };
+
+    window.huijiVoice = {
+      supported: !!Rec,
+
+      isSecure: function () {
+        return window.isSecureContext === true;
+      },
+
+      start: function (onText, onEnd, onError) {
+        if (!Rec) {
+          if (onError) onError('当前浏览器不支持语音识别，请用 Chrome 或 Edge');
+          return false;
+        }
+        if (rec) { try { rec.abort(); } catch (e) {} rec = null; }
+        h.onText = onText; h.onEnd = onEnd; h.onError = onError;
+
+        rec = new Rec();
+        rec.lang = 'zh-CN';
+        rec.continuous = true;
+        rec.interimResults = true;
+
+        rec.onresult = function (ev) {
+          var finalText = '', interim = '';
+          for (var i = ev.resultIndex; i < ev.results.length; i++) {
+            var r = ev.results[i];
+            if (r.isFinal) finalText += r[0].transcript;
+            else interim += r[0].transcript;
+          }
+          if (h.onText) h.onText(finalText, interim, !!finalText);
+        };
+        rec.onerror = function (ev) {
+          var msg = ev.error || 'unknown';
+          if (msg === 'not-allowed' || msg === 'service-not-allowed') {
+            msg = '麦克风权限被拒绝，请在浏览器地址栏允许麦克风';
+          } else if (msg === 'no-speech') {
+            msg = '没有听到声音，请靠近麦克风再说一次';
+          } else if (msg === 'audio-capture') {
+            msg = '找不到麦克风设备';
+          } else if (msg === 'network') {
+            msg = '语音识别网络异常（该能力需要联网）';
+          }
+          if (h.onError) h.onError(msg);
+        };
+        rec.onend = function () { if (h.onEnd) h.onEnd(); };
+
+        try {
+          rec.start();
+          return true;
+        } catch (e) {
+          if (h.onError) h.onError('启动语音识别失败：' + e.message);
+          return false;
+        }
+      },
+
+      stop: function () {
+        if (rec) { try { rec.stop(); } catch (e) {} }
+      }
+    };
+
+    var tip = document.getElementById('boot-tip');
+    var hideTip = function () {
+      if (tip && tip.parentNode) { tip.parentNode.removeChild(tip); tip = null; }
+    };
+    // Flutter 首帧渲染完成后再移除加载提示，避免提前露出白屏
+    window.addEventListener('flutter-first-frame', hideTip);
+    // 兜底：即使首帧事件未触发，也不让提示长期遮挡界面
+    setTimeout(hideTip, 20000);
+  })();
+  </script>
+
+  <script>
+  // ===== 录音桥：MediaRecorder 录音并转 base64，供上传 ASR API =====
+  (function () {
+    var mr = null, chunks = [], mime = '';
+
+    window.huijiRec = {
+      supported: !!(navigator.mediaDevices && window.MediaRecorder),
+
+      start: function (ok, err) {
+        if (!navigator.mediaDevices || !window.MediaRecorder) {
+          err('当前浏览器不支持录音，请用 Chrome/Edge');
+          return;
+        }
+        navigator.mediaDevices.getUserMedia({ audio: true }).then(function (stream) {
+          try {
+            var opts = {};
+            var types = ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4'];
+            for (var i = 0; i < types.length; i++) {
+              if (MediaRecorder.isTypeSupported(types[i])) { opts.mimeType = types[i]; break; }
+            }
+            mr = new MediaRecorder(stream, opts);
+            chunks = [];
+            mime = mr.mimeType || 'audio/webm';
+            mr.ondataavailable = function (e) { if (e.data && e.data.size) chunks.push(e.data); };
+            mr.start();
+            ok(true);
+          } catch (e) {
+            err('录音启动失败：' + e.message);
+          }
+        }).catch(function (e) {
+          var m = e && e.name === 'NotAllowedError'
+            ? '麦克风权限被拒绝，请在浏览器地址栏允许麦克风'
+            : ('无法获取麦克风：' + ((e && (e.message || e.name)) || '未知'));
+          err(m);
+        });
+      },
+
+      stop: function (cb) {
+        if (!mr) { cb('', ''); return; }
+        var rec = mr;
+        var stream = rec.stream;
+        rec.onstop = function () {
+          var blob = new Blob(chunks, { type: mime });
+          var rd = new FileReader();
+          rd.onloadend = function () {
+            var s = String(rd.result || '');
+            var i = s.indexOf(',');
+            cb(i >= 0 ? s.substring(i + 1) : '', mime);
+          };
+          rd.readAsDataURL(blob);
+          if (stream) stream.getTracks().forEach(function (t) { t.stop(); });
+          mr = null;
+        };
+        try { rec.stop(); } catch (e) { cb('', ''); }
+      }
+    };
+  })();
+  </script>
+
+  <script src="flutter_bootstrap.js?v=20261120" async></script>
+</body>
+</html>

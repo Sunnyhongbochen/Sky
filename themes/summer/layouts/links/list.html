@@ -1,18 +1,60 @@
 {{ define "main" }}
+{{- $group := .Params.linksGroup -}}
+{{- $data := false -}}
+{{- with $group }}{{ $data = index hugo.Data.links . }}{{ end -}}
 <section class="section-page">
-  <nav class="breadcrumb">
-    <a href="{{ .Site.BaseURL }}">← 首页</a>
+  <nav class="breadcrumb" aria-label="面包屑">
+    {{- if .Parent.IsHome }}
+    <a href="{{ site.Home.RelPermalink }}">← 首页</a>
+    {{- else }}
+    <a href="{{ .Parent.RelPermalink }}">← {{ .Parent.Title }}</a>
+    {{- end }}
   </nav>
-  <h1 class="section-page-title">{{ .Title }}</h1>
-  <div class="links-grid">
-    {{ with .Site.Data.links.sites }}
-    {{ range . }}
-    <a href="{{ .url }}" class="link-card" target="_blank" rel="noopener">
-      <h3 class="link-name">{{ .name }}</h3>
-      <p class="link-desc">{{ .desc }}</p>
-    </a>
-    {{ end }}
-    {{ end }}
+
+  <header class="section-head">
+    <h1 class="section-page-title">{{ .Title }}</h1>
+    {{- with $data }}{{ with .sites }}<span class="section-count">共 {{ len . }} 个</span>{{ end }}{{ end }}
+  </header>
+  {{- with .Params.subtitle }}
+  <p class="section-subtitle">{{ . }}</p>
+  {{- end }}
+
+  {{- $orig := .RelPermalink -}}
+  {{- $groups := slice -}}
+  {{- if .Sections -}}
+    {{- range .Sections -}}
+      {{- $groups = $groups | append . -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $groups = $groups | append . -}}
+  {{- end -}}
+
+  {{- range $groups }}
+  {{- $gd := index hugo.Data.links .Params.linksGroup }}
+  {{- if $gd }}
+  <div class="links-block">
+    {{- if ne .RelPermalink $orig }}
+    <div class="subsection-head">
+      <h2 class="subsection-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{- with .Params.subtitle }}<span class="subsection-desc">{{ . }}</span>{{ end }}
+    </div>
+    {{- end }}
+    <div class="links-grid">
+      {{- range $gd.sites }}
+      {{- $external := or (hasPrefix .url "http://") (hasPrefix .url "https://") }}
+      {{- $local := or (hasPrefix .url "http://localhost") (hasPrefix .url "http://127.0.0.1") }}
+      <a href="{{ .url }}" class="link-card"{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }}>
+        <h3 class="link-name">
+          {{ .name }}
+          {{- if $local }}<span class="badge badge-local">本地演示</span>{{ end }}
+        </h3>
+        <p class="link-desc">{{ .desc }}</p>
+        {{- if $local }}<span class="link-hint">需在本机运行对应服务后访问</span>{{ end }}
+      </a>
+      {{- end }}
+    </div>
   </div>
+  {{- end }}
+  {{- end }}
 </section>
 {{ end }}

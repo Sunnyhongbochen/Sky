@@ -1,0 +1,5365 @@
+[
+ {
+  "family": "东方名都",
+  "variants": [
+   "东方名都",
+   "东方名都2期"
+  ],
+  "address": "常青路149号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.238339,
+  "lat": 30.623468,
+  "minDist": 3,
+  "kindergartens": [
+   "史蒂芬森教育万科城幼儿园",
+   "阳光蓓佳幼儿园"
+  ]
+ },
+ {
+  "family": "远洋心苑",
+  "variants": [
+   "远洋心苑"
+  ],
+  "address": "新湾二路与常青一路交叉口西北120米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.247766,
+  "lat": 30.621046,
+  "minDist": 14,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "晶晶锦绣幼儿园",
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "长春小区",
+  "variants": [
+   "长春小区"
+  ],
+  "address": "新湾路3号(长港路地铁站A口步行480米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.241887,
+  "lat": 30.630949,
+  "minDist": 15,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "阳光宝贝婴幼园",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "绿色家园",
+  "variants": [
+   "绿色家园"
+  ],
+  "address": "长港路288号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.256447,
+  "lat": 30.632255,
+  "minDist": 34,
+  "kindergartens": [
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "维特幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "福星华府誉境启卓幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园二十三村",
+  "variants": [
+   "常青花园二十三村"
+  ],
+  "address": "学府北路一街与康居三路一巷交叉口西120米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.235937,
+  "lat": 30.640953,
+  "minDist": 39,
+  "kindergartens": [
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "富康花园",
+  "variants": [
+   "富康花园"
+  ],
+  "address": "杨汊湖长港路与新湾五路交汇处",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.254717,
+  "lat": 30.633628,
+  "minDist": 42,
+  "kindergartens": [
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "维特幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "福星华府誉境启卓幼儿园"
+  ]
+ },
+ {
+  "family": "阳光花园益康苑",
+  "variants": [
+   "阳光花园·益康苑"
+  ],
+  "address": "常青五路21号(长港路地铁站G口步行330米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.249148,
+  "lat": 30.628421,
+  "minDist": 52,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "稚雅幼儿园金雅分园",
+   "益康苑幼儿园",
+   "艾米莉亚福星华府幼儿园"
+  ]
+ },
+ {
+  "family": "万科城",
+  "variants": [
+   "万科城",
+   "万科城二期",
+   "万科城4期",
+   "万科城一期",
+   "万科城三期"
+  ],
+  "address": "常青路167号(民航新村站)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.234622,
+  "lat": 30.625901,
+  "minDist": 62,
+  "kindergartens": [
+   "史蒂芬森教育万科城幼儿园",
+   "阳光蓓佳幼儿园",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "中环星干线",
+  "variants": [
+   "中环星干线"
+  ],
+  "address": "江达路特1号",
+  "typename": "商住两用楼宇",
+  "hasApartmentVariant": false,
+  "lng": 114.231825,
+  "lat": 30.615711,
+  "minDist": 64,
+  "kindergartens": [
+   "育苗幼儿园"
+  ]
+ },
+ {
+  "family": "红旗公寓",
+  "variants": [
+   "红旗公寓"
+  ],
+  "address": "站北路7号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": true,
+  "lng": 114.255887,
+  "lat": 30.623087,
+  "minDist": 68,
+  "kindergartens": [
+   "红旗公寓幼儿园",
+   "晶晶锦绣幼儿园",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "江汉人家A区",
+  "variants": [
+   "江汉人家A区"
+  ],
+  "address": "绿柳路与石桥一路交叉口西北160米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.268809,
+  "lat": 30.624626,
+  "minDist": 69,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "童心幼儿园",
+   "中侨国际骄娇宝幼托学苑"
+  ]
+ },
+ {
+  "family": "绿色家园北区",
+  "variants": [
+   "绿色家园北区"
+  ],
+  "address": "长港路343号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.255876,
+  "lat": 30.633023,
+  "minDist": 73,
+  "kindergartens": [
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "维特幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "福星华府誉境启卓幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园四小区",
+  "variants": [
+   "常青花园四小区"
+  ],
+  "address": "学府北路65号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.235754,
+  "lat": 30.6469,
+  "minDist": 73,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）"
+  ]
+ },
+ {
+  "family": "锦绣人家",
+  "variants": [
+   "锦绣人家"
+  ],
+  "address": "红旗渠路102号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.252179,
+  "lat": 30.622564,
+  "minDist": 74,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "红旗公寓幼儿园",
+   "晶晶锦绣幼儿园",
+   "王子托育远洋心苑幼儿园",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "新华家园四期蝶苑",
+  "variants": [
+   "新华家园-四期蝶苑"
+  ],
+  "address": "汉兴街办事处姑嫂树路9号(石桥地铁站F口步行490米)",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.263987,
+  "lat": 30.626213,
+  "minDist": 76,
+  "kindergartens": [
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "华苑幼儿园",
+   "中侨国际骄娇宝幼托学苑"
+  ]
+ },
+ {
+  "family": "绿色家园南区",
+  "variants": [
+   "绿色家园南区"
+  ],
+  "address": "长港路288号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.256736,
+  "lat": 30.631941,
+  "minDist": 77,
+  "kindergartens": [
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "维特幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "福星华府誉境启卓幼儿园"
+  ]
+ },
+ {
+  "family": "新华家园",
+  "variants": [
+   "新华家园",
+   "新华家园一期"
+  ],
+  "address": "姑嫂树路11号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.263198,
+  "lat": 30.625659,
+  "minDist": 77,
+  "kindergartens": [
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "华苑幼儿园",
+   "红旗公寓幼儿园",
+   "中侨国际骄娇宝幼托学苑",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "园丁苑",
+  "variants": [
+   "园丁苑"
+  ],
+  "address": "姑嫂树路51号(杨汊湖地铁站D2口步行400米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.25899,
+  "lat": 30.632576,
+  "minDist": 80,
+  "kindergartens": [
+   "红胜幼儿园",
+   "红苗幼儿园（后湖里园区）",
+   "星连星幼儿园",
+   "维特幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "福星华府誉境启卓幼儿园"
+  ]
+ },
+ {
+  "family": "金色雅园",
+  "variants": [
+   "金色雅园"
+  ],
+  "address": "新湾二路与新湾路交叉口西北80米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.244096,
+  "lat": 30.631713,
+  "minDist": 83,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "稚雅幼儿园金雅分园",
+   "益康苑幼儿园",
+   "阳光宝贝婴幼园",
+   "艾米莉亚福星华府幼儿园",
+   "晶晶锦绣幼儿园",
+   "王子托育远洋心苑幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "博海名居",
+  "variants": [
+   "博海名居"
+  ],
+  "address": "红旗渠路中段特1号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.258236,
+  "lat": 30.625778,
+  "minDist": 85,
+  "kindergartens": [
+   "稚雅幼儿园",
+   "华苑幼儿园",
+   "红旗公寓幼儿园",
+   "晶晶锦绣幼儿园",
+   "中侨国际骄娇宝幼托学苑",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "常青花园二十五村",
+  "variants": [
+   "常青花园二十五村"
+  ],
+  "address": "常青花园25村",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.237057,
+  "lat": 30.643254,
+  "minDist": 89,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）"
+  ]
+ },
+ {
+  "family": "德华楼",
+  "variants": [
+   "德华楼"
+  ],
+  "address": "姑嫂树路9号新华家园A区1层1.2室",
+  "typename": "中餐厅",
+  "hasApartmentVariant": false,
+  "lng": 114.264798,
+  "lat": 30.626591,
+  "minDist": 96,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "华苑幼儿园",
+   "红旗公寓幼儿园",
+   "中侨国际骄娇宝幼托学苑",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "福星惠誉福星城南区",
+  "variants": [
+   "福星惠誉·福星城南区"
+  ],
+  "address": "常青路126号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.247238,
+  "lat": 30.618508,
+  "minDist": 97,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "晶晶锦绣幼儿园",
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "阳光花园",
+  "variants": [
+   "阳光花园4期",
+   "阳光花园5期",
+   "阳光花园"
+  ],
+  "address": "新湾五路105号阳光花园",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.249459,
+  "lat": 30.627839,
+  "minDist": 98,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "稚雅幼儿园金雅分园",
+   "益康苑幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "晶晶锦绣幼儿园",
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "维特幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "福星华府誉境启卓幼儿园",
+   "武汉市常青童馨幼儿园",
+   "红旗公寓幼儿园",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "万景橘苑",
+  "variants": [
+   "万景橘苑",
+   "万景橘苑二期"
+  ],
+  "address": "新湾路80号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.250576,
+  "lat": 30.632502,
+  "minDist": 99,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "益康苑幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "武汉市常青童馨幼儿园",
+   "维特幼儿园",
+   "福星华府誉境启卓幼儿园",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "福星华府K1地块",
+  "variants": [
+   "福星华府K1地块"
+  ],
+  "address": "新湾二路与新湾北路交叉口南60米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.243706,
+  "lat": 30.632438,
+  "minDist": 100,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "阳光宝贝婴幼园",
+   "艾米莉亚福星华府幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "浩海丰太花园",
+  "variants": [
+   "浩海丰太花园"
+  ],
+  "address": "红旗渠路133号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.256646,
+  "lat": 30.626112,
+  "minDist": 101,
+  "kindergartens": [
+   "红旗公寓幼儿园",
+   "晶晶锦绣幼儿园",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "闸眼港",
+  "variants": [
+   "闸眼港"
+  ],
+  "address": "新湾路与新湾五路交叉口东北180米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.253442,
+  "lat": 30.635255,
+  "minDist": 103,
+  "kindergartens": [
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "维特幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "福星华府誉境启卓幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "常青九村",
+  "variants": [
+   "常青九村"
+  ],
+  "address": "兴业路与S19机场二高速出口交叉口南140米",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.263033,
+  "lat": 30.623006,
+  "minDist": 104,
+  "kindergartens": [
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "华苑幼儿园",
+   "红旗公寓幼儿园",
+   "中侨国际骄娇宝幼托学苑",
+   "红渠少儿成长中心",
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）"
+  ]
+ },
+ {
+  "family": "和道银座",
+  "variants": [
+   "和道银座"
+  ],
+  "address": "新湾路与姑嫂树路交叉口西180米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.255236,
+  "lat": 30.634812,
+  "minDist": 106,
+  "kindergartens": [
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "维特幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "福星华府誉境启卓幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "常宁里",
+  "variants": [
+   "常宁里"
+  ],
+  "address": "常青路江汉经济开发区江兴路2号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.237522,
+  "lat": 30.624102,
+  "minDist": 106,
+  "kindergartens": [
+   "史蒂芬森教育万科城幼儿园",
+   "阳光蓓佳幼儿园"
+  ]
+ },
+ {
+  "family": "天辰荟",
+  "variants": [
+   "天辰荟"
+  ],
+  "address": "姑嫂树路与夏鹃街交叉口东20米",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.258075,
+  "lat": 30.634975,
+  "minDist": 107,
+  "kindergartens": [
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "维特幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "福星华府誉境启卓幼儿园"
+  ]
+ },
+ {
+  "family": "莱特花园",
+  "variants": [
+   "莱特花园"
+  ],
+  "address": "新湾二路与红旗渠路交叉口东南60米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.248034,
+  "lat": 30.622089,
+  "minDist": 108,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "晶晶锦绣幼儿园",
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园二十六村",
+  "variants": [
+   "常青花园二十六村"
+  ],
+  "address": "康居三路1巷1(机场路旁)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.238304,
+  "lat": 30.642271,
+  "minDist": 113,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）"
+  ]
+ },
+ {
+  "family": "福星华府西区",
+  "variants": [
+   "福星华府西区"
+  ],
+  "address": "汉兴街办事处新湾路7号(长港路地铁站A口步行400米)",
+  "typename": "住宅区",
+  "hasApartmentVariant": false,
+  "lng": 114.242142,
+  "lat": 30.631864,
+  "minDist": 114,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "阳光宝贝婴幼园",
+   "武汉常青阳光幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "武汉城建信达后湖里",
+  "variants": [
+   "武汉城建·信达后湖里"
+  ],
+  "address": "和谐大道128号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.264744,
+  "lat": 30.634293,
+  "minDist": 116,
+  "kindergartens": [
+   "红苗幼儿园（后湖里园区）",
+   "维特幼儿园",
+   "福星华府誉境启卓幼儿园"
+  ]
+ },
+ {
+  "family": "紫薇苑",
+  "variants": [
+   "紫薇苑"
+  ],
+  "address": "红旗渠路与双华路交叉口西20米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.262025,
+  "lat": 30.626625,
+  "minDist": 117,
+  "kindergartens": [
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "华苑幼儿园",
+   "红旗公寓幼儿园",
+   "中侨国际骄娇宝幼托学苑",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "武汉城建信达汉悦公寓",
+  "variants": [
+   "武汉城建信达汉悦公寓"
+  ],
+  "address": "青松路与秋桂街交叉口西240米",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": true,
+  "lng": 114.264725,
+  "lat": 30.634275,
+  "minDist": 117,
+  "kindergartens": [
+   "红苗幼儿园（后湖里园区）",
+   "维特幼儿园",
+   "福星华府誉境启卓幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园十小区东区西区",
+  "variants": [
+   "常青花园十小区东区西区"
+  ],
+  "address": "公园南路与明德东路交叉口北220米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.248192,
+  "lat": 30.638769,
+  "minDist": 119,
+  "kindergartens": [
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "华苑小区",
+  "variants": [
+   "华苑小区"
+  ],
+  "address": "杨汊湖新华下路",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.261358,
+  "lat": 30.62733,
+  "minDist": 121,
+  "kindergartens": [
+   "稚雅幼儿园",
+   "华苑幼儿园",
+   "红旗公寓幼儿园",
+   "中侨国际骄娇宝幼托学苑",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "福星华府K3区",
+  "variants": [
+   "福星华府K3区"
+  ],
+  "address": "新湾四路与新秀路交叉口北120米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.249725,
+  "lat": 30.634325,
+  "minDist": 124,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "邮政小区",
+  "variants": [
+   "邮政小区"
+  ],
+  "address": "红旗渠路166号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.255757,
+  "lat": 30.624364,
+  "minDist": 124,
+  "kindergartens": [
+   "红旗公寓幼儿园",
+   "晶晶锦绣幼儿园",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "江汉人家",
+  "variants": [
+   "江汉人家"
+  ],
+  "address": "唐家墩街办事处兴业路(北京现代旁)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.269696,
+  "lat": 30.624908,
+  "minDist": 126,
+  "kindergartens": [
+   "新稚雅幼儿园"
+  ]
+ },
+ {
+  "family": "新华家园悦景居",
+  "variants": [
+   "新华家园悦景居"
+  ],
+  "address": "红旗渠路178号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.26179,
+  "lat": 30.625262,
+  "minDist": 128,
+  "kindergartens": [
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "华苑幼儿园",
+   "红旗公寓幼儿园",
+   "中侨国际骄娇宝幼托学苑",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "阳光丽舍",
+  "variants": [
+   "阳光丽舍"
+  ],
+  "address": "长港路88附5号(长港路地铁站H口步行340米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.248713,
+  "lat": 30.629509,
+  "minDist": 132,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "稚雅幼儿园金雅分园",
+   "益康苑幼儿园",
+   "阳光宝贝婴幼园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园"
+  ]
+ },
+ {
+  "family": "香缇美景",
+  "variants": [
+   "香缇美景",
+   "香缇美景1期"
+  ],
+  "address": "江达路6号(园博园地铁站E口步行460米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.230393,
+  "lat": 30.616758,
+  "minDist": 132,
+  "kindergartens": [
+   "育苗幼儿园"
+  ]
+ },
+ {
+  "family": "金色雅园金源苑",
+  "variants": [
+   "金色雅园金源苑"
+  ],
+  "address": "常青三路7号(长港路地铁站D口步行160米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.245583,
+  "lat": 30.623261,
+  "minDist": 135,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "益康苑幼儿园",
+   "晶晶锦绣幼儿园",
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "红梅里社区",
+  "variants": [
+   "红梅里社区"
+  ],
+  "address": "常青一路与常青路辅路交叉口东200米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.246466,
+  "lat": 30.618941,
+  "minDist": 136,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "晶晶锦绣幼儿园",
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园五村",
+  "variants": [
+   "常青花园五村"
+  ],
+  "address": "香樟一路26号1",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.235061,
+  "lat": 30.634929,
+  "minDist": 139,
+  "kindergartens": [
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "福星惠誉福星城",
+  "variants": [
+   "福星惠誉·福星城"
+  ],
+  "address": "汉兴街街道汉兴街办事处红旗渠路89号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.246819,
+  "lat": 30.618999,
+  "minDist": 140,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "晶晶锦绣幼儿园",
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "龙蟠1号",
+  "variants": [
+   "龙蟠1号"
+  ],
+  "address": "青松路与秋桂街交叉口西北80米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.266506,
+  "lat": 30.634798,
+  "minDist": 142,
+  "kindergartens": [
+   "红苗幼儿园（后湖里园区）"
+  ]
+ },
+ {
+  "family": "新世界常青南园南区",
+  "variants": [
+   "新世界·常青南园南区"
+  ],
+  "address": "常青五路与新湾三路交叉口西北180米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.24713,
+  "lat": 30.628188,
+  "minDist": 143,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "稚雅幼儿园金雅分园",
+   "益康苑幼儿园",
+   "阳光宝贝婴幼园",
+   "艾米莉亚福星华府幼儿园"
+  ]
+ },
+ {
+  "family": "万科汉口传奇锦棠",
+  "variants": [
+   "万科汉口传奇锦棠"
+  ],
+  "address": "常青一路与双华路交叉口东200米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.264986,
+  "lat": 30.623366,
+  "minDist": 143,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "华苑幼儿园",
+   "中侨国际骄娇宝幼托学苑"
+  ]
+ },
+ {
+  "family": "浩海小区",
+  "variants": [
+   "浩海小区"
+  ],
+  "address": "红旗渠路133号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.257865,
+  "lat": 30.626711,
+  "minDist": 143,
+  "kindergartens": [
+   "稚雅幼儿园",
+   "华苑幼儿园",
+   "红旗公寓幼儿园",
+   "中侨国际骄娇宝幼托学苑",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "汉口花园一期A区",
+  "variants": [
+   "汉口花园一期A区"
+  ],
+  "address": "后湖大道与绿柳路交叉口北200米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.266189,
+  "lat": 30.632449,
+  "minDist": 146,
+  "kindergartens": [
+   "红苗幼儿园（后湖里园区）"
+  ]
+ },
+ {
+  "family": "常宁里特一号",
+  "variants": [
+   "常宁里特一号"
+  ],
+  "address": "江兴路与常青路交叉口西南100米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.2383,
+  "lat": 30.624766,
+  "minDist": 147,
+  "kindergartens": [
+   "史蒂芬森教育万科城幼儿园",
+   "阳光蓓佳幼儿园"
+  ]
+ },
+ {
+  "family": "万科汉口传奇",
+  "variants": [
+   "万科汉口传奇1期",
+   "万科汉口传奇"
+  ],
+  "address": "双华路与常青一路交叉口南200米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.262363,
+  "lat": 30.622426,
+  "minDist": 149,
+  "kindergartens": [
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "红旗公寓幼儿园",
+   "中侨国际骄娇宝幼托学苑",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "新湾社区",
+  "variants": [
+   "新湾社区"
+  ],
+  "address": "新湾路与姑嫂树路交叉口西160米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.255594,
+  "lat": 30.635153,
+  "minDist": 151,
+  "kindergartens": [
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "维特幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "福星华府誉境启卓幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园四小区空间站",
+  "variants": [
+   "常青花园四小区空间站"
+  ],
+  "address": "学府北路65号常青花园四小区",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.236552,
+  "lat": 30.646196,
+  "minDist": 153,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）"
+  ]
+ },
+ {
+  "family": "福星华府东区",
+  "variants": [
+   "福星华府东区"
+  ],
+  "address": "新湾路25号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.250638,
+  "lat": 30.634508,
+  "minDist": 155,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "乐远",
+  "variants": [
+   "乐远"
+  ],
+  "address": "金色雅园金涛苑西1门旁(长港路地铁站E口步行90米)",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.246842,
+  "lat": 30.62559,
+  "minDist": 156,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "益康苑幼儿园",
+   "晶晶锦绣幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "铁路小区",
+  "variants": [
+   "铁路小区"
+  ],
+  "address": "汉兴街街道常青一路福星惠誉福星城旁",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.248372,
+  "lat": 30.617842,
+  "minDist": 156,
+  "kindergartens": [
+   "晶晶锦绣幼儿园",
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "福星华府",
+  "variants": [
+   "福星华府"
+  ],
+  "address": "新湾路99号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.250497,
+  "lat": 30.634566,
+  "minDist": 157,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "福星华府誉境",
+  "variants": [
+   "福星华府·誉境"
+  ],
+  "address": "姑嫂树路99号",
+  "typename": "住��小区",
+  "hasApartmentVariant": false,
+  "lng": 114.253837,
+  "lat": 30.636387,
+  "minDist": 160,
+  "kindergartens": [
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "维特幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "福星华府誉境启卓幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园三村",
+  "variants": [
+   "常青花园三村"
+  ],
+  "address": "香樟一路37号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.235046,
+  "lat": 30.632358,
+  "minDist": 161,
+  "kindergartens": [
+   "阳光宝贝婴幼园",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "巾帼园",
+  "variants": [
+   "巾帼园"
+  ],
+  "address": "常青五路25号1号楼(长港路地铁站G口步行400米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.250275,
+  "lat": 30.628076,
+  "minDist": 162,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "益康苑幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "晶晶锦绣幼儿园"
+  ]
+ },
+ {
+  "family": "京华时代",
+  "variants": [
+   "京华时代"
+  ],
+  "address": "站前北路特1号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.260889,
+  "lat": 30.62413,
+  "minDist": 165,
+  "kindergartens": [
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "华苑幼儿园",
+   "红旗公寓幼儿园",
+   "中侨国际骄娇宝幼托学苑",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "常青花园",
+  "variants": [
+   "常青花园"
+  ],
+  "address": "学府北路与金银潭小路交叉口西100米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.241792,
+  "lat": 30.64689,
+  "minDist": 166,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）"
+  ]
+ },
+ {
+  "family": "常青南苑",
+  "variants": [
+   "常青南苑1期"
+  ],
+  "address": "常青五路与新湾二路交叉口东140米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.247425,
+  "lat": 30.627225,
+  "minDist": 167,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "稚雅幼儿园金雅分园",
+   "益康苑幼儿园",
+   "阳光宝贝婴幼园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园六村",
+  "variants": [
+   "常青花园六村"
+  ],
+  "address": "东西湖康居二路6号(常青第一学校旁)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.232903,
+  "lat": 30.634292,
+  "minDist": 171,
+  "kindergartens": [
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "新世界常青南园",
+  "variants": [
+   "新世界·常青南园"
+  ],
+  "address": "长港路58号(地铁2号线长港路F出口)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.246838,
+  "lat": 30.628676,
+  "minDist": 174,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "稚雅幼儿园金雅分园",
+   "益康苑幼儿园",
+   "阳光宝贝婴幼园",
+   "艾米莉亚福星华府幼儿园"
+  ]
+ },
+ {
+  "family": "项目AXH",
+  "variants": [
+   "项目AXH"
+  ],
+  "address": "冬梅街与姑嫂树路交叉口南60米",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.265025,
+  "lat": 30.626425,
+  "minDist": 174,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "华苑幼儿园",
+   "中侨国际骄娇宝幼托学苑"
+  ]
+ },
+ {
+  "family": "天猫CXB",
+  "variants": [
+   "天猫CXB"
+  ],
+  "address": "S19机场二高速出口与S19机场二高速交叉口东北60米",
+  "typename": "商务写字楼",
+  "hasApartmentVariant": false,
+  "lng": 114.267608,
+  "lat": 30.62513,
+  "minDist": 175,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "中侨国际骄娇宝幼托学苑"
+  ]
+ },
+ {
+  "family": "常青花园四村",
+  "variants": [
+   "常青花园四村"
+  ],
+  "address": "东西湖香樟一路22号(常青阳光幼儿园旁)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.236411,
+  "lat": 30.633586,
+  "minDist": 176,
+  "kindergartens": [
+   "阳光宝贝婴幼园",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "老98户小区",
+  "variants": [
+   "老98户小区"
+  ],
+  "address": "常青路70号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.247844,
+  "lat": 30.616443,
+  "minDist": 179,
+  "kindergartens": [
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "绿城云墅",
+  "variants": [
+   "绿城云墅"
+  ],
+  "address": "常青花园中路以南、学府南路以东(常青花园商住项目)",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.236299,
+  "lat": 30.639037,
+  "minDist": 179,
+  "kindergartens": [
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "玉兰里社区",
+  "variants": [
+   "玉兰里社区"
+  ],
+  "address": "新湾一路与常青三路交叉口东南60米",
+  "typename": "住宅区",
+  "hasApartmentVariant": false,
+  "lng": 114.244173,
+  "lat": 30.623702,
+  "minDist": 185,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园二十四村",
+  "variants": [
+   "常青花园二十四村"
+  ],
+  "address": "康居三路一巷1(轻工大学地铁站C口步行410米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.237833,
+  "lat": 30.640801,
+  "minDist": 186,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园十三村",
+  "variants": [
+   "常青花园十三村"
+  ],
+  "address": "香樟三路二街6附3(轻工大学地铁站D口步行270米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.234165,
+  "lat": 30.641418,
+  "minDist": 189,
+  "kindergartens": [
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）"
+  ]
+ },
+ {
+  "family": "常青花园十小区",
+  "variants": [
+   "常青花园十小区"
+  ],
+  "address": "公园南路6号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.249083,
+  "lat": 30.63891,
+  "minDist": 194,
+  "kindergartens": [
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "江汉里",
+  "variants": [
+   "江汉里"
+  ],
+  "address": "绿柳路与石桥一路交叉口西北120米",
+  "typename": "社区中心",
+  "hasApartmentVariant": false,
+  "lng": 114.270139,
+  "lat": 30.62543,
+  "minDist": 198,
+  "kindergartens": [
+   "新稚雅幼儿园"
+  ]
+ },
+ {
+  "family": "万科锦园",
+  "variants": [
+   "万科锦园"
+  ],
+  "address": "常青一路180号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.256463,
+  "lat": 30.621656,
+  "minDist": 198,
+  "kindergartens": [
+   "红旗公寓幼儿园",
+   "晶晶锦绣幼儿园",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "万丰花园",
+  "variants": [
+   "万丰花园"
+  ],
+  "address": "红旗渠路176号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.260773,
+  "lat": 30.625225,
+  "minDist": 200,
+  "kindergartens": [
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "华苑幼儿园",
+   "红旗公寓幼儿园",
+   "中侨国际骄娇宝幼托学苑",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "文锦苑",
+  "variants": [
+   "文锦苑"
+  ],
+  "address": "常青一路206号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.257837,
+  "lat": 30.622036,
+  "minDist": 203,
+  "kindergartens": [
+   "稚雅幼儿园",
+   "红旗公寓幼儿园",
+   "晶晶锦绣幼儿园",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "世纪云飞",
+  "variants": [
+   "世纪云飞"
+  ],
+  "address": "江兴路与发展二路交叉口西120米",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.233207,
+  "lat": 30.62396,
+  "minDist": 206,
+  "kindergartens": [
+   "史蒂芬森教育万科城幼儿园"
+  ]
+ },
+ {
+  "family": "福星华府峯境",
+  "variants": [
+   "福星华府·峯境"
+  ],
+  "address": "姑嫂树互通与S19机场二高速交叉口北200米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.257596,
+  "lat": 30.637514,
+  "minDist": 207,
+  "kindergartens": [
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "维特幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "福星华府誉境启卓幼儿园"
+  ]
+ },
+ {
+  "family": "丰太园",
+  "variants": [
+   "丰太园"
+  ],
+  "address": "常青三路与常兴街交叉口西40米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.257014,
+  "lat": 30.627319,
+  "minDist": 207,
+  "kindergartens": [
+   "华苑幼儿园",
+   "星连星幼儿园",
+   "红旗公寓幼儿园",
+   "维特幼儿园",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "汉口花园",
+  "variants": [
+   "汉口花园一期",
+   "汉口花园",
+   "汉口花园五期",
+   "汉口花园四期"
+  ],
+  "address": "后湖街办事处后湖大道(石桥地铁站C口步行270米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.266568,
+  "lat": 30.631966,
+  "minDist": 208,
+  "kindergartens": [
+   "红苗幼儿园（后湖里园区）"
+  ]
+ },
+ {
+  "family": "福星惠誉福星城北区",
+  "variants": [
+   "福星惠誉·福星城北区"
+  ],
+  "address": "常青路中段(靠近汉口火车站)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.246161,
+  "lat": 30.619934,
+  "minDist": 211,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "晶晶锦绣幼儿园",
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "京华国际B座",
+  "variants": [
+   "京华国际B座"
+  ],
+  "address": "姑嫂树路10号",
+  "typename": "商务写字楼",
+  "hasApartmentVariant": false,
+  "lng": 114.267361,
+  "lat": 30.625398,
+  "minDist": 213,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "华苑幼儿园",
+   "中侨国际骄娇宝幼托学苑"
+  ]
+ },
+ {
+  "family": "盛世江城",
+  "variants": [
+   "盛世江城",
+   "盛世江城3期"
+  ],
+  "address": "新湾路9号(长港路地铁站J口步行310米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.246749,
+  "lat": 30.633035,
+  "minDist": 214,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "益康苑幼儿园",
+   "阳光宝贝婴幼园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "红光小区",
+  "variants": [
+   "红光小区二期",
+   "红光小区"
+  ],
+  "address": "新湾四路25号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.249968,
+  "lat": 30.629867,
+  "minDist": 215,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "红胜幼儿园",
+   "益康苑幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "阳光宝贝婴幼园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "常青五垸",
+  "variants": [
+   "常青五垸"
+  ],
+  "address": "新湾五路与常青三路交叉口",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.255,
+  "lat": 30.630737,
+  "minDist": 216,
+  "kindergartens": [
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "维特幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "福星华府誉境启卓幼儿园",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "江汉区汉兴街和祥里社区",
+  "variants": [
+   "江汉区汉兴街和祥里社区"
+  ],
+  "address": "姑嫂树路31号(石桥地铁站C口步行450米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.261581,
+  "lat": 30.629529,
+  "minDist": 216,
+  "kindergartens": [
+   "华苑幼儿园",
+   "红苗幼儿园（后湖里园区）",
+   "星连星幼儿园",
+   "维特幼儿园",
+   "中侨国际骄娇宝幼托学苑",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "常青一垸",
+  "variants": [
+   "常青一垸"
+  ],
+  "address": "杨汊湖常青五路",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.261589,
+  "lat": 30.629533,
+  "minDist": 216,
+  "kindergartens": [
+   "华苑幼儿园",
+   "红苗幼儿园（后湖里园区）",
+   "星连星幼儿园",
+   "维特幼儿园",
+   "中侨国际骄娇宝幼托学苑",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "单身公寓",
+  "variants": [
+   "单身公寓"
+  ],
+  "address": "新湾二路17号",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": true,
+  "lng": 114.242188,
+  "lat": 30.628983,
+  "minDist": 218,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "稚雅幼儿园金雅分园",
+   "益康苑幼儿园",
+   "阳光宝贝婴幼园"
+  ]
+ },
+ {
+  "family": "顶琇国际公馆",
+  "variants": [
+   "顶琇国际公馆"
+  ],
+  "address": "红旗渠路108号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.254262,
+  "lat": 30.623974,
+  "minDist": 220,
+  "kindergartens": [
+   "红旗公寓幼儿园",
+   "晶晶锦绣幼儿园",
+   "王子托育远洋心苑幼儿园",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "盛丰花园小区",
+  "variants": [
+   "盛丰花园小区"
+  ],
+  "address": "姑嫂树路1号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.2666,
+  "lat": 30.623756,
+  "minDist": 221,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "中侨国际骄娇宝幼托学苑"
+  ]
+ },
+ {
+  "family": "长城港湾",
+  "variants": [
+   "长城港湾"
+  ],
+  "address": "汉兴街办事处长港路301号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.250786,
+  "lat": 30.631361,
+  "minDist": 222,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "益康苑幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "江汉经发公寓",
+  "variants": [
+   "江汉经发公寓"
+  ],
+  "address": "江兴路1号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": true,
+  "lng": 114.237913,
+  "lat": 30.625427,
+  "minDist": 224,
+  "kindergartens": [
+   "史蒂芬森教育万科城幼儿园",
+   "阳光蓓佳幼儿园"
+  ]
+ },
+ {
+  "family": "武汉江汉经济开发区2号楼",
+  "variants": [
+   "武汉江汉经济开发区2号楼"
+  ],
+  "address": "江兴路7号汉口创业中心2号楼",
+  "typename": "工厂",
+  "hasApartmentVariant": false,
+  "lng": 114.236176,
+  "lat": 30.624846,
+  "minDist": 225,
+  "kindergartens": [
+   "史蒂芬森教育万科城幼儿园",
+   "阳光蓓佳幼儿园"
+  ]
+ },
+ {
+  "family": "江汉人家B区",
+  "variants": [
+   "江汉人家B区"
+  ],
+  "address": [],
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.27065,
+  "lat": 30.625367,
+  "minDist": 226,
+  "kindergartens": [
+   "新稚雅幼儿园"
+  ]
+ },
+ {
+  "family": "统建阳光花园",
+  "variants": [
+   "统建阳光花园2期"
+  ],
+  "address": "红旗渠路与新湾五路交叉口西140米",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.254703,
+  "lat": 30.624786,
+  "minDist": 226,
+  "kindergartens": [
+   "红旗公寓幼儿园",
+   "晶晶锦绣幼儿园",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "江花苑",
+  "variants": [
+   "江花苑"
+  ],
+  "address": "姑嫂树路38号(杨汊湖地铁站D2口步行420米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.260702,
+  "lat": 30.6334,
+  "minDist": 227,
+  "kindergartens": [
+   "红胜幼儿园",
+   "红苗幼儿园（后湖里园区）",
+   "星连星幼儿园",
+   "维特幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "福星华府誉境启卓幼儿园"
+  ]
+ },
+ {
+  "family": "武汉江汉经济开发区",
+  "variants": [
+   "武汉江汉经济开发区"
+  ],
+  "address": "江兴路特1附近",
+  "typename": "产业园区",
+  "hasApartmentVariant": false,
+  "lng": 114.238371,
+  "lat": 30.625499,
+  "minDist": 228,
+  "kindergartens": [
+   "阳光宝贝婴幼园",
+   "史蒂芬森教育万科城幼儿园",
+   "阳光蓓佳幼儿园"
+  ]
+ },
+ {
+  "family": "电建小区",
+  "variants": [
+   "电建小区"
+  ],
+  "address": "常青路123号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.244535,
+  "lat": 30.616956,
+  "minDist": 229,
+  "kindergartens": [
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园十五村",
+  "variants": [
+   "常青花园十五村"
+  ],
+  "address": "香樟三路二街3号(常青花园十三村北门对面)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.234802,
+  "lat": 30.642975,
+  "minDist": 231,
+  "kindergartens": [
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）"
+  ]
+ },
+ {
+  "family": "阳光小区",
+  "variants": [
+   "阳光小区1期"
+  ],
+  "address": "红旗渠路与新湾五路交叉口西120米",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.255018,
+  "lat": 30.625135,
+  "minDist": 232,
+  "kindergartens": [
+   "红旗公寓幼儿园",
+   "晶晶锦绣幼儿园",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "常青花园五小区",
+  "variants": [
+   "常青花园五小区"
+  ],
+  "address": "学府北路111号(学府北路与康居四路交汇处)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.24113,
+  "lat": 30.648193,
+  "minDist": 232,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）"
+  ]
+ },
+ {
+  "family": "汉悦公寓后湖里店",
+  "variants": [
+   "汉悦公寓后湖里店"
+  ],
+  "address": "城建信达后湖里1栋(石桥地铁站E口步行490米)",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": true,
+  "lng": 114.263389,
+  "lat": 30.634235,
+  "minDist": 233,
+  "kindergartens": [
+   "红苗幼儿园（后湖里园区）",
+   "维特幼儿园",
+   "福星华府誉境启卓幼儿园"
+  ]
+ },
+ {
+  "family": "二滩国际",
+  "variants": [
+   "二滩国际"
+  ],
+  "address": "新湾路与新湾三路交叉口东北20米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.247187,
+  "lat": 30.63213,
+  "minDist": 236,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "益康苑幼儿园",
+   "阳光宝贝婴幼园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "和成天下",
+  "variants": [
+   "和成天下"
+  ],
+  "address": "新湾四路与长港路交叉口西北20米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.250275,
+  "lat": 30.630775,
+  "minDist": 236,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "红胜幼儿园",
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "华苑幼儿园",
+   "星连星幼儿园",
+   "红旗公寓幼儿园",
+   "益康苑幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "中侨国际骄娇宝幼托学苑",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "金盛时代",
+  "variants": [
+   "金盛时代"
+  ],
+  "address": "红旗渠路18号付10号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.252612,
+  "lat": 30.624153,
+  "minDist": 238,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "红旗公寓幼儿园",
+   "益康苑幼儿园",
+   "晶晶锦绣幼儿园",
+   "王子托育远洋心苑幼儿园",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "新长江京华国际",
+  "variants": [
+   "新长江京华国际"
+  ],
+  "address": "姑嫂树路10号",
+  "typename": "商住两用楼宇",
+  "hasApartmentVariant": false,
+  "lng": 114.267175,
+  "lat": 30.625569,
+  "minDist": 239,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "华苑幼儿园",
+   "中侨国际骄娇宝幼托学苑"
+  ]
+ },
+ {
+  "family": "常青花园第一社区三号",
+  "variants": [
+   "常青花园第一社区三号"
+  ],
+  "address": "香樟一路一街与常青北路交叉口东北100米",
+  "typename": "住宅区",
+  "hasApartmentVariant": false,
+  "lng": 114.235468,
+  "lat": 30.631721,
+  "minDist": 241,
+  "kindergartens": [
+   "阳光宝贝婴幼园",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "公安住宅楼",
+  "variants": [
+   "公安住宅楼"
+  ],
+  "address": "常青一路与姑嫂树路交叉口西南140米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.265125,
+  "lat": 30.624575,
+  "minDist": 243,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "华苑幼儿园",
+   "中侨国际骄娇宝幼托学苑"
+  ]
+ },
+ {
+  "family": "市政小区",
+  "variants": [
+   "市政小区"
+  ],
+  "address": "红旗渠路100号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.250126,
+  "lat": 30.622499,
+  "minDist": 243,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "红旗公寓幼儿园",
+   "晶晶锦绣幼儿园",
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "阳光新苑",
+  "variants": [
+   "阳光新苑"
+  ],
+  "address": "新湾五路201号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.252398,
+  "lat": 30.632446,
+  "minDist": 247,
+  "kindergartens": [
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "益康苑幼儿园",
+   "维特幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "福星华府誉境启卓幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "新华锦绣公寓",
+  "variants": [
+   "新华锦绣公寓"
+  ],
+  "address": "姑嫂树路10号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": true,
+  "lng": 114.267747,
+  "lat": 30.626,
+  "minDist": 247,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "华苑幼儿园",
+   "中侨国际骄娇宝幼托学苑"
+  ]
+ },
+ {
+  "family": "金色雅园金涛苑",
+  "variants": [
+   "金色雅园金涛苑"
+  ],
+  "address": "杨汊湖常青五路(长港路地铁站E口步行140米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.24786,
+  "lat": 30.626184,
+  "minDist": 249,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "益康苑幼儿园",
+   "晶晶锦绣幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "城投金沙境",
+  "variants": [
+   "城投·金沙境"
+  ],
+  "address": "江达路25-4号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.238367,
+  "lat": 30.62121,
+  "minDist": 249,
+  "kindergartens": [
+   "阳光蓓佳幼儿园"
+  ]
+ },
+ {
+  "family": "半秋山",
+  "variants": [
+   "半秋山"
+  ],
+  "address": "姑嫂树路12号南国北都城市广场F2层",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.265683,
+  "lat": 30.627104,
+  "minDist": 251,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "稚雅幼儿园",
+   "华苑幼儿园",
+   "中侨国际骄娇宝幼托学苑"
+  ]
+ },
+ {
+  "family": "常青花园十八村",
+  "variants": [
+   "常青花园十八村"
+  ],
+  "address": "香樟三路三街9号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.23546,
+  "lat": 30.644209,
+  "minDist": 252,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）"
+  ]
+ },
+ {
+  "family": "发尊1号公寓",
+  "variants": [
+   "发尊1号公寓"
+  ],
+  "address": "汉兴街道姑嫂树路南国北都城市广场1号公寓1501号",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": true,
+  "lng": 114.265675,
+  "lat": 30.627225,
+  "minDist": 255,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "稚雅幼儿园",
+   "华苑幼儿园",
+   "中侨国际骄娇宝幼托学苑"
+  ]
+ },
+ {
+  "family": "SOHO1号公寓",
+  "variants": [
+   "SOHO1号公寓"
+  ],
+  "address": "北湖街办事处姑嫂树路(石桥地铁站F口步行260米)",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": true,
+  "lng": 114.265675,
+  "lat": 30.627225,
+  "minDist": 255,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "稚雅幼儿园",
+   "华苑幼儿园",
+   "中侨国际骄娇宝幼托学苑"
+  ]
+ },
+ {
+  "family": "万科君澜安心住放心吃快乐行",
+  "variants": [
+   "万科君澜-安心住放心吃快乐行"
+  ],
+  "address": "三环线与常青立交桥交叉口南140米",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.23616,
+  "lat": 30.627064,
+  "minDist": 256,
+  "kindergartens": [
+   "阳光宝贝婴幼园",
+   "史蒂芬森教育万科城幼儿园",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "天策楼",
+  "variants": [
+   "天策楼"
+  ],
+  "address": "江汉经济开发区江旺路8号",
+  "typename": "商务写字楼",
+  "hasApartmentVariant": false,
+  "lng": 114.235609,
+  "lat": 30.623803,
+  "minDist": 256,
+  "kindergartens": [
+   "史蒂芬森教育万科城幼儿园",
+   "阳光蓓佳幼儿园"
+  ]
+ },
+ {
+  "family": "京华国际A座",
+  "variants": [
+   "京华国际A座"
+  ],
+  "address": "兴业路与姑嫂树路交叉口东80米",
+  "typename": "商务写字楼",
+  "hasApartmentVariant": false,
+  "lng": 114.267049,
+  "lat": 30.625717,
+  "minDist": 259,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "华苑幼儿园",
+   "中侨国际骄娇宝幼托学苑"
+  ]
+ },
+ {
+  "family": "南航花苑",
+  "variants": [
+   "南航花苑"
+  ],
+  "address": "长港路11号(长港路地铁站A口步行260米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.242908,
+  "lat": 30.628797,
+  "minDist": 260,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "稚雅幼儿园金雅分园",
+   "益康苑幼儿园",
+   "阳光宝贝婴幼园"
+  ]
+ },
+ {
+  "family": "站东社区",
+  "variants": [
+   "站东社区"
+  ],
+  "address": "发展大道",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.26747,
+  "lat": 30.62201,
+  "minDist": 260,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "稚雅幼儿园",
+   "童心幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园金苑",
+  "variants": [
+   "常青花园金苑"
+  ],
+  "address": "公园环路125号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.238949,
+  "lat": 30.644211,
+  "minDist": 260,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）"
+  ]
+ },
+ {
+  "family": "远洋心里",
+  "variants": [
+   "远洋心里",
+   "远洋心里1期"
+  ],
+  "address": "姑嫂树路与常青五路交汇处",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.259644,
+  "lat": 30.630973,
+  "minDist": 262,
+  "kindergartens": [
+   "红胜幼儿园",
+   "华苑幼儿园",
+   "红苗幼儿园（后湖里园区）",
+   "星连星幼儿园",
+   "维特幼儿园",
+   "福星华府誉境启卓幼儿园",
+   "中侨国际骄娇宝幼托学苑",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "金色雅园金沙苑",
+  "variants": [
+   "金色雅园金沙苑"
+  ],
+  "address": "新湾二路16号(长港路地铁站E口步行200米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.248623,
+  "lat": 30.624051,
+  "minDist": 264,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "益康苑幼儿园",
+   "晶晶锦绣幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "迎宾花园",
+  "variants": [
+   "迎宾花园"
+  ],
+  "address": "江兴路1号附5号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.236785,
+  "lat": 30.625467,
+  "minDist": 264,
+  "kindergartens": [
+   "史蒂芬森教育万科城幼儿园",
+   "阳光蓓佳幼儿园"
+  ]
+ },
+ {
+  "family": "武汉市红光小区",
+  "variants": [
+   "武汉市红光小区1期"
+  ],
+  "address": "长港路与新湾四路交叉口西140米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.248968,
+  "lat": 30.631009,
+  "minDist": 265,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "红胜幼儿园",
+   "益康苑幼儿园",
+   "阳光宝贝婴幼园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "思联花园城",
+  "variants": [
+   "思联花园城"
+  ],
+  "address": "常青路267号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.247965,
+  "lat": 30.615578,
+  "minDist": 267,
+  "kindergartens": [
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "克拉公馆",
+  "variants": [
+   "克拉公馆5期"
+  ],
+  "address": "金银潭大道与康居五路交叉口南80米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.243214,
+  "lat": 30.64985,
+  "minDist": 267,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）"
+  ]
+ },
+ {
+  "family": "江名书苑",
+  "variants": [
+   "江名书苑"
+  ],
+  "address": "常青一路210号学林华府",
+  "typename": "商务写字楼",
+  "hasApartmentVariant": false,
+  "lng": 114.260749,
+  "lat": 30.62251,
+  "minDist": 270,
+  "kindergartens": [
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "红旗公寓幼儿园",
+   "中侨国际骄娇宝幼托学苑",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "常青花园十二小区",
+  "variants": [
+   "常青花园十二小区"
+  ],
+  "address": "公园环路与康居五路交叉口",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.241866,
+  "lat": 30.645401,
+  "minDist": 271,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）"
+  ]
+ },
+ {
+  "family": "集中公寓",
+  "variants": [
+   "集中公寓"
+  ],
+  "address": "绿柳路与秋桂街交叉口西北80米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": true,
+  "lng": 114.263151,
+  "lat": 30.632665,
+  "minDist": 274,
+  "kindergartens": [
+   "华苑幼儿园",
+   "红苗幼儿园（后湖里园区）",
+   "维特幼儿园",
+   "福星华府誉境启卓幼儿园"
+  ]
+ },
+ {
+  "family": "湖北邮政公寓",
+  "variants": [
+   "湖北邮政公寓"
+  ],
+  "address": "红旗渠路杨汊湖邮局小区",
+  "typename": "宿舍",
+  "hasApartmentVariant": true,
+  "lng": 114.233366,
+  "lat": 30.62327,
+  "minDist": 274,
+  "kindergartens": [
+   "史蒂芬森教育万科城幼儿园"
+  ]
+ },
+ {
+  "family": "统建阳光北苑",
+  "variants": [
+   "统建阳光北苑"
+  ],
+  "address": "常青五路38号(长港路地铁站E口步行440米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.250966,
+  "lat": 30.626916,
+  "minDist": 275,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "红旗公寓幼儿园",
+   "益康苑幼儿园",
+   "晶晶锦绣幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园社区",
+  "variants": [
+   "常青花园社区"
+  ],
+  "address": "新湾二路与长港路交叉口东南40米(长港路地铁站H口旁)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.245699,
+  "lat": 30.628514,
+  "minDist": 279,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "稚雅幼儿园金雅分园",
+   "益康苑幼儿园",
+   "阳光宝贝婴幼园",
+   "艾米莉亚福星华府幼儿园"
+  ]
+ },
+ {
+  "family": "常青四垸社区",
+  "variants": [
+   "常青四垸社区"
+  ],
+  "address": "常青五路",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.255887,
+  "lat": 30.629906,
+  "minDist": 280,
+  "kindergartens": [
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "维特幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "福星华府誉境启卓幼儿园",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "城投红树林",
+  "variants": [
+   "城投红树林"
+  ],
+  "address": "常青五路162号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.251325,
+  "lat": 30.629275,
+  "minDist": 280,
+  "kindergartens": [
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "益康苑幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园"
+  ]
+ },
+ {
+  "family": "金盾花园",
+  "variants": [
+   "金盾花园"
+  ],
+  "address": "江达路18号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.233616,
+  "lat": 30.618144,
+  "minDist": 281,
+  "kindergartens": [
+   "育苗幼儿园"
+  ]
+ },
+ {
+  "family": "新世界常青南园北区",
+  "variants": [
+   "新世界·常青南园北区"
+  ],
+  "address": "长港路58号(长港路地铁站J口步行130米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.246081,
+  "lat": 30.629782,
+  "minDist": 291,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "稚雅幼儿园金雅分园",
+   "益康苑幼儿园",
+   "阳光宝贝婴幼园",
+   "艾米莉亚福星华府幼儿园"
+  ]
+ },
+ {
+  "family": "喜悦花园",
+  "variants": [
+   "喜悦花园"
+  ],
+  "address": "发展二路与江旺路交叉口东南60米",
+  "typename": "住宅区",
+  "hasApartmentVariant": false,
+  "lng": 114.23543,
+  "lat": 30.622476,
+  "minDist": 297,
+  "kindergartens": [
+   "史蒂芬森教育万科城幼儿园",
+   "阳光蓓佳幼儿园"
+  ]
+ },
+ {
+  "family": "学林华府",
+  "variants": [
+   "学林华府"
+  ],
+  "address": "常青一路210号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.260451,
+  "lat": 30.622327,
+  "minDist": 305,
+  "kindergartens": [
+   "稚雅幼儿园",
+   "童心幼儿园",
+   "红旗公寓幼儿园",
+   "中侨国际骄娇宝幼托学苑",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "金苑小区12区",
+  "variants": [
+   "金苑小区12区"
+  ],
+  "address": "学府北路与康居四路交叉口西南160米",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.237983,
+  "lat": 30.64511,
+  "minDist": 305,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）"
+  ]
+ },
+ {
+  "family": "常青花园七村南村",
+  "variants": [
+   "常青花园七村南村"
+  ],
+  "address": "康居二路与香樟二路交叉口西100米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.232675,
+  "lat": 30.635964,
+  "minDist": 306,
+  "kindergartens": [
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "常青二苑",
+  "variants": [
+   "常青二苑"
+  ],
+  "address": "双华路8号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.259846,
+  "lat": 30.629293,
+  "minDist": 307,
+  "kindergartens": [
+   "红胜幼儿园",
+   "华苑幼儿园",
+   "星连星幼儿园",
+   "维特幼儿园",
+   "中侨国际骄娇宝幼托学苑",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "南航馨园",
+  "variants": [
+   "南航馨园"
+  ],
+  "address": "汉兴街长港路和新湾路新湾二路路口交汇处",
+  "typename": "住宅区",
+  "hasApartmentVariant": false,
+  "lng": 114.244339,
+  "lat": 30.629271,
+  "minDist": 308,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "稚雅幼儿园金雅分园",
+   "益康苑幼儿园",
+   "阳光宝贝婴幼园",
+   "艾米莉亚福星华府幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园第二社区",
+  "variants": [
+   "常青花园第二社区"
+  ],
+  "address": "香樟三路与香樟三路二街交叉口南20米",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.233161,
+  "lat": 30.642071,
+  "minDist": 308,
+  "kindergartens": [
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）"
+  ]
+ },
+ {
+  "family": "顶房国际城",
+  "variants": [
+   "顶房国际城"
+  ],
+  "address": "马场二路与八古墩北路交叉口南160米",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.265825,
+  "lat": 30.620225,
+  "minDist": 309,
+  "kindergartens": [
+   "稚雅幼儿园",
+   "童心幼儿园"
+  ]
+ },
+ {
+  "family": "新龙和苑",
+  "variants": [
+   "新龙和苑"
+  ],
+  "address": "机电路39(杨汊湖地铁站B口步行150米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.260621,
+  "lat": 30.637991,
+  "minDist": 310,
+  "kindergartens": [
+   "红胜幼儿园",
+   "维特幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "福星华府誉境启卓幼儿园"
+  ]
+ },
+ {
+  "family": "银河花园",
+  "variants": [
+   "银河花园"
+  ],
+  "address": "银墩侧路",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.24965,
+  "lat": 30.616479,
+  "minDist": 311,
+  "kindergartens": [
+   "晶晶锦绣幼儿园",
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "远洋心汉口御峰K4小区",
+  "variants": [
+   "远洋心汉口御峰K4小区"
+  ],
+  "address": "常和街与御园路交叉口东80米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.245883,
+  "lat": 30.615044,
+  "minDist": 311,
+  "kindergartens": [
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "顶琇国际城A区",
+  "variants": [
+   "顶琇国际城A区"
+  ],
+  "address": "八古墩北路与马场二路交叉口东南100米",
+  "typename": "住宅区",
+  "hasApartmentVariant": false,
+  "lng": 114.266802,
+  "lat": 30.621142,
+  "minDist": 313,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "稚雅幼儿园",
+   "童心幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园9村",
+  "variants": [
+   "常青花园9村"
+  ],
+  "address": "公园环路与康居三路交叉口东南120米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.240375,
+  "lat": 30.641875,
+  "minDist": 316,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "八古墩",
+  "variants": [
+   "八古墩"
+  ],
+  "address": "马场二路与八古墩北路交叉口东南100米",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.26675,
+  "lat": 30.62098,
+  "minDist": 317,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "稚雅幼儿园",
+   "童心幼儿园"
+  ]
+ },
+ {
+  "family": "常青三垸社区",
+  "variants": [
+   "常青三垸社区"
+  ],
+  "address": "汉兴街",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.255996,
+  "lat": 30.628076,
+  "minDist": 318,
+  "kindergartens": [
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "红旗公寓幼儿园",
+   "维特幼儿园",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "石桥花园D区",
+  "variants": [
+   "石桥花园D区"
+  ],
+  "address": "石桥墩",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.272031,
+  "lat": 30.624956,
+  "minDist": 318,
+  "kindergartens": [
+   "新稚雅幼儿园"
+  ]
+ },
+ {
+  "family": "汉升OPC社区",
+  "variants": [
+   "汉升OPC社区"
+  ],
+  "address": "汉兴街街道俊源美佳创业园B座8号2栋3楼",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.236431,
+  "lat": 30.621096,
+  "minDist": 318,
+  "kindergartens": [
+   "阳光蓓佳幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园二村",
+  "variants": [
+   "常青花园二村"
+  ],
+  "address": "常青花园一街",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.237543,
+  "lat": 30.63241,
+  "minDist": 320,
+  "kindergartens": [
+   "阳光宝贝婴幼园",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "万科汉口传奇唐樾",
+  "variants": [
+   "万科汉口传奇唐樾"
+  ],
+  "address": "新华路758号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.264303,
+  "lat": 30.619587,
+  "minDist": 323,
+  "kindergartens": [
+   "稚雅幼儿园",
+   "童心幼儿园"
+  ]
+ },
+ {
+  "family": "合亿达瑞秋中心B区",
+  "variants": [
+   "合亿达瑞秋中心B区"
+  ],
+  "address": "江达路与发展二路交叉口东北80米",
+  "typename": "商务写字楼",
+  "hasApartmentVariant": false,
+  "lng": 114.236765,
+  "lat": 30.620865,
+  "minDist": 323,
+  "kindergartens": [
+   "阳光蓓佳幼儿园"
+  ]
+ },
+ {
+  "family": "南航小区",
+  "variants": [
+   "南航小区"
+  ],
+  "address": "杨汊湖长港路民航小区附近(南航花苑旁)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.241178,
+  "lat": 30.627994,
+  "minDist": 328,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "稚雅幼儿园金雅分园",
+   "阳光宝贝婴幼园"
+  ]
+ },
+ {
+  "family": "富士君荟天地",
+  "variants": [
+   "富士·君荟天地"
+  ],
+  "address": "姑嫂树路20号东侧(地铁石桥站E出口)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.263982,
+  "lat": 30.631139,
+  "minDist": 331,
+  "kindergartens": [
+   "华苑幼儿园",
+   "红苗幼儿园（后湖里园区）",
+   "维特幼儿园",
+   "中侨国际骄娇宝幼托学苑"
+  ]
+ },
+ {
+  "family": "云境",
+  "variants": [
+   "云境"
+  ],
+  "address": "发展二路与江发路交叉口东南40米",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.235875,
+  "lat": 30.621325,
+  "minDist": 332,
+  "kindergartens": [
+   "阳光蓓佳幼儿园"
+  ]
+ },
+ {
+  "family": "中科国贸",
+  "variants": [
+   "中科国贸"
+  ],
+  "address": "常青花园中路115号附7号",
+  "typename": "商务写字楼",
+  "hasApartmentVariant": false,
+  "lng": 114.239128,
+  "lat": 30.639496,
+  "minDist": 333,
+  "kindergartens": [
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "金雅公寓",
+  "variants": [
+   "金雅公寓"
+  ],
+  "address": "红旗渠路88号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": true,
+  "lng": 114.24386,
+  "lat": 30.62201,
+  "minDist": 334,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园一村",
+  "variants": [
+   "常青花园一村"
+  ],
+  "address": "香樟一路9号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.236267,
+  "lat": 30.631119,
+  "minDist": 334,
+  "kindergartens": [
+   "阳光宝贝婴幼园",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "楚苑佳境",
+  "variants": [
+   "楚苑佳境"
+  ],
+  "address": "常青花园中路9号(常青花园地铁站A2口步行350米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.239881,
+  "lat": 30.640606,
+  "minDist": 334,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "福星惠誉琛境",
+  "variants": [
+   "福星惠誉·琛境"
+  ],
+  "address": "红旗渠路与新湾三路交汇处",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.250885,
+  "lat": 30.624635,
+  "minDist": 335,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "红旗公寓幼儿园",
+   "益康苑幼儿园",
+   "晶晶锦绣幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "亘星鼎立",
+  "variants": [
+   "亘星鼎立"
+  ],
+  "address": "中国铁塔湖北分公司综合生产办公大楼",
+  "typename": "商务写字楼",
+  "hasApartmentVariant": false,
+  "lng": 114.262251,
+  "lat": 30.633436,
+  "minDist": 336,
+  "kindergartens": [
+   "红胜幼儿园",
+   "红苗幼儿园（后湖里园区）",
+   "星连星幼儿园",
+   "维特幼儿园",
+   "福星华府誉境启卓幼儿园"
+  ]
+ },
+ {
+  "family": "顶秀国际C座",
+  "variants": [
+   "顶秀国际C座"
+  ],
+  "address": "马场二路与八古墩北路交叉口东南140米",
+  "typename": "商务写字楼",
+  "hasApartmentVariant": false,
+  "lng": 114.26655,
+  "lat": 30.62045,
+  "minDist": 337,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "稚雅幼儿园",
+   "童心幼儿园"
+  ]
+ },
+ {
+  "family": "星悦城",
+  "variants": [
+   "星悦城五期",
+   "星悦城二期"
+  ],
+  "address": "和谐大道128号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.266006,
+  "lat": 30.636721,
+  "minDist": 337,
+  "kindergartens": [
+   "红苗幼儿园（后湖里园区）"
+  ]
+ },
+ {
+  "family": "常青花园8号小区",
+  "variants": [
+   "常青花园8号小区"
+  ],
+  "address": "常青花园中路与公园环路交叉口东80米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.239125,
+  "lat": 30.639375,
+  "minDist": 338,
+  "kindergartens": [
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "汉口花园一期B区韵竹里",
+  "variants": [
+   "汉口花园一期B区韵竹里"
+  ],
+  "address": "后湖大道52附33号附近(石桥地铁站B口步行90米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.267229,
+  "lat": 30.630927,
+  "minDist": 340,
+  "kindergartens": [
+   "红苗幼儿园（后湖里园区）"
+  ]
+ },
+ {
+  "family": "万科公园5号铂樾小区",
+  "variants": [
+   "万科公园5号铂樾小区"
+  ],
+  "address": "八古墩东一巷10号(唐家墩地铁站B口步行450米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.271408,
+  "lat": 30.621825,
+  "minDist": 342,
+  "kindergartens": [
+   "新稚雅幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园二十七村西区",
+  "variants": [
+   "常青花园二十七村西区"
+  ],
+  "address": "学府南路38号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.238168,
+  "lat": 30.633705,
+  "minDist": 343,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "阳光宝贝婴幼园",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "民航小区",
+  "variants": [
+   "民航小区"
+  ],
+  "address": "民航里1号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.239184,
+  "lat": 30.628713,
+  "minDist": 345,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "阳光宝贝婴幼园",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "蓝色天际",
+  "variants": [
+   "蓝色天际"
+  ],
+  "address": "唐家墩路203号(唐家墩地铁站B口步行340米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.268562,
+  "lat": 30.620915,
+  "minDist": 345,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "童心幼儿园"
+  ]
+ },
+ {
+  "family": "民航新村",
+  "variants": [
+   "民航新村"
+  ],
+  "address": "常青街办事处常青路",
+  "typename": "住宅区",
+  "hasApartmentVariant": false,
+  "lng": 114.239193,
+  "lat": 30.626458,
+  "minDist": 345,
+  "kindergartens": [
+   "阳光宝贝婴幼园",
+   "阳光蓓佳幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园十一村",
+  "variants": [
+   "常青花园十一村"
+  ],
+  "address": "香樟三路1号(常青北路与常青花园中路交汇处)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.232255,
+  "lat": 30.64083,
+  "minDist": 349,
+  "kindergartens": [
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园十村",
+  "variants": [
+   "常青花园十村"
+  ],
+  "address": "香樟二路10号(轻工大学地铁站A口步行250米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.233423,
+  "lat": 30.638301,
+  "minDist": 349,
+  "kindergartens": [
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园十七村",
+  "variants": [
+   "常青花园十七村"
+  ],
+  "address": "香樟三路52号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.234213,
+  "lat": 30.644347,
+  "minDist": 350,
+  "kindergartens": [
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）"
+  ]
+ },
+ {
+  "family": "棠颂星悦城",
+  "variants": [
+   "棠颂星悦城"
+  ],
+  "address": "和谐大道与青松路交叉口东120米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.266409,
+  "lat": 30.636818,
+  "minDist": 352,
+  "kindergartens": [
+   "红苗幼儿园（后湖里园区）"
+  ]
+ },
+ {
+  "family": "常青花园八村",
+  "variants": [
+   "常青花园八村"
+  ],
+  "address": "香樟二路2号(轻工大学地铁站A口步行420米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.233896,
+  "lat": 30.636857,
+  "minDist": 352,
+  "kindergartens": [
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "南国北都B座",
+  "variants": [
+   "南国北都B座"
+  ],
+  "address": "S19机场二高速出口与兴业路交叉口西北40米",
+  "typename": "商务写字楼",
+  "hasApartmentVariant": false,
+  "lng": 114.267628,
+  "lat": 30.627005,
+  "minDist": 355,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "稚雅幼儿园",
+   "华苑幼儿园",
+   "中侨国际骄娇宝幼托学苑"
+  ]
+ },
+ {
+  "family": "常青花园恒大御景",
+  "variants": [
+   "常青花园恒大御景"
+  ],
+  "address": "姑李路与康居六路交叉口西260米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.246001,
+  "lat": 30.649737,
+  "minDist": 356,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园七村",
+  "variants": [
+   "常青花园七村"
+  ],
+  "address": "香樟二路5号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.232468,
+  "lat": 30.6364,
+  "minDist": 357,
+  "kindergartens": [
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "楚街一品",
+  "variants": [
+   "楚街一品"
+  ],
+  "address": "银墩路与银墩街小路交叉口东北20米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.249925,
+  "lat": 30.616025,
+  "minDist": 359,
+  "kindergartens": [
+   "晶晶锦绣幼儿园",
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园二十七村东区",
+  "variants": [
+   "常青花园二十七村东区"
+  ],
+  "address": "康居一路16号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.240955,
+  "lat": 30.634078,
+  "minDist": 361,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "阳光宝贝婴幼园",
+   "武汉常青阳光幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "菜恒文常青花园店",
+  "variants": [
+   "菜恒文常青花园店"
+  ],
+  "address": "学府南路与明德西路交叉口北80米",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.234873,
+  "lat": 30.637031,
+  "minDist": 366,
+  "kindergartens": [
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "金色雅园金池苑",
+  "variants": [
+   "金色雅园金池苑"
+  ],
+  "address": "长港路10号(长港路地铁站G口步行90米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.244797,
+  "lat": 30.62793,
+  "minDist": 368,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "稚雅幼儿园金雅分园",
+   "益康苑幼儿园",
+   "阳光宝贝婴幼园"
+  ]
+ },
+ {
+  "family": "汉口火车站小区",
+  "variants": [
+   "汉口火车站小区"
+  ],
+  "address": "银墩路与银墩街小路交叉口西南80米",
+  "typename": "住宅区",
+  "hasApartmentVariant": false,
+  "lng": 114.249285,
+  "lat": 30.615252,
+  "minDist": 368,
+  "kindergartens": [
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园十一小区",
+  "variants": [
+   "常青花园十一小区"
+  ],
+  "address": "张公堤外常青花园地铁口旁",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.244961,
+  "lat": 30.644429,
+  "minDist": 368,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "顶琇国际城B区",
+  "variants": [
+   "顶琇国际城B区"
+  ],
+  "address": "马场二路127号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.266713,
+  "lat": 30.620174,
+  "minDist": 370,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "童心幼儿园"
+  ]
+ },
+ {
+  "family": "炒",
+  "variants": [
+   "炒"
+  ],
+  "address": "常青花园中路与公园环路交叉口东北140米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.239625,
+  "lat": 30.639725,
+  "minDist": 370,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "常二社区",
+  "variants": [
+   "常二社区"
+  ],
+  "address": "常青三路128附近",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.258851,
+  "lat": 30.628842,
+  "minDist": 371,
+  "kindergartens": [
+   "红胜幼儿园",
+   "华苑幼儿园",
+   "星连星幼儿园",
+   "红旗公寓幼儿园",
+   "维特幼儿园",
+   "中侨国际骄娇宝幼托学苑",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "富强天嘉园",
+  "variants": [
+   "富强天嘉园"
+  ],
+  "address": "常青街红旗村站常青公园旁",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.243004,
+  "lat": 30.616863,
+  "minDist": 371,
+  "kindergartens": [
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园二十七村",
+  "variants": [
+   "常青花园二十七村"
+  ],
+  "address": "康居一路13号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.240036,
+  "lat": 30.633913,
+  "minDist": 372,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "阳光宝贝婴幼园",
+   "武汉常青阳光幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "汉和蕙苑",
+  "variants": [
+   "汉和蕙苑"
+  ],
+  "address": "八古墩东三巷田园小区西2门附近",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.272461,
+  "lat": 30.622678,
+  "minDist": 372,
+  "kindergartens": [
+   "新稚雅幼儿园"
+  ]
+ },
+ {
+  "family": "泽皓雅居",
+  "variants": [
+   "泽皓雅居"
+  ],
+  "address": "汉兴街办事处民航新村新湾一路",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.243318,
+  "lat": 30.627028,
+  "minDist": 379,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "稚雅幼儿园金雅分园",
+   "益康苑幼儿园",
+   "阳光宝贝婴幼园"
+  ]
+ },
+ {
+  "family": "石桥花园C区",
+  "variants": [
+   "石桥花园C区"
+  ],
+  "address": "石桥墩189号",
+  "typename": "住宅区",
+  "hasApartmentVariant": false,
+  "lng": 114.271089,
+  "lat": 30.626875,
+  "minDist": 382,
+  "kindergartens": [
+   "新稚雅幼儿园"
+  ]
+ },
+ {
+  "family": "汉口花园幽兰居",
+  "variants": [
+   "汉口花园幽兰居"
+  ],
+  "address": "秋桂街19号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.267915,
+  "lat": 30.636593,
+  "minDist": 383,
+  "kindergartens": [
+   "红苗幼儿园（后湖里园区）"
+  ]
+ },
+ {
+  "family": "常青花园十二村",
+  "variants": [
+   "常青花园十二村"
+  ],
+  "address": "香樟三路15号(轻工大学地铁站D口步行310米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.232296,
+  "lat": 30.642115,
+  "minDist": 383,
+  "kindergartens": [
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）"
+  ]
+ },
+ {
+  "family": "华安里社区",
+  "variants": [
+   "华安里社区"
+  ],
+  "address": [],
+  "typename": "住宅区",
+  "hasApartmentVariant": false,
+  "lng": 114.242799,
+  "lat": 30.619213,
+  "minDist": 386,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "育苗幼儿园",
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "江汉区贺家墩村C包K5地块",
+  "variants": [
+   "江汉区贺家墩村C包K5地块"
+  ],
+  "address": "常和街与常悦路交叉口西北20米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.245702,
+  "lat": 30.614391,
+  "minDist": 386,
+  "kindergartens": [
+   "福星幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园骏岭",
+  "variants": [
+   "常青花园骏岭"
+  ],
+  "address": "常青花园7村",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.231789,
+  "lat": 30.636298,
+  "minDist": 389,
+  "kindergartens": [
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "远洋心汉口御峰",
+  "variants": [
+   "远洋心汉口御峰"
+  ],
+  "address": "常超街现代花园对面",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.244979,
+  "lat": 30.61458,
+  "minDist": 390,
+  "kindergartens": [
+   "福星幼儿园"
+  ]
+ },
+ {
+  "family": "绘福星名流宅区",
+  "variants": [
+   "绘福星名流宅区"
+  ],
+  "address": "常青三路与新湾四路交叉口西南60米",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.251475,
+  "lat": 30.625825,
+  "minDist": 391,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "红旗公寓幼儿园",
+   "益康苑幼儿园",
+   "晶晶锦绣幼儿园",
+   "王子托育远洋心苑幼儿园",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "湖北省武汉市江汉区唐家墩K6开发地块",
+  "variants": [
+   "湖北省武汉市江汉区唐家墩K6开发地块2期"
+  ],
+  "address": "马场二路与八古墩西二巷交叉口西北100米",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.265625,
+  "lat": 30.619275,
+  "minDist": 391,
+  "kindergartens": [
+   "童心幼儿园"
+  ]
+ },
+ {
+  "family": "阳光社区",
+  "variants": [
+   "阳光社区"
+  ],
+  "address": "新湾四路与常青三路交叉口北40米",
+  "typename": "住宅区",
+  "hasApartmentVariant": false,
+  "lng": 114.252205,
+  "lat": 30.626574,
+  "minDist": 395,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "红旗公寓幼儿园",
+   "益康苑幼儿园",
+   "晶晶锦绣幼儿园",
+   "王子托育远洋心苑幼儿园",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "恒智中心",
+  "variants": [
+   "恒智中心"
+  ],
+  "address": "常青路66号",
+  "typename": "商务写字楼",
+  "hasApartmentVariant": false,
+  "lng": 114.248246,
+  "lat": 30.614425,
+  "minDist": 396,
+  "kindergartens": [
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "湖北空管青年公寓",
+  "variants": [
+   "湖北空管青年公寓"
+  ],
+  "address": "新湾南路与南航小路交叉口西20米",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": true,
+  "lng": 114.239977,
+  "lat": 30.627674,
+  "minDist": 397,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "稚雅幼儿园金雅分园",
+   "阳光宝贝婴幼园",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园十四区",
+  "variants": [
+   "常青花园十四区"
+  ],
+  "address": "公园南路3号(常青花园地铁站B1口步行290米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.243255,
+  "lat": 30.638239,
+  "minDist": 398,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "复兴五村新村西区",
+  "variants": [
+   "复兴五村新村西区"
+  ],
+  "address": "健民诊所东南侧80米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.234013,
+  "lat": 30.61328,
+  "minDist": 402,
+  "kindergartens": [
+   "育苗幼儿园"
+  ]
+ },
+ {
+  "family": "常青锦园",
+  "variants": [
+   "常青锦园"
+  ],
+  "address": "长港路4号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.241074,
+  "lat": 30.626186,
+  "minDist": 403,
+  "kindergartens": [
+   "稚雅幼儿园金雅分园",
+   "阳光宝贝婴幼园",
+   "阳光蓓佳幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园十小区东区",
+  "variants": [
+   "常青花园十小区东区"
+  ],
+  "address": "学府东路2号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.251321,
+  "lat": 30.639321,
+  "minDist": 405,
+  "kindergartens": [
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "馨苑小区",
+  "variants": [
+   "馨苑小区"
+  ],
+  "address": "新湾五路141号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.254007,
+  "lat": 30.627684,
+  "minDist": 407,
+  "kindergartens": [
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "红旗公寓幼儿园",
+   "益康苑幼儿园",
+   "晶晶锦绣幼儿园",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "常青花园九村北村",
+  "variants": [
+   "常青花园九村北村"
+  ],
+  "address": "香樟二路15号(轻工大学地铁站A口步行180米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.231892,
+  "lat": 30.639384,
+  "minDist": 407,
+  "kindergartens": [
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "圈外创智中心A座",
+  "variants": [
+   "圈外创智中心A座"
+  ],
+  "address": "江兴路11号圈外数字创意产业园A栋",
+  "typename": "商务写字楼",
+  "hasApartmentVariant": false,
+  "lng": 114.230825,
+  "lat": 30.623125,
+  "minDist": 417,
+  "kindergartens": [
+   "史蒂芬森教育万科城幼儿园"
+  ]
+ },
+ {
+  "family": "顶琇国际城",
+  "variants": [
+   "顶琇国际城4期"
+  ],
+  "address": "马场二路与八古墩西二巷交叉口东北180米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.267117,
+  "lat": 30.6198,
+  "minDist": 426,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "童心幼儿园"
+  ]
+ },
+ {
+  "family": "长青壹号南区",
+  "variants": [
+   "长青壹号南区"
+  ],
+  "address": "常青花园中路与中环东路交叉口西南140米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.24778,
+  "lat": 30.641753,
+  "minDist": 426,
+  "kindergartens": [
+   "福星华府誉境思桥幼儿园",
+   "武汉市常青童梦幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园六小区",
+  "variants": [
+   "常青花园六小区"
+  ],
+  "address": "学府北路239号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.247854,
+  "lat": 30.647118,
+  "minDist": 428,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园"
+  ]
+ },
+ {
+  "family": "远洋心汉口御峰K5小区",
+  "variants": [
+   "远洋心汉口御峰K5小区"
+  ],
+  "address": "御园路与常和街交叉口西南120米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.244532,
+  "lat": 30.614373,
+  "minDist": 430,
+  "kindergartens": [
+   "福星幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园九村",
+  "variants": [
+   "常青花园九村"
+  ],
+  "address": "香樟二路15号(轻工大学地铁站A口步行380米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.232093,
+  "lat": 30.638463,
+  "minDist": 435,
+  "kindergartens": [
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园十四村",
+  "variants": [
+   "常青花园十四村"
+  ],
+  "address": "香樟三路27号(轻工大学地铁站D口步行450米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.232555,
+  "lat": 30.643302,
+  "minDist": 438,
+  "kindergartens": [
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）"
+  ]
+ },
+ {
+  "family": "八古新墩69号院",
+  "variants": [
+   "八古新墩69号院"
+  ],
+  "address": "马场二路与八古墩西二巷交叉口东北200米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.267325,
+  "lat": 30.619825,
+  "minDist": 439,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "童心幼儿园"
+  ]
+ },
+ {
+  "family": "边防家园",
+  "variants": [
+   "边防家园"
+  ],
+  "address": "新湾一路7号(长港路地铁站A口步行440米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.242028,
+  "lat": 30.626603,
+  "minDist": 442,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "稚雅幼儿园金雅分园",
+   "阳光宝贝婴幼园"
+  ]
+ },
+ {
+  "family": "博士楼",
+  "variants": [
+   "博士楼"
+  ],
+  "address": "明德西路与明德中路交叉口东南160米",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.240644,
+  "lat": 30.63478,
+  "minDist": 443,
+  "kindergartens": [
+   "盛世红苗幼儿园",
+   "阳光宝贝婴幼园",
+   "武汉常青阳光幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "美联时光里",
+  "variants": [
+   "美联时光里二期",
+   "美联时光里",
+   "美联时光里一期"
+  ],
+  "address": "冬梅街107号(石桥地铁站A口步行140米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.267667,
+  "lat": 30.630063,
+  "minDist": 444,
+  "kindergartens": [
+   "华苑幼儿园",
+   "红苗幼儿园（后湖里园区）"
+  ]
+ },
+ {
+  "family": "石桥SQ",
+  "variants": [
+   "石桥SQ"
+  ],
+  "address": "绿柳路与冬梅街交叉口北40米(石桥地铁站A口旁)",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.266954,
+  "lat": 30.629056,
+  "minDist": 448,
+  "kindergartens": [
+   "华苑幼儿园",
+   "红苗幼儿园（后湖里园区）",
+   "中侨国际骄娇宝幼托学苑"
+  ]
+ },
+ {
+  "family": "常青花园十六村",
+  "variants": [
+   "常青花园十六村"
+  ],
+  "address": "香樟三路29号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.232801,
+  "lat": 30.644564,
+  "minDist": 451,
+  "kindergartens": [
+   "武汉市实验幼儿园（博爱园区·本部）",
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）"
+  ]
+ },
+ {
+  "family": "新世界常青二分之一中心",
+  "variants": [
+   "新世界·常青二分之一中心"
+  ],
+  "address": "常青花园(常青花园地铁站B1口步行240米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.240106,
+  "lat": 30.638755,
+  "minDist": 452,
+  "kindergartens": [
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "城开汉口秀园",
+  "variants": [
+   "城开·汉口秀园"
+  ],
+  "address": "和谐大道7号(杨汊湖地铁站A2口步行110米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.263038,
+  "lat": 30.637162,
+  "minDist": 453,
+  "kindergartens": [
+   "红苗幼儿园（后湖里园区）",
+   "维特幼儿园",
+   "福星华府誉境启卓幼儿园"
+  ]
+ },
+ {
+  "family": "万科汉口传奇悦庭东区",
+  "variants": [
+   "万科汉口传奇悦庭东区"
+  ],
+  "address": "八古墩北路与新华路辅路交叉口南140米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.261203,
+  "lat": 30.6191,
+  "minDist": 456,
+  "kindergartens": [
+   "童心幼儿园",
+   "红旗公寓幼儿园"
+  ]
+ },
+ {
+  "family": "新鑫龙人家",
+  "variants": [
+   "新鑫龙人家"
+  ],
+  "address": [],
+  "typename": "中餐厅",
+  "hasApartmentVariant": false,
+  "lng": 114.235375,
+  "lat": 30.613675,
+  "minDist": 459,
+  "kindergartens": [
+   "育苗幼儿园"
+  ]
+ },
+ {
+  "family": "鼎尚居",
+  "variants": [
+   "鼎尚居"
+  ],
+  "address": "常青五路与新湾五路交叉口西南60米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.254175,
+  "lat": 30.628625,
+  "minDist": 461,
+  "kindergartens": [
+   "红胜幼儿园",
+   "星连星幼儿园",
+   "红旗公寓幼儿园",
+   "益康苑幼儿园",
+   "维特幼儿园",
+   "艾米莉亚福星华府幼儿园",
+   "福星华府誉境思桥幼儿园",
+   "红渠少儿成长中心"
+  ]
+ },
+ {
+  "family": "绿城留香园",
+  "variants": [
+   "绿城留香园"
+  ],
+  "address": "青松路与夏鹃街交汇处(杨汊湖地铁站B口步行260米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.262126,
+  "lat": 30.638646,
+  "minDist": 462,
+  "kindergartens": [
+   "红苗幼儿园（后湖里园区）",
+   "福星华府誉境启卓幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园九村南村",
+  "variants": [
+   "常青花园九村南村"
+  ],
+  "address": "香樟二路13号(轻工大学地铁站A口步行260米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.231705,
+  "lat": 30.638486,
+  "minDist": 465,
+  "kindergartens": [
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园一小区5村",
+  "variants": [
+   "常青花园一小区5村"
+  ],
+  "address": "常青北路与康居一路交叉口东40米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.236275,
+  "lat": 30.629825,
+  "minDist": 466,
+  "kindergartens": [
+   "阳光宝贝婴幼园",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "远洋汉口中心",
+  "variants": [
+   "远洋汉口中心"
+  ],
+  "address": "常青路79号",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.246501,
+  "lat": 30.61355,
+  "minDist": 467,
+  "kindergartens": [
+   "福星幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园七村北村",
+  "variants": [
+   "常青花园七村北村"
+  ],
+  "address": "S18机场高速出口与金山大道交叉口东北140米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.231989,
+  "lat": 30.637358,
+  "minDist": 472,
+  "kindergartens": [
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "万科汉口传奇悦庭",
+  "variants": [
+   "万科汉口传奇悦庭"
+  ],
+  "address": "八古墩北路与新华路辅路交叉口西南160米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.260852,
+  "lat": 30.619108,
+  "minDist": 475,
+  "kindergartens": [
+   "童心幼儿园",
+   "红旗公寓幼儿园"
+  ]
+ },
+ {
+  "family": "跃进郭湖墩家园",
+  "variants": [
+   "跃进郭湖墩家园"
+  ],
+  "address": "夏鹃街与青松路交叉口西120米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.262375,
+  "lat": 30.638625,
+  "minDist": 478,
+  "kindergartens": [
+   "红苗幼儿园（后湖里园区）",
+   "福星华府誉境启卓幼儿园"
+  ]
+ },
+ {
+  "family": "唐家墩K6开发地块",
+  "variants": [
+   "唐家墩K6开发地块"
+  ],
+  "address": "金陈路与马场二路交叉口西60米",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.265467,
+  "lat": 30.618303,
+  "minDist": 486,
+  "kindergartens": [
+   "童心幼儿园"
+  ]
+ },
+ {
+  "family": "石桥村城中村改造H4+TJ1西地块还建房项目",
+  "variants": [
+   "石桥村城中村改造H4+TJ1西地块还建房项目"
+  ],
+  "address": "青松路与兴业路辅路交叉口东南20米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.271678,
+  "lat": 30.627726,
+  "minDist": 492,
+  "kindergartens": [
+   "新稚雅幼儿园"
+  ]
+ },
+ {
+  "family": "绿城楚留香",
+  "variants": [
+   "绿城楚留香"
+  ],
+  "address": "和谐大道与青松路交叉口东北180米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.266525,
+  "lat": 30.638075,
+  "minDist": 492,
+  "kindergartens": [
+   "红苗幼儿园（后湖里园区）"
+  ]
+ },
+ {
+  "family": "宜景阁",
+  "variants": [
+   "宜景阁"
+  ],
+  "address": "复兴立交与常青路辅路交叉口东北100米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.249175,
+  "lat": 30.613825,
+  "minDist": 494,
+  "kindergartens": [
+   "福星幼儿园"
+  ]
+ },
+ {
+  "family": "汉口花园逸松庭",
+  "variants": [
+   "汉口花园逸松庭"
+  ],
+  "address": "后湖大道54号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.270636,
+  "lat": 30.632241,
+  "minDist": 495,
+  "kindergartens": [
+   "红苗幼儿园（后湖里园区）"
+  ]
+ },
+ {
+  "family": "顶琇头条中心",
+  "variants": [
+   "顶琇头条中心"
+  ],
+  "address": "唐家墩路(唐家墩地铁站B口步行250米)",
+  "typename": "商务写字楼",
+  "hasApartmentVariant": false,
+  "lng": 114.270026,
+  "lat": 30.61965,
+  "minDist": 496,
+  "kindergartens": [
+   "新稚雅幼儿园"
+  ]
+ },
+ {
+  "family": "新大陆城市花园",
+  "variants": [
+   "新大陆城市花园"
+  ],
+  "address": "唐家墩路201号(唐家墩地铁站B口步行310米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.268281,
+  "lat": 30.619572,
+  "minDist": 496,
+  "kindergartens": [
+   "新稚雅幼儿园",
+   "童心幼儿园"
+  ]
+ },
+ {
+  "family": "石桥花园E区",
+  "variants": [
+   "石桥花园E区"
+  ],
+  "address": "青松路与兴业路辅路交叉口东南120米",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.272521,
+  "lat": 30.627213,
+  "minDist": 498,
+  "kindergartens": [
+   "新稚雅幼儿园"
+  ]
+ },
+ {
+  "family": "石桥花园一期东区",
+  "variants": [
+   "石桥花园一期东区"
+  ],
+  "address": "青松路与兴业路辅路交叉口东南120米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.272525,
+  "lat": 30.627225,
+  "minDist": 499,
+  "kindergartens": [
+   "新稚雅幼儿园"
+  ]
+ },
+ {
+  "family": "美联奥林匹克花园",
+  "variants": [
+   "美联·奥林匹克花园六期",
+   "美联·奥林匹克花园一期",
+   "美联·奥林匹克花园",
+   "美联·奥林匹克花园二期",
+   "美联·奥林匹克花园四期"
+  ],
+  "address": "奥园东路3号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.238189,
+  "lat": 30.651626,
+  "minDist": 502,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）"
+  ]
+ },
+ {
+  "family": "丰梨苑中心阁",
+  "variants": [
+   "丰梨苑中心阁"
+  ],
+  "address": "复兴立交与常青路辅路交叉口北60米",
+  "typename": "商务写字楼",
+  "hasApartmentVariant": false,
+  "lng": 114.248642,
+  "lat": 30.61352,
+  "minDist": 503,
+  "kindergartens": [
+   "福星幼儿园"
+  ]
+ },
+ {
+  "family": "远洋心语",
+  "variants": [
+   "远洋心语"
+  ],
+  "address": "汉兴街街道常青路华安里社区(近常青公园)江汉区柏润菜市场",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.241566,
+  "lat": 30.618592,
+  "minDist": 505,
+  "kindergartens": [
+   "福星幼儿园",
+   "王子托育远洋心苑幼儿园"
+  ]
+ },
+ {
+  "family": "万和田季",
+  "variants": [
+   "万和田季"
+  ],
+  "address": "常悦路与常超街交叉口东100米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.244525,
+  "lat": 30.613625,
+  "minDist": 505,
+  "kindergartens": [
+   "福星幼儿园"
+  ]
+ },
+ {
+  "family": "思维同创B座",
+  "variants": [
+   "思维同创B座"
+  ],
+  "address": "思维同创大厦",
+  "typename": "商务写字楼",
+  "hasApartmentVariant": false,
+  "lng": 114.233913,
+  "lat": 30.620385,
+  "minDist": 506,
+  "kindergartens": [
+   "育苗幼儿园"
+  ]
+ },
+ {
+  "family": "融创融公馆",
+  "variants": [
+   "融创融公馆二期",
+   "融创融公馆",
+   "融创融公馆一期"
+  ],
+  "address": "青松路259号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.261065,
+  "lat": 30.639864,
+  "minDist": 507,
+  "kindergartens": [
+   "福星华府誉境启卓幼儿园",
+   "红苗幼儿园（后湖里园区）"
+  ]
+ },
+ {
+  "family": "卿欣嘉居",
+  "variants": [
+   "卿欣嘉居"
+  ],
+  "address": "唐家墩路217号(唐家墩地铁站B口步行310米)",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.269848,
+  "lat": 30.619485,
+  "minDist": 511,
+  "kindergartens": [
+   "新稚雅幼儿园"
+  ]
+ },
+ {
+  "family": "思维同创A座",
+  "variants": [
+   "思维同创A座"
+  ],
+  "address": "江发路与发展三路交叉口东60米",
+  "typename": "商务写字楼",
+  "hasApartmentVariant": false,
+  "lng": 114.233884,
+  "lat": 30.620519,
+  "minDist": 519,
+  "kindergartens": [
+   "育苗幼儿园"
+  ]
+ },
+ {
+  "family": "思联公馆",
+  "variants": [
+   "思联公馆"
+  ],
+  "address": "发展大道与常青路交叉口西北角50米路东",
+  "typename": "商住两用楼宇",
+  "hasApartmentVariant": false,
+  "lng": 114.248923,
+  "lat": 30.613452,
+  "minDist": 520,
+  "kindergartens": [
+   "福星幼儿园"
+  ]
+ },
+ {
+  "family": "长青壹号",
+  "variants": [
+   "长青壹号"
+  ],
+  "address": "常青花园中路与中环东路交叉口西南100米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.247214,
+  "lat": 30.642626,
+  "minDist": 521,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "龙泉公寓",
+  "variants": [
+   "龙泉公寓"
+  ],
+  "address": "发展大道与后襄河一路交叉口西北180米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": true,
+  "lng": 114.250075,
+  "lat": 30.614025,
+  "minDist": 522,
+  "kindergartens": [
+   "福星幼儿园"
+  ]
+ },
+ {
+  "family": "常青花园B座",
+  "variants": [
+   "常青花园B座"
+  ],
+  "address": "汉飞大道与金山大道交叉口东北40米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.230925,
+  "lat": 30.637275,
+  "minDist": 525,
+  "kindergartens": [
+   "武汉市实验幼儿园（橡树园区）",
+   "武汉市实验幼儿园（睿迪园区）",
+   "武汉常青阳光幼儿园"
+  ]
+ },
+ {
+  "family": "长青壹号北区",
+  "variants": [
+   "长青壹号北区"
+  ],
+  "address": "中环东路与常青花园中路交叉口西140米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.246725,
+  "lat": 30.643452,
+  "minDist": 547,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "天梨豪园",
+  "variants": [
+   "天梨豪园"
+  ],
+  "address": "发展大道176号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.249909,
+  "lat": 30.613581,
+  "minDist": 553,
+  "kindergartens": [
+   "福星幼儿园"
+  ]
+ },
+ {
+  "family": "常青街银河社区",
+  "variants": [
+   "常青街银河社区"
+  ],
+  "address": "银河里58-62号(汉口火车站地铁站B口步行370米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.251017,
+  "lat": 30.614383,
+  "minDist": 554,
+  "kindergartens": [
+   "福星幼儿园"
+  ]
+ },
+ {
+  "family": "示范小区",
+  "variants": [
+   "示范小区"
+  ],
+  "address": "��兴街街道常超街附近宏泰公寓",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.241053,
+  "lat": 30.616689,
+  "minDist": 557,
+  "kindergartens": [
+   "福星幼儿园"
+  ]
+ },
+ {
+  "family": "愿景时代",
+  "variants": [
+   "愿景时代"
+  ],
+  "address": "公园南路6东北方向150米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.25307,
+  "lat": 30.64067,
+  "minDist": 568,
+  "kindergartens": [
+   "福星华府誉境思桥幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "远洋万和四季",
+  "variants": [
+   "远洋·万和四季"
+  ],
+  "address": "常超街与常展里交汇在一期御峰的南面",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.245294,
+  "lat": 30.612785,
+  "minDist": 568,
+  "kindergartens": [
+   "福星幼儿园"
+  ]
+ },
+ {
+  "family": "万科汉口传奇悦庭西区",
+  "variants": [
+   "万科汉口传奇悦庭西区"
+  ],
+  "address": "金墩街辅路与金墩巷交叉口东北140米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.259772,
+  "lat": 30.61912,
+  "minDist": 575,
+  "kindergartens": [
+   "红旗公寓幼儿园"
+  ]
+ },
+ {
+  "family": "将军路街奥园生活圈邻里中心",
+  "variants": [
+   "将军路街奥园生活圈邻里中心"
+  ],
+  "address": "奥园东路5号附8-附12号",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.238315,
+  "lat": 30.652313,
+  "minDist": 577,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）"
+  ]
+ },
+ {
+  "family": "汉口花园幽兰居C区",
+  "variants": [
+   "汉口花园幽兰居C区"
+  ],
+  "address": "翠柏路与和谐大道交叉口南60米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.268675,
+  "lat": 30.638375,
+  "minDist": 590,
+  "kindergartens": [
+   "红苗幼儿园（后湖里园区）"
+  ]
+ },
+ {
+  "family": "中铁北苑",
+  "variants": [
+   "中铁北苑"
+  ],
+  "address": "复兴五村323号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.238047,
+  "lat": 30.617157,
+  "minDist": 620,
+  "kindergartens": [
+   "育苗幼儿园"
+  ]
+ },
+ {
+  "family": "伊甸园",
+  "variants": [
+   "伊甸园"
+  ],
+  "address": "姑李路208号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.249116,
+  "lat": 30.650149,
+  "minDist": 624,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园"
+  ]
+ },
+ {
+  "family": "星科缦庭",
+  "variants": [
+   "星科缦庭"
+  ],
+  "address": "跃进村",
+  "typename": "商务住宅相关",
+  "hasApartmentVariant": false,
+  "lng": 114.263691,
+  "lat": 30.63934,
+  "minDist": 626,
+  "kindergartens": [
+   "红苗幼儿园（后湖里园区）",
+   "福星华府誉境启卓幼儿园"
+  ]
+ },
+ {
+  "family": "美联奥林匹克花园北区",
+  "variants": [
+   "美联奥林匹克花园-北区"
+  ],
+  "address": "常青北路与奥园路交叉口南280米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.234184,
+  "lat": 30.652928,
+  "minDist": 629,
+  "kindergartens": [
+   "武汉市实验幼儿园（博爱园区·本部）"
+  ]
+ },
+ {
+  "family": "天梨豪园丽景阁",
+  "variants": [
+   "天梨豪园丽景阁"
+  ],
+  "address": "发展大道179附7附近",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.250742,
+  "lat": 30.613197,
+  "minDist": 634,
+  "kindergartens": [
+   "福星幼儿园"
+  ]
+ },
+ {
+  "family": "石桥花园B区",
+  "variants": [
+   "石桥花园B区"
+  ],
+  "address": "青松路与冬梅街交叉口南160米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.269919,
+  "lat": 30.629244,
+  "minDist": 636,
+  "kindergartens": [
+   "红苗幼儿园（后湖里园区）"
+  ]
+ },
+ {
+  "family": "天梨豪园帝景阁",
+  "variants": [
+   "天梨豪园帝景阁"
+  ],
+  "address": "常青街办事处发展大道天梨豪园",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.249956,
+  "lat": 30.612733,
+  "minDist": 636,
+  "kindergartens": [
+   "福星幼儿园"
+  ]
+ },
+ {
+  "family": "荣昌花园",
+  "variants": [
+   "荣昌花园"
+  ],
+  "address": "姑李路将军花园门口荣昌花园4栋2号门面",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.249732,
+  "lat": 30.649246,
+  "minDist": 638,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园"
+  ]
+ },
+ {
+  "family": "美联奥公馆",
+  "variants": [
+   "美联·奥公馆"
+  ],
+  "address": "奥园东路6号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.240696,
+  "lat": 30.652718,
+  "minDist": 640,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）"
+  ]
+ },
+ {
+  "family": "将军梧桐树下工薪小区",
+  "variants": [
+   "将军梧桐树下工薪小区"
+  ],
+  "address": "将军路将军花园对面",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.245971,
+  "lat": 30.652788,
+  "minDist": 642,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园"
+  ]
+ },
+ {
+  "family": "常展里",
+  "variants": [
+   "常展里"
+  ],
+  "address": "井南路与常超街交叉口东北140米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.246225,
+  "lat": 30.611925,
+  "minDist": 649,
+  "kindergartens": [
+   "福星幼儿园"
+  ]
+ },
+ {
+  "family": "当代春风十里小区",
+  "variants": [
+   "当代春风十里小区"
+  ],
+  "address": "常青花园中路与中环东路交叉口东北220米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.249519,
+  "lat": 30.644802,
+  "minDist": 655,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市常青童馨幼儿园"
+  ]
+ },
+ {
+  "family": "巴西奥运村",
+  "variants": [
+   "巴西奥运村"
+  ],
+  "address": "奥园中路与奥园东路交叉口西20米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.239325,
+  "lat": 30.652725,
+  "minDist": 659,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）"
+  ]
+ },
+ {
+  "family": "白金领域",
+  "variants": [
+   "白金领域"
+  ],
+  "address": "发展大道183号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.251689,
+  "lat": 30.613595,
+  "minDist": 661,
+  "kindergartens": [
+   "福星幼儿园"
+  ]
+ },
+ {
+  "family": "中铁南苑",
+  "variants": [
+   "中铁南苑"
+  ],
+  "address": "复兴五村272号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.240125,
+  "lat": 30.61599,
+  "minDist": 663,
+  "kindergartens": [
+   "福星幼儿园"
+  ]
+ },
+ {
+  "family": "远洋汉口公馆远洋心汉口",
+  "variants": [
+   "远洋汉口公馆远洋心汉口2期",
+   "远洋汉口公馆远洋心汉口"
+  ],
+  "address": "发展大道与振兴一路交叉口西北100米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.24703,
+  "lat": 30.61173,
+  "minDist": 669,
+  "kindergartens": [
+   "福星幼儿园"
+  ]
+ },
+ {
+  "family": "东方帝园",
+  "variants": [
+   "东方帝园"
+  ],
+  "address": "金墩街10号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.25923,
+  "lat": 30.617902,
+  "minDist": 670,
+  "kindergartens": [
+   "红旗公寓幼儿园"
+  ]
+ },
+ {
+  "family": "影狐科技2号楼",
+  "variants": [
+   "影狐科技2号楼"
+  ],
+  "address": "江汉经济开发区江兴路18号影狐科技",
+  "typename": "商务写字楼",
+  "hasApartmentVariant": false,
+  "lng": 114.229975,
+  "lat": 30.622125,
+  "minDist": 670,
+  "kindergartens": [
+   "育苗幼儿园"
+  ]
+ },
+ {
+  "family": "喜庭汇",
+  "variants": [
+   "喜庭汇"
+  ],
+  "address": "S19机场二高速入口与姑李路交叉口西北200米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.245525,
+  "lat": 30.653475,
+  "minDist": 700,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园"
+  ]
+ },
+ {
+  "family": "将军花园",
+  "variants": [
+   "将军花园2期",
+   "将军花园"
+  ],
+  "address": "康居六路与姑李路交叉口东120米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.250279,
+  "lat": 30.649863,
+  "minDist": 711,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园"
+  ]
+ },
+ {
+  "family": "都市假日",
+  "variants": [
+   "都市假日"
+  ],
+  "address": "金银湖马池路特1号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.230476,
+  "lat": 30.651992,
+  "minDist": 731,
+  "kindergartens": [
+   "武汉市实验幼儿园（博爱园区·本部）"
+  ]
+ },
+ {
+  "family": "将军花园A区",
+  "variants": [
+   "将军花园A区"
+  ],
+  "address": "姑李路196号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.250852,
+  "lat": 30.649799,
+  "minDist": 759,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园"
+  ]
+ },
+ {
+  "family": "将军花园D区",
+  "variants": [
+   "将军花园D区"
+  ],
+  "address": "将军一路与银花街交叉口西220米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.250719,
+  "lat": 30.650939,
+  "minDist": 800,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园"
+  ]
+ },
+ {
+  "family": "凯旋名居",
+  "variants": [
+   "凯旋名居"
+  ],
+  "address": "金银潭大道将军一路",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.247741,
+  "lat": 30.653903,
+  "minDist": 829,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园"
+  ]
+ },
+ {
+  "family": "福园",
+  "variants": [
+   "福园"
+  ],
+  "address": "姑李路152号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.252428,
+  "lat": 30.646878,
+  "minDist": 866,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园"
+  ]
+ },
+ {
+  "family": "鹏海家园",
+  "variants": [
+   "鹏海家园"
+  ],
+  "address": "将军路银花街46号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.252511,
+  "lat": 30.649234,
+  "minDist": 894,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园"
+  ]
+ },
+ {
+  "family": "金地北辰阅风华",
+  "variants": [
+   "金地北辰阅风华"
+  ],
+  "address": "奥园东路8号",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.240116,
+  "lat": 30.65499,
+  "minDist": 895,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园",
+   "武汉市实验幼儿园（博爱园区·本部）"
+  ]
+ },
+ {
+  "family": "青青佳园",
+  "variants": [
+   "青青佳园"
+  ],
+  "address": "将军一路与金银潭大道交汇处",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.25072,
+  "lat": 30.652486,
+  "minDist": 896,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园"
+  ]
+ },
+ {
+  "family": "将军花园C区",
+  "variants": [
+   "将军花园C区"
+  ],
+  "address": "将军一路与银花街交叉口西100米",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.251748,
+  "lat": 30.651513,
+  "minDist": 917,
+  "kindergartens": [
+   "武汉市常青童梦幼儿园"
+  ]
+ },
+ {
+  "family": "沿海丽水佳园",
+  "variants": [
+   "沿海丽水佳园四期"
+  ],
+  "address": "马池路特1号(马池地铁站B口步行210米)",
+  "typename": "住宅小区",
+  "hasApartmentVariant": false,
+  "lng": 114.22648,
+  "lat": 30.650267,
+  "minDist": 966,
+  "kindergartens": [
+   "武汉市实验幼儿园（博爱园区·本部）"
+  ]
+ }
+]

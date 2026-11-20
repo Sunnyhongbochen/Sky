@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /functions/
+Disallow: /huiji/doc/
+
+Sitemap: {{ "sitemap.xml" | absURL }}

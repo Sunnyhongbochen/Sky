@@ -1,12 +1,14 @@
 # Hugo 生成的静态文件
 public/
 resources/_gen/
+.tmp-build*/
 
 # 临时文件
 *.tmp
 *.swp
 *.swo
 *~
+.hugo_build.lock
 
 # 操作系统文件
 .DS_Store
@@ -16,8 +18,24 @@ Thumbs.db
 .vscode/
 .idea/
 *.iml
+.trae/
 
-# 日志文件
+# 日志与部署缓存
 *.log
-.hugo_build.lock
 .wrangler/
+.netlify/
+
+# 依赖
+node_modules/
+
+# 本地密钥 / 环境变量
+.dev.vars
+.env
+.env.local
+
+# 城市部件管理平台（city-platform）：本地演示应用，含约 140MB 模拟数据截图，不纳入站点仓库
+city-platform/
+*.bak-*
+
+# 会记 HuiJi：Web 产物随站点发布，排除大体积安装包
+huiji/*.apk

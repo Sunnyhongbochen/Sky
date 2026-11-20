@@ -1,5 +1,15 @@
 <footer class="site-footer">
-  <p>© {{ now.Format "2006" }} {{ .Site.Title }} · 
-    <a href="https://summer-website.pages.dev">summer-website.pages.dev</a>
-  </p>
+  <div class="footer-inner">
+    <p class="footer-line">
+      © {{ if ne site.Params.since now.Year }}{{ site.Params.since }}–{{ end }}{{ now.Format "2006" }} {{ site.Title }}
+      <span class="footer-dot">·</span> {{ site.Params.description }}
+    </p>
+    <p class="footer-links">
+      <a href="{{ `index.xml` | relURL }}">RSS 订阅</a>
+      <span class="footer-dot">·</span>
+      <a href="{{ `sitemap.xml` | relURL }}">站点地图</a>
+      <span class="footer-dot">·</span>
+      <a href="#top">回到顶部 ↑</a>
+    </p>
+  </div>
 </footer>

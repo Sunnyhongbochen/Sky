@@ -1,0 +1,9 @@
+.venv/
+data/models/
+data/uploads/*
+!data/uploads/.gitkeep
+data/*.transcript.json
+data/*.tmp
+data/model-config.json
+__pycache__/
+*.pyc

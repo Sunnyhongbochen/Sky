@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section class="section-page error-page">
+  <p class="error-code">404</p>
+  <h1 class="section-page-title">页面走丢了</h1>
+  <p class="error-text">这个地址没有内容，可能是链接过期或者手误。</p>
+  <p class="error-actions">
+    <a class="page-btn" href="{{ site.Home.RelPermalink }}">回到首页</a>
+    <a class="page-btn" href="{{ `posts/` | relURL }}">看看文章</a>
+  </p>
+</section>
+{{ end }}

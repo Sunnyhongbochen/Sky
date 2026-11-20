@@ -1,62 +1,87 @@
 baseURL = "https://summer-website.pages.dev/"
-languageCode = "zh-cn"
-defaultContentLanguage = "zh"
 title = "夏天的小站"
+
+# --- 语言 ---
+locale = "zh-CN"                       # v0.158+ 取代 languageCode
+defaultContentLanguage = "zh"
+hasCJKLanguage = true                  # 中文按字计数，影响字数/阅读时长统计
+enableRobotsTXT = true                 # 由 layouts/robots.txt 生成
+enableEmoji = true
+
 theme = "summer"
 
+# --- 分页 ---
+[pagination]
+  pagerSize = 10
+
+# --- 站点参数 ---
 [params]
   author = "胡夏天"
   description = "记录思考，沉淀成长"
-  keywords = ["博客", "笔记", "成长"]
+  keywords = ["博客", "笔记", "成长", "AI", "政务信息化"]
   DateFormat = "2006-01-02 15:04"
+  since = 2026
+  ogImage = "/og-default.png"           # 社交分享默认图（1200x630）
+  locale = "zh_CN"
 
-  [params.profileMode]
-    enabled = true
-    title = "夏天的小站"
-    subtitle = "记录思考，沉淀成长"
-    imageUrl = ""
-    imageTitle = ""
-    imageWidth = 120
-    imageHeight = 120
-
+# --- 主导航（首页模块卡片同时复用这里的 desc）---
 [[menu.main]]
   identifier = "posts"
   name = "偶得碎语"
   url = "/posts/"
   weight = 1
+  [menu.main.params]
+    desc = "随笔 · 灵感 · 碎片"
 
 [[menu.main]]
   identifier = "notes"
   name = "知学札记"
   url = "/notes/"
   weight = 2
+  [menu.main.params]
+    desc = "学习笔记 · 干货沉淀"
 
 [[menu.main]]
   identifier = "moments"
   name = "时光印记"
   url = "/moments/"
   weight = 3
+  [menu.main.params]
+    desc = "生活纪事 · 小确幸"
 
 [[menu.main]]
   identifier = "ai-growth"
-  name = "AI成长"
+  name = "AI 成长"
   url = "/ai-growth/"
   weight = 4
+  [menu.main.params]
+    desc = "技术应用 · 资讯情报 · 日志记录"
 
 [[menu.main]]
   identifier = "links"
   name = "链接"
   url = "/links/"
   weight = 5
+  [menu.main.params]
+    desc = "有趣的灵魂与分享"
 
+# --- 输出 ---
 [outputs]
   home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
 
+[sitemap]
+  filename = "sitemap.xml"
+  changefreq = "weekly"
+  priority = 0.5
+
+# --- Markdown ---
 [markup]
   [markup.highlight]
     codeFences = true
     guessSyntax = true
     lineNos = true
+    lineNumbersInTable = false
     style = "github-dark"
     tabWidth = 4
   [markup.goldmark]
@@ -66,3 +91,26 @@ theme = "summer"
     endLevel = 3
     ordered = false
     startLevel = 2
+
+# 把会记 HuiJi（Flutter Web 构建）挂载到站点的 /huiji/ 路径
+# 入口 index.html 内 base href=/huiji/，因此挂载目标必须是 static/huiji
+[module]
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "data"
+    target = "data"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "archetypes"
+    target = "archetypes"
+  [[module.mounts]]
+    source = "huiji"
+    target = "static/huiji"
+    excludeFiles = ["*.apk", "doc/*"]

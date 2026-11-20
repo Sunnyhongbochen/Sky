@@ -1,44 +1,35 @@
 {{ define "main" }}
-{{ $pages := where .Site.RegularPages "Type" "in" (slice "posts" "notes" "moments" "ai-growth") }}
-<main>
-<section class="module-cards">
+{{- $pages := where site.RegularPages "Section" "in" (slice "posts" "notes" "moments" "ai-growth") -}}
+<section class="module-cards" aria-label="内容模块">
   <div class="cards-grid">
-    <a href="/posts/" class="module-card">
-      <h2 class="card-title">偶得碎语</h2>
-      <p class="card-desc">随笔 · 灵感 · 碎片</p>
+    {{- range site.Menus.main }}
+    <a href="{{ .URL }}" class="module-card">
+      <h2 class="card-title">{{ .Name }}</h2>
+      <p class="card-desc">{{ with .Params.desc }}{{ . }}{{ else }}&nbsp;{{ end }}</p>
     </a>
-    <a href="/notes/" class="module-card">
-      <h2 class="card-title">知学札记</h2>
-      <p class="card-desc">学习笔记 · 干货沉淀</p>
-    </a>
-    <a href="/moments/" class="module-card">
-      <h2 class="card-title">时光印记</h2>
-      <p class="card-desc">生活纪事 · 小确幸</p>
-    </a>
-    <a href="/ai-growth/" class="module-card">
-      <h2 class="card-title">AI 成长</h2>
-      <p class="card-desc">技术应用 · 资讯情报 · 日志记录</p>
-    </a>
-    <a href="/links/" class="module-card">
-      <h2 class="card-title">链接</h2>
-      <p class="card-desc">有趣的灵魂与分享</p>
-    </a>
+    {{- end }}
   </div>
 </section>
-{{ if gt (len $pages) 0 }}
+
+{{- if gt (len $pages) 0 }}
 <section class="recent-posts">
-  <h2 class="section-title">最新文章</h2>
+  <div class="section-head">
+    <h2 class="section-title">最新文章</h2>
+    <span class="section-count">共 {{ len $pages }} 篇</span>
+  </div>
   <div class="post-list">
-    {{ range first 6 $pages.ByDate.Reverse }}
+    {{- range first 8 $pages.ByDate.Reverse }}
     <article class="post-item">
-      <time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "01-02" }}</time>
+      <time class="post-date" datetime="{{ .Date.Format `2006-01-02` }}">{{ .Date.Format "01-02" }}</time>
       <div class="post-info">
         <h3 class="post-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        {{- with .CurrentSection }}
+        <span class="post-section">{{ .Title }}</span>
+        {{- end }}
       </div>
     </article>
-    {{ end }}
+    {{- end }}
   </div>
 </section>
-{{ end }}
-</main>
+{{- end }}
 {{ end }}

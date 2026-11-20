@@ -1,0 +1,21 @@
+【会记 · 网页版（子目录部署）】
+
+本包已按 base href = /huiji/ 构建。
+部署方法：把本包内所有文件，原样放到你网站的 /huiji/ 目录下（即 https://你的域名/huiji/）。
+
+例：
+- Cloudflare Pages：把内容放进仓库的 huiji/ 目录后推送；
+- 宝塔/Nginx：放到站点根目录下的 huiji/ 文件夹。
+
+若你的子目录名不是 huiji，请重新构建：flutter build web --release --base-href /你的目录名/
+
+注意：必须用 HTTP(S) 访问，不能双击本地文件打开（浏览器会拦截）。
+麦克风权限与语音识别需要 https 或 localhost。
+
+【首屏加速（手动改动，重新构建后需重做）】
+1. flutter_bootstrap.js 末尾的 _flutter.loader.load 增加
+   config: { canvasKitBaseUrl: "/huiji/canvaskit/" }
+   让 CanvasKit 使用本地文件，避免默认从 www.gstatic.com 拉取时卡住首屏。
+2. index.html 预加载 main.dart.js，并改为在 flutter-first-frame 后移除加载提示。
+3. 内部文档 doc/ 已在站点挂载时排除，不会随网站发布。
+

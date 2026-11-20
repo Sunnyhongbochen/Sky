@@ -1,143 +1,99 @@
 # 夏天的小站
 
-一个记录思考、沉淀成长的个人网站。
+个人网站：记录思考，沉淀成长。
+线上地址：<https://summer-website.pages.dev/>
 
-## 🌐 网站栏目
+## 栏目
 
-| 栏目 | 路径 | 说明 |
+| 栏目 | 路径 | 内容 |
 |------|------|------|
-| 偶得碎语 | `/posts/` | 随笔，记录一闪而过的灵感、情绪碎片与零散感悟 |
-| 知学札记 | `/notes/` | 笔记，整理学习工作的干货收获，沉淀知识点 |
-| 时光印记 | `/moments/` | 纪事，记录生活中的新体验，留存有温度的小确幸 |
-| 工作日志 | `/worklog/` | 工作，记录每天的工作进展和成果 |
+| 偶得碎语 | `/posts/` | 随笔、灵感、碎片 |
+| 知学札记 | `/notes/` | 学习笔记、干货沉淀 |
+| 时光印记 | `/moments/` | 生活纪事、小确幸 |
+| AI 成长 | `/ai-growth/` | 技术应用、资讯情报、工作日志 |
+| 链接 | `/links/` | 友链、作品、小测 |
 
-## 🛠️ 技术栈
+导航与首页卡片共用 `config.toml` 里的 `[[menu.main]]`，新增栏目改一处即可。
 
-- **静态网站生成器**：Hugo
-- **托管平台**：Gitee Pages
-- **主题**：PaperMod
-- **访问控制**：Gitee 私有仓库 + 密码保护（方案B）
+## 技术栈
 
-## 📁 项目结构
+- **生成器**：Hugo（0.166.0，extended）
+- **托管**：Cloudflare Pages（`public/` 静态资源 + `functions/` 中间件）
+- **主题**：`themes/summer`（自研，青蓝配色，支持暗色模式）
+- **访问控制**：Cloudflare Pages Functions 密码中间件（`functions/_middleware.js`）
+- **子应用**：`huiji/`（会记，Flutter Web，挂载到 `/huiji/`）、`city-platform/`、`voice-knowledge-hub-deploy/`（本地演示）
+
+## 目录结构
 
 ```
 summer-website/
-├── config.toml              # 网站配置文件
-├── README.md                # 项目说明
-├── archetypes/              # 文章模板
-│   ├── posts.md            # 偶得碎语模板
-│   ├── notes.md            # 知学札记模板
-│   ├── moments.md          # 时光印记模板
-│   └── worklog.md          # 工作日志模板
-├── content/                 # 内容目录
-│   ├── posts/              # 偶得碎语
-│   ├── notes/              # 知学札记
-│   ├── moments/            # 时光印记
-│   └── worklog/            # 工作日志
-├── static/                  # 静态资源
-│   ├── images/             # 图片
-│   └── files/              # 文件
-└── themes/                  # 主题（后续安装）
+├── config.toml                 站点配置（语言、菜单、分页、模块挂载）
+├── content/                    文章（posts / notes / moments / ai-growth / links）
+├── data/links.yaml             友链、作品、小测数据
+├── themes/summer/
+│   ├── assets/css/style.css    全部样式
+│   └── layouts/                模板（_default / links / partials / 404 / robots / RSS）
+├── static/                     favicon、og 图、login.html、小测页面
+├── functions/_middleware.js    访问密码中间件
+├── huiji/                      会记 Flutter Web 构建产物（挂载到 /huiji/）
+├── .github/workflows/deploy.yml GitHub Actions 自动部署
+├── tests/                      中间件回归测试
+└── start.bat                   一键启动本地三个服务
 ```
 
-## 🚀 快速开始
-
-### 1. 安装 Hugo
+## 本地开发
 
 ```bash
-# macOS
-brew install hugo
+# 预览（含草稿）
+hugo server -D --port 1313
 
-# Linux
-sudo apt-get install hugo
-
-# 或从官网下载：https://gohugo.io/getting-started/installing/
+# 完整构建（与线上一致）
+hugo --minify --gc
 ```
 
-### 2. 安装主题
+Windows 双击 `start.bat` 可同时启动：站点 `:1313`、城市部件平台 `:3000`、音译 `:4173`。
+
+## 写文章
 
 ```bash
-cd summer-website
-git submodule add https://github.com/adityatelange/hugo-PaperMod.git themes/PaperMod
+hugo new posts/2026-11-20-标题.md
+hugo new notes/2026-11-20-标题.md
+hugo new moments/2026-11-20-标题.md
 ```
 
-### 3. 本地预览
+发布前把 front matter 里的 `draft` 改成 `false`。
+
+## 部署
+
+推送到 `master` 后由 `.github/workflows/deploy.yml` 自动构建并发布到 Cloudflare Pages。
+
+需要的仓库 Secret：
+
+| 名称 | 用途 |
+|------|------|
+| `CLOUDFLARE_API_TOKEN` | 具备 Pages 编辑权限的 API Token |
+
+## 访问密码
+
+线上整站受 `functions/_middleware.js` 保护，流程：未登录 → 302 到 `/login` → `POST /api/login` 校验 → 写入 `HttpOnly + Secure` 的 `site_auth` Cookie（值为 SHA-256 摘要，不含密码原文，有效期 7 天）。`/api/logout` 退出。
+
+**修改密码（推荐做法）**
+
+在 Cloudflare Pages → Settings → Environment variables 添加 `SITE_PASSWORD`，重新部署即生效（优先级高于代码里的回退值）。
+
+**回归测试**
 
 ```bash
-hugo server -D
+node tests/middleware-auth.test.mjs   # 24 项断言，覆盖跳转、放行、Cookie、开放跳转防护
 ```
 
-然后访问：http://localhost:1313
+> 注意：`huiji/*.apk` 体积 150MB，已被 `.gitignore` 和 Hugo `excludeFiles` 排除，不会进入仓库与线上产物。
 
-### 4. 生成静态文件
+## 主题改造要点
 
-```bash
-hugo
-```
-
-生成的文件在 `public/` 目录
-
-### 5. 部署到 Gitee Pages
-
-1. 创建 Gitee 仓库（设为私有）
-2. 将项目推送到仓库
-3. 在仓库设置中启用 Gitee Pages
-4. 选择 `gh-pages` 分支作为源
-
-## ✍️ 写文章
-
-### 创建新文章
-
-```bash
-# 偶得碎语
-hugo new posts/文章标题.md
-
-# 知学札记
-hugo new notes/文章标题.md
-
-# 时光印记
-hugo new moments/文章标题.md
-
-# 工作日志
-hugo new worklog/文章标题.md
-```
-
-### 文章模板
-
-每个栏目都有专门的模板，包含预设的结构和提示，直接套用即可。
-
-## 🔐 访问控制（方案B）
-
-Public仓库 + 密码保护
-
-实现方式：
-1. 使用 Hugo 生成静态文件
-2. 使用第三方工具添加密码保护
-3. 推荐方案：
-   - Netlify Password Protection
-   - Cloudflare Access
-   - 或使用静态密码保护脚本
-
-## 📝 注意事项
-
-- 所有文章使用 Markdown 格式
-- 图片放在 `static/images/` 目录
-- 附件放在 `static/files/` 目录
-- 草稿设置 `draft: true`，正式发布设为 `false`
-
-## 🎨 自定义
-
-### 修改网站信息
-
-编辑 `config.toml` 文件：
-- `title`：网站名称
-- `params.description`：网站描述
-- `params.profileMode`：首页配置
-
-### 更换主题
-
-在 `config.toml` 中修改 `theme` 字段，然后将主题放到 `themes/` 目录。
-
----
-
-**记录思考，沉淀成长** 🌸
+- `head.html`：canonical、OG/Twitter、JSON-LD、favicon、RSS
+- `single.html`：目录（长文自动出现）、阅读时长、字数、更新时间、上下篇
+- `list.html`：分区页聚合子栏目最新 5 篇，子栏目页做真分页
+- `links/list.html`：读 `data/links.yaml`，`localhost` 链接自动打「本地演示」标
+- `_markup/`：图片自动懒加载 + 图注，外链自动 `target=_blank rel=noopener`
+- `style.css`：AA 对比度、暗色模式、移动端导航横向滑动、打印样式
