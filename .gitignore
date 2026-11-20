@@ -1,7 +1,7 @@
 # Hugo 生成的静态文件
 public/
 resources/_gen/
-.tmp-build*/
+.tmp*/
 
 # 临时文件
 *.tmp
