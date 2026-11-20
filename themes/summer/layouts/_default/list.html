@@ -18,6 +18,7 @@
 
   {{- if .Sections }}
   {{- range .Sections }}
+  {{- if gt (len .RegularPagesRecursive) 0 }}
   <div class="section-subsection">
     <div class="subsection-head">
       <h2 class="subsection-title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
@@ -36,6 +37,7 @@
       {{- end }}
     </div>
   </div>
+  {{- end }}
   {{- end }}
   {{- else }}
   {{- $paginator := .Paginate .RegularPages.ByDate.Reverse }}

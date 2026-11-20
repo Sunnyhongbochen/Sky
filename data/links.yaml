@@ -4,19 +4,16 @@ friends:
     - name: "AI爪客"
       url: "https://blog.csdn.net/python_jeff/article/details/161242620"
       desc: "CSDN python_jeff · 零基础入门 Skill 创作的认知框架，约 2.5 万字"
-    - name: "阮一峰的网络日志"
-      url: "https://www.ruanyifeng.com/home.html"
-      desc: "科技爱好者周刊，每周五发布"
+    - name: "洛澈AI"
+      url: "https://luocheai.online/account"
+      desc: "AI 订阅一站式开通"
 
 # 作品
 works:
   sites:
-    - name: "襄阳市城市部件数据管理平台"
-      url: "http://82.157.103.93:8888/"
-      desc: "基于GIS的城市管理部件可视化平台，支持部件普查、分权管理、操作审计（演示账号 admin / admin123）"
-    - name: "城市部件平台（本地开发版）"
+    - name: "城市部件管理平台"
       url: "http://localhost:3000"
-      desc: "同一平台的本机开发实例，改代码后本地调试用，需先运行 city-platform"
+      desc: "基于GIS的城市部件可视化管理平台，支持部件分区、分系统、分部门管理，以及部件的生命周期更新维护(演示账号 admin / admin123)"
     - name: "会记 HuiJi"
       url: "/huiji/"
       desc: "会面记忆与人际关系管理 Web 应用，基于 Flutter Web 构建，支持本地记录、语音识别与数据导出"

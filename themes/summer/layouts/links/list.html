@@ -41,9 +41,8 @@
     {{- end }}
     <div class="links-grid">
       {{- range $gd.sites }}
-      {{- $external := or (hasPrefix .url "http://") (hasPrefix .url "https://") }}
       {{- $local := or (hasPrefix .url "http://localhost") (hasPrefix .url "http://127.0.0.1") }}
-      <a href="{{ .url }}" class="link-card"{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }}>
+      <a href="{{ .url }}" class="link-card" target="_blank" rel="noopener noreferrer">
         <h3 class="link-name">
           {{ .name }}
           {{- if $local }}<span class="badge badge-local">本地演示</span>{{ end }}
