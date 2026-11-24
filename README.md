@@ -11,7 +11,7 @@
 | 知学札记 | `/notes/` | 学习笔记、干货沉淀 |
 | 时光印记 | `/moments/` | 生活纪事、小确幸 |
 | AI 成长 | `/ai-growth/` | 技术应用、资讯情报、工作日志 |
-| 链接 | `/links/` | 友链、作品、小测 |
+| 链接 | `/links/` | 友链、作品、GIS地图 |
 
 导航与首页卡片共用 `config.toml` 里的 `[[menu.main]]`，新增栏目改一处即可。
 
@@ -29,11 +29,11 @@
 summer-website/
 ├── config.toml                 站点配置（语言、菜单、分页、模块挂载）
 ├── content/                    文章（posts / notes / moments / ai-growth / links）
-├── data/links.yaml             友链、作品、小测数据
+├── data/links.yaml             友链、作品、GIS地图数据
 ├── themes/summer/
 │   ├── assets/css/style.css    全部样式
 │   └── layouts/                模板（_default / links / partials / 404 / robots / RSS）
-├── static/                     favicon、og 图、login.html、小测页面
+├── static/                     favicon、og 图、login.html、GIS 专题地图页面
 ├── functions/_middleware.js    访问密码中间件
 ├── huiji/                      会记 Flutter Web 构建产物（挂载到 /huiji/）
 ├── .github/workflows/deploy.yml GitHub Actions 自动部署

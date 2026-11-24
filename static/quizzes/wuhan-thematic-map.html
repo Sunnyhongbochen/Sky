@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>武汉专题地图</title>
+    <script src="https://webapi.amap.com/maps?v=2.0&key=f802ceab11ff6e7c163cce86c55c4d82"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "Microsoft YaHei", sans-serif; }
+        #container { width: 100vw; height: 100vh; }
+
+        .panel {
+            position: absolute; background: white; border-radius: 10px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.18); z-index: 1000;
+        }
+        #layer-panel { top: 12px; left: 12px; width: 240px; max-height: 86vh; overflow-y: auto; padding: 14px; }
+        .panel-title {
+            font-size: 15px; font-weight: 700; color: #2F5597;
+            border-bottom: 2px solid #4472C4; padding-bottom: 8px; margin-bottom: 10px;
+            display: flex; align-items: baseline; justify-content: space-between;
+        }
+        .panel-sub { font-size: 10px; font-weight: 400; color: #9aa7bc; letter-spacing: 1px; }
+        .layer-group-title { font-size: 11px; color: #8894a8; margin: 12px 0 5px; letter-spacing: .5px; }
+        .layer-row {
+            display: flex; align-items: center; gap: 8px; padding: 7px 6px;
+            border-radius: 6px; cursor: pointer; font-size: 13px; color: #333;
+        }
+        .layer-row:hover { background: #f3f6fb; }
+        .layer-row input[type=checkbox], .sub-row input[type=checkbox] {
+            width: 15px; height: 15px; accent-color: #4472C4; cursor: pointer;
+        }
+        .layer-name { flex: 1; }
+        .layer-count { font-size: 11px; color: #8894a8; background: #f0f3f8; padding: 1px 7px; border-radius: 9px; }
+        .expand-btn {
+            border: none; background: transparent; color: #4472C4; font-size: 13px;
+            cursor: pointer; padding: 0 2px; transition: transform .15s;
+        }
+        .expand-btn.open { transform: rotate(90deg); }
+        .sub-layers { margin: 2px 0 6px 25px; padding: 2px 0 2px 9px; border-left: 1px dashed #ccd6e6; }
+        .sub-row { display: flex; align-items: center; gap: 7px; padding: 4px 0; font-size: 12px; color: #555; cursor: pointer; }
+        .sub-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .sub-count { margin-left: auto; color: #9aa7bc; font-size: 11px; }
+        .area-filters { display: flex; flex-wrap: wrap; gap: 5px; }
+        .area-btn {
+            border: 1px solid #ccd6e6; background: white; color: #5a6b85;
+            padding: 4px 9px; border-radius: 12px; font-size: 11px;
+            cursor: pointer; font-family: inherit;
+        }
+        .area-btn.active { background: #4472C4; border-color: #4472C4; color: white; }
+
+        #info-panel { top: 12px; right: 12px; width: 300px; max-height: 86vh; overflow-y: auto; padding: 15px; }
+        #info-panel h3 { margin-bottom: 10px; font-size: 14px; color: #333; border-bottom: 2px solid #4472C4; padding-bottom: 5px; }
+        .legend-item { display: flex; align-items: center; margin: 5px 0; font-size: 12px; }
+        .legend-dot { width: 12px; height: 12px; border-radius: 50%; margin-right: 8px; }
+        .dot-public { background: #E15759; }
+        .dot-universal { background: #59A14F; }
+        .dot-nonuniversal { background: #76B7B2; }
+        .dot-childcare { background: #ED8B2D; }
+        .dot-community { background: #9467BD; border-radius: 3px; width: 12px; height: 12px; margin-right: 8px; display: inline-block; }
+        #tip {
+            position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
+            background: rgba(0,0,0,0.7); color: white; padding: 8px 16px;
+            border-radius: 20px; font-size: 12px; z-index: 1000;
+        }
+        .marker-popup { font-size: 12px; }
+        .marker-popup h4 { font-size: 13px; margin-bottom: 6px; color: #333; }
+        .marker-popup .badge {
+            color: white; padding: 1px 6px; border-radius: 8px;
+            font-size: 10px; margin-right: 4px; display: inline-block;
+        }
+        .marker-popup .town-badge { background: #f0f3f8; color: #4472C4; padding: 1px 6px; border-radius: 8px; font-size: 10px; }
+        .attr-table { width: 100%; border-collapse: collapse; margin: 4px 0; }
+        .attr-table td { padding: 3px 4px; vertical-align: top; font-size: 11px; border-bottom: 1px dashed #eee; }
+        .attr-table td:first-child { color: #888; white-space: nowrap; width: 64px; }
+        .marker-popup .intro { font-size: 11px; color: #555; margin: 6px 0; line-height: 1.5; text-align: justify; }
+        .marker-popup .src { font-size: 10px; color: #999; margin-top: 4px; }
+        .kg-pin {
+            width: 26px; height: 26px; border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg); border: 2px solid white;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .kg-pin span { transform: rotate(45deg); color: #fff; font-size: 12px; font-weight: bold; line-height: 1; }
+        .cm-pin {
+            width: 22px; height: 22px; border-radius: 4px; background: #9467BD;
+            border: 2px solid white; box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+            display: flex; align-items: center; justify-content: center;
+            color: #fff; font-size: 11px; font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+
+    <!-- 图层管理：以"专题"为单位组织地图数据 -->
+    <div id="layer-panel" class="panel">
+        <div class="panel-title">图层管理 <span class="panel-sub">THEMATIC LAYERS</span></div>
+
+        <div class="layer-group-title">武汉专题</div>
+        <label class="layer-row">
+            <input type="checkbox" id="ly-kg" checked>
+            <span class="layer-name">幼儿园分布</span>
+            <span class="layer-count" id="kg-layer-count">51</span>
+            <span class="expand-btn" id="expand-kg" title="展开/收起类型子图层">&#9654;</span>
+        </label>
+        <div class="sub-layers" id="sub-kg" style="display:none;">
+            <label class="sub-row"><input type="checkbox" data-type="公办" checked><span class="sub-dot" style="background:#E15759;"></span>公办幼儿园<span class="sub-count" data-count="公办">17</span></label>
+            <label class="sub-row"><input type="checkbox" data-type="普惠" checked><span class="sub-dot" style="background:#59A14F;"></span>普惠幼儿园<span class="sub-count" data-count="普惠">22</span></label>
+            <label class="sub-row"><input type="checkbox" data-type="非普惠" checked><span class="sub-dot" style="background:#76B7B2;"></span>非普惠幼儿园<span class="sub-count" data-count="非普惠">9</span></label>
+            <label class="sub-row"><input type="checkbox" data-type="托育" checked><span class="sub-dot" style="background:#ED8B2D;"></span>备案托育机构<span class="sub-count" data-count="托育">3</span></label>
+        </div>
+        <label class="layer-row">
+            <input type="checkbox" id="ly-cm" checked>
+            <span class="layer-name">电梯小区</span>
+            <span class="layer-count" id="cm-layer-count">0</span>
+        </label>
+        <label class="layer-row">
+            <input type="checkbox" id="ly-bd" checked>
+            <span class="layer-name">行政边界</span>
+            <span class="layer-count">2</span>
+        </label>
+
+        <div class="layer-group-title">区域筛选</div>
+        <div class="area-filters">
+            <button class="area-btn active" data-town="all">全部</button>
+            <button class="area-btn" data-town="汉兴街道">汉兴街道</button>
+            <button class="area-btn" data-town="常青花园片区">常青花园片区</button>
+            <button class="area-btn" data-town="唐家墩街道">唐家墩街道</button>
+            <button class="area-btn" data-town="常青街道">常青街道</button>
+        </div>
+    </div>
+
+    <div id="info-panel" class="panel">
+        <h3>图例与统计</h3>
+        <div class="legend-item"><div class="legend-dot dot-public"></div>公办幼儿园（17所）</div>
+        <div class="legend-item"><div class="legend-dot dot-universal"></div>普惠幼儿园（22所）</div>
+        <div class="legend-item"><div class="legend-dot dot-nonuniversal"></div>非普惠幼儿园（9所）</div>
+        <div class="legend-item"><div class="legend-dot dot-childcare"></div>备案托育机构（3所）</div>
+        <div class="legend-item"><div class="dot-community"></div>2015年及之后建成电梯小区</div>
+        <hr style="margin: 10px 0; border: none; border-top: 1px solid #eee;">
+        <p style="font-size: 12px; color: #666;" id="count-summary">加载中...</p>
+        <p style="font-size: 11px; color: #999;">覆盖范围: 武汉市江汉区（汉兴、唐家墩、常青街道及常青花园片区）</p>
+        <p style="font-size: 11px; color: #999;">名单来源: 江汉区教育局2026年幼儿园名单、2025年幼儿园信息表/招生问答，区卫健局托育备案名单，高德POI补充核验</p>
+        <p style="font-size: 11px; color: #999;">小区口径: 2015年及之后建成、有电梯（非步梯房）；距最近地铁口不超过1公里</p>
+        <p style="font-size: 11px; color: #999;">点击图标查看属性详情；左侧可切换专题图层显隐</p>
+        <p style="font-size: 11px; color: #999;">坐标系: GCJ-02（高德）</p>
+    </div>
+
+    <div id="tip">武汉专题地图 · 勾选左侧专题图层控制显示</div>
+
+    <script>
+        var colorMap = { '公办': '#E15759', '普惠': '#59A14F', '非普惠': '#76B7B2', '托育': '#ED8B2D' };
+        var typeText = { '公办': '公办幼儿园', '普惠': '普惠幼儿园', '非普惠': '非普惠幼儿园', '托育': '备案托育机构' };
+
+        var map = new AMap.Map('container', {
+            zoom: 14, center: [114.2503, 30.6271],
+            mapStyle: 'amap://styles/normal'
+        });
+
+        // 图层显隐状态：专题总开关 + 幼儿园类型子开关
+        var layerState = {
+            kindergarten: true,
+            community: true,
+            boundary: true,
+            '公办': true, '普惠': true, '非普惠': true, '托育': true
+        };
+        var currentFilter = 'all';
+        var allMarkers = [];    // 幼儿园 {marker, data, visible}
+        var cmItems = [];       // 电梯小区 {marker, data, visible}
+        var boundaryItems = []; // 行政边界覆盖物
+
+        function esc(s) {
+            return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        }
+
+        function buildPopup(m) {
+            var color = colorMap[m.type] || '#999';
+            var rows = [
+                ['类别', '<span class="badge" style="background:' + color + ';">' + esc(typeText[m.type] || m.type) + '</span><span class="town-badge">' + esc(m.town) + '</span>'],
+                ['办园等级', m.grade ? '<b style="color:' + color + ';">' + esc(m.grade) + '</b>' : '暂无公开评级'],
+                ['地址', esc(m.address)],
+                ['联系电话', m.tel ? '<a href="tel:' + esc(m.tel).split(' /')[0] + '">' + esc(m.tel) + '</a>' : '暂无公开电话'],
+                ['2026年招生', m.plan2026 ? esc(m.plan2026) + ' 人' : esc(m.planNote || '以园方公告为准')]
+            ];
+            var html = '<div class="marker-popup" style="padding:6px;max-width:330px;">'
+                + '<h4><span class="badge" style="background:' + color + ';">' + esc(m.type) + '</span>' + esc(m.name) + '</h4>'
+                + '<table class="attr-table">';
+            rows.forEach(function(r) { html += '<tr><td>' + r[0] + '</td><td>' + r[1] + '</td></tr>'; });
+            html += '</table>'
+                + '<p class="intro">' + esc(m.intro) + '</p>'
+                + '<p class="intro"><b style="color:#4472C4;">园区特点：</b>' + esc(m.features) + '</p>'
+                + '<p class="src">信息来源: ' + esc(m.sources.join('；')) + '</p>'
+                + '</div>';
+            return html;
+        }
+
+        function buildCommunityPopup(c) {
+            var near = (c.nearby || []).map(function(n) {
+                return esc(n.name) + '（' + esc(n.type) + '，约' + n.dist + '米）';
+            }).join('、') || '1公里内无入选园所';
+            var rows = [
+                ['所属片区', '<b style="color:#9467BD;">' + esc(c.areaTag || '—') + '</b>'],
+                ['建成交付', '<b style="color:#9467BD;">' + esc(c.delivery) + '</b>'],
+                ['电梯', esc(c.elevator)],
+                ['最近地铁口', c.metro ? esc(c.metro.station) + '（约' + c.metro.dist + '米）' : '—'],
+                ['地址', esc(c.address || '以定位点为准')]
+            ];
+            var html = '<div class="marker-popup" style="padding:6px;max-width:330px;">'
+                + '<h4><span class="badge" style="background:#9467BD;">小区</span>' + esc(c.name) + '</h4>'
+                + '<table class="attr-table">';
+            rows.forEach(function(r) { html += '<tr><td>' + r[0] + '</td><td>' + r[1] + '</td></tr>'; });
+            if (c.matchedKg) html += '<tr><td>对口公办园</td><td>' + esc(c.matchedKg) + '</td></tr>';
+            html += '<tr><td>近1公里园所</td><td>' + near + '</td></tr>';
+            html += '</table>'
+                + (c.note ? '<p class="intro">' + esc(c.note) + '</p>' : '')
+                + '<p class="src">信息来源: ' + esc((c.sources || []).join('；')) + '</p>'
+                + '</div>';
+            return html;
+        }
+
+        // 可见性判定：专题开关 + 类型子开关 + 区域筛选
+        function kgVisible(it) {
+            return layerState.kindergarten && layerState[it.data.type]
+                && (currentFilter === 'all' || it.data.town === currentFilter);
+        }
+        function cmLayerVisible(it) {
+            return layerState.community
+                && (currentFilter === 'all' || it.data.areaTag === currentFilter);
+        }
+
+        function updateLabels() {
+            var show = map.getZoom() >= 15;
+            allMarkers.forEach(function(it) {
+                if (!it.visible) return;
+                if (show) { it.marker.showLabel && it.marker.showLabel(); } else { it.marker.hideLabel && it.marker.hideLabel(); }
+            });
+            var showCm = layerState.community && map.getZoom() >= 16;
+            cmItems.forEach(function(it) {
+                if (!it.visible) return;
+                if (showCm) { it.marker.showLabel && it.marker.showLabel(); } else { it.marker.hideLabel && it.marker.hideLabel(); }
+            });
+        }
+
+        function updateStats() {
+            var kg = allMarkers.filter(kgVisible).length;
+            var cm = cmItems.filter(cmLayerVisible).length;
+            document.getElementById('count-summary').innerHTML =
+                '当前可见 <b style="color:#4472C4;">' + kg + '</b> 所幼儿园 · <b style="color:#9467BD;">' + cm + '</b> 个电梯小区';
+        }
+
+        // 幂等同步显隐：动画期间高德会重绘 marker，moveend/zoomend 后重新同步即可
+        function syncVisibility() {
+            allMarkers.forEach(function(it) {
+                var s = kgVisible(it); it.visible = s;
+                if (s) { it.marker.show(); } else { it.marker.hide(); }
+            });
+            cmItems.forEach(function(it) {
+                var s = cmLayerVisible(it); it.visible = s;
+                if (s) { it.marker.show(); } else { it.marker.hide(); }
+            });
+            boundaryItems.forEach(function(o) {
+                if (layerState.boundary) { o.show(); } else { o.hide(); }
+            });
+            updateLabels();
+            updateStats();
+        }
+        map.on('moveend', syncVisibility);
+        map.on('zoomend', syncVisibility);
+
+        function applyFilter() {
+            syncVisibility();
+            var focus = allMarkers.filter(function(it) { return it.visible; }).map(function(it) { return it.marker; });
+            if (!focus.length) focus = cmItems.filter(function(it) { return it.visible; }).map(function(it) { return it.marker; });
+            if (focus.length) map.setFitView(focus, true, [60, 60, 60, 60]);
+            clearTimeout(applyFilter._t);
+            applyFilter._t = setTimeout(syncVisibility, 600);
+        }
+
+        // --- 专题数据加载 ---
+        var typeCounts = {};
+        fetch('kindergartens.json?v=20261124a').then(function(r) {
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            return r.json();
+        }).then(function(markers) {
+            markers.forEach(function(m) {
+                typeCounts[m.type] = (typeCounts[m.type] || 0) + 1;
+                var color = colorMap[m.type] || '#999';
+                var marker = new AMap.Marker({
+                    position: [m.lng, m.lat], anchor: 'bottom-center',
+                    content: '<div class="kg-pin" style="background:' + color + ';"><span>幼</span></div>'
+                });
+                marker.setLabel({
+                    content: '<div style="pointer-events:none;background:' + color + ';color:white;padding:2px 8px;border-radius:10px;font-size:11px;white-space:nowrap;box-shadow:0 1px 3px rgba(0,0,0,0.3);">' + esc(m.name) + '</div>',
+                    offset: new AMap.Pixel(0, -34)
+                });
+                var infoWindow = new AMap.InfoWindow({ content: buildPopup(m), offset: new AMap.Pixel(0, -5), isCustom: false });
+                marker.on('click', function() { infoWindow.open(map, marker.getPosition()); });
+                map.add(marker);
+                allMarkers.push({ marker: marker, data: m, visible: true });
+            });
+            document.getElementById('kg-layer-count').textContent = markers.length;
+            Object.keys(typeCounts).forEach(function(t) {
+                var el = document.querySelector('.sub-count[data-count="' + t + '"]');
+                if (el) el.textContent = typeCounts[t];
+            });
+            syncVisibility();
+        }).catch(function(e) {
+            document.getElementById('tip').textContent = '专题数据加载失败: ' + e.message;
+        });
+
+        fetch('communities.json?v=20261124a').then(function(r) {
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            return r.json();
+        }).then(function(communities) {
+            var ok = 0;
+            communities.forEach(function(c) {
+                if (!c.lng || !c.lat) return;
+                ok++;
+                var marker = new AMap.Marker({
+                    position: [c.lng, c.lat], anchor: 'center',
+                    content: '<div class="cm-pin">区</div>'
+                });
+                marker.setLabel({
+                    content: '<div style="pointer-events:none;background:#9467BD;color:white;padding:2px 8px;border-radius:10px;font-size:11px;white-space:nowrap;box-shadow:0 1px 3px rgba(0,0,0,0.3);">' + esc(c.name) + '</div>',
+                    offset: new AMap.Pixel(0, -20)
+                });
+                var infoWindow = new AMap.InfoWindow({ content: buildCommunityPopup(c), offset: new AMap.Pixel(0, -5), isCustom: false });
+                marker.on('click', function() { infoWindow.open(map, marker.getPosition()); });
+                map.add(marker);
+                cmItems.push({ marker: marker, data: c, visible: true });
+            });
+            document.getElementById('cm-layer-count').textContent = ok;
+            syncVisibility();
+        }).catch(function(e) {
+            console.error('小区专题数据加载失败: ' + e.message);
+        });
+
+        fetch('boundary.json?v=20261124a').then(function(r) {
+            if (!r.ok) throw new Error('HTTP ' + r.status);
+            return r.json();
+        }).then(function(bd) {
+            function drawPoly(paths, style) {
+                paths.forEach(function(ring) {
+                    var poly = new AMap.Polygon({
+                        path: ring, strokeColor: style.stroke, strokeWeight: style.weight,
+                        strokeOpacity: 0.9, fillColor: style.stroke,
+                        fillOpacity: style.fillOpacity, zIndex: style.zIndex || 10
+                    });
+                    map.add(poly);
+                    boundaryItems.push(poly);
+                });
+            }
+            function addLabel(text, pos, style) {
+                var txt = new AMap.Text({
+                    text: text, position: pos, anchor: 'center',
+                    style: {
+                        'background-color': style.bg, 'border': '1px solid ' + style.stroke,
+                        'color': 'white', 'padding': '4px 10px',
+                        'border-radius': '12px', 'font-size': '12px', 'font-weight': 'bold'
+                    }
+                });
+                map.add(txt);
+                boundaryItems.push(txt);
+            }
+            function centroid(rings) {
+                var sx = 0, sy = 0, n = 0;
+                rings.forEach(function(ring) { ring.forEach(function(p) { sx += p[0]; sy += p[1]; n++; }); });
+                return [sx / n, sy / n];
+            }
+            drawPoly(bd.district.paths, { stroke: '#2F5597', weight: 3.5, fillOpacity: 0.02, zIndex: 5 });
+            addLabel(bd.district.name, bd.district.center, { stroke: '#2F5597', bg: 'rgba(47, 85, 151, 0.85)' });
+            drawPoly(bd.street.paths, { stroke: '#4472C4', weight: 2, fillOpacity: 0.08, zIndex: 6 });
+            addLabel(bd.street.name, bd.street.center.length ? bd.street.center : centroid(bd.street.paths), { stroke: '#4472C4', bg: 'rgba(68, 114, 196, 0.85)' });
+            syncVisibility();
+        }).catch(function(e) {
+            console.error('边界数据加载失败: ' + e.message);
+        });
+
+        // --- 图层管理面板交互 ---
+        document.getElementById('ly-kg').addEventListener('change', function() {
+            layerState.kindergarten = this.checked; applyFilter();
+        });
+        document.getElementById('ly-cm').addEventListener('change', function() {
+            layerState.community = this.checked; applyFilter();
+        });
+        document.getElementById('ly-bd').addEventListener('change', function() {
+            layerState.boundary = this.checked; syncVisibility();
+        });
+        document.querySelectorAll('.sub-row input[data-type]').forEach(function(cb) {
+            cb.addEventListener('change', function() {
+                layerState[this.getAttribute('data-type')] = this.checked; applyFilter();
+            });
+        });
+        document.getElementById('expand-kg').addEventListener('click', function() {
+            var box = document.getElementById('sub-kg');
+            var open = box.style.display !== 'none';
+            box.style.display = open ? 'none' : 'block';
+            this.classList.toggle('open', !open);
+        });
+        document.querySelectorAll('.area-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.area-btn').forEach(function(b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                currentFilter = btn.getAttribute('data-town');
+                applyFilter();
+            });
+        });
+    </script>
+</body>
+</html>

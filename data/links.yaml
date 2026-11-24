@@ -11,9 +11,6 @@ friends:
 # 作品
 works:
   sites:
-    - name: "城市部件管理平台"
-      url: "http://localhost:3000"
-      desc: "基于GIS的城市部件可视化管理平台，支持部件分区、分系统、分部门管理，以及部件的生命周期更新维护(演示账号 admin / admin123)"
     - name: "会记 HuiJi"
       url: "/huiji/"
       desc: "会面记忆与人际关系管理 Web 应用，基于 Flutter Web 构建，支持本地记录、语音识别与数据导出"
@@ -21,9 +18,12 @@ works:
       url: "http://localhost:4173/"
       desc: "录音转写与个人知识库：上传手机录音、本地 Whisper 转写、大模型整理与全文检索，数据保存在本机"
 
-# 小测
+# GIS地图
 quizzes:
   sites:
-    - name: "武汉市江汉区幼儿园分布地图"
-      url: "/quizzes/kindergarten-map.html"
-      desc: "基于高德地图的江汉区汉兴/唐家墩/常青街道及常青花园片区51所幼儿园分布可视化，标注公办17/普惠22/非普惠9/托育3"
+    - name: "城市部件管理平台"
+      url: "http://localhost:3000"
+      desc: "基于GIS的城市部件可视化管理平台，支持部件分区、分系统、分部门管理，以及部件的生命周期更新维护(演示账号 admin / admin123)"
+    - name: "武汉专题地图"
+      url: "/quizzes/wuhan-thematic-map.html"
+      desc: "基于高德地图的武汉专题地图，以图层管理组织江汉区幼儿园分布、电梯小区、行政边界等专题，支持图层显隐、区域筛选与点位属性查看"

@@ -4,9 +4,9 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const SRC_HTML = path.join(ROOT, 'static', 'quizzes', 'kindergarten-map.html');
+const SRC_HTML = path.join(ROOT, 'static', 'quizzes', 'wuhan-thematic-map.html');
 const OUT_DIR = 'E:\\Coding\\school';
-const OUT_FILE = path.join(OUT_DIR, '江汉区汉兴街道幼儿园分布地图.html');
+const OUT_FILE = path.join(OUT_DIR, '武汉专题地图.html');
 
 const kg = fs.readFileSync(path.join(ROOT, 'static', 'quizzes', 'kindergartens.json'), 'utf8');
 const cm = fs.readFileSync(path.join(ROOT, 'static', 'quizzes', 'communities.json'), 'utf8');
