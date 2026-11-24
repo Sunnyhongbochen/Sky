@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="160" viewBox="0 0 200 160">
+  <rect width="200" height="160" fill="#f5f7fa" rx="8"/>
+  <rect x="20" y="60" width="160" height="80" fill="#E67E22" opacity="0.15" rx="6"/>
+  <text x="100" y="105" text-anchor="middle" font-size="48">🌳</text>
+  <text x="100" y="145" text-anchor="middle" font-size="12" fill="#888">设备图片 7</text>
+</svg>

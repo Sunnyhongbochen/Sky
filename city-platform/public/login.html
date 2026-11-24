@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>登录 · 城市部件数据管理平台</title>
+<style>
+:root{--bg:#080e1a;--panel:#0d1a2d;--card:#111d33;--border:#1a2d4a;--accent:#2d6aa0;--accent2:#4a90d9;--text:#c8d6e5;--dim:#6b7d99;--red:#ff5252;--green:#00c853}
+*{margin:0;padding:0;box-sizing:border-box}
+body{min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:"Microsoft YaHei","PingFang SC",sans-serif;background:radial-gradient(circle at 50% 0%,#0a1e38 0%,#050a14 55%,#03060c 100%);color:var(--text);overflow:hidden}
+body::before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(45,106,160,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(45,106,160,.06) 1px,transparent 1px);background-size:44px 44px;pointer-events:none}
+.wrap{position:relative;width:420px;max-width:calc(100vw - 32px);padding:38px 36px 30px;background:linear-gradient(160deg,rgba(17,29,51,.96),rgba(8,16,30,.98));border:1px solid rgba(74,144,217,.28);border-radius:14px;box-shadow:0 24px 80px rgba(0,0,0,.65),0 0 40px rgba(45,106,160,.12)}
+.brand{text-align:center;margin-bottom:28px}
+.brand .dot{display:inline-block;width:44px;height:44px;line-height:44px;border-radius:10px;background:linear-gradient(135deg,#2d6aa0,#4a90d9);color:#fff;font-size:22px;box-shadow:0 0 24px rgba(74,144,217,.45);margin-bottom:12px}
+.brand h1{font-size:19px;letter-spacing:2px;background:linear-gradient(90deg,#7ec8e3,#4a90d9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:700}
+.brand p{margin-top:6px;font-size:10px;color:var(--dim);letter-spacing:2px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12px;color:var(--dim);margin-bottom:7px;letter-spacing:.5px}
+.field input{width:100%;height:42px;padding:0 13px;background:var(--card);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:14px;outline:none;transition:border .2s,box-shadow .2s}
+.field input:focus{border-color:var(--accent2);box-shadow:0 0 0 3px rgba(74,144,217,.12)}
+.field input::placeholder{color:#40506a}
+.captcha-row{display:flex;gap:10px}
+.captcha-row input{flex:1;min-width:0}
+#captchaBox{width:124px;height:42px;flex:0 0 124px;border:1px solid var(--border);border-radius:6px;background:#f0f4ff;cursor:pointer;overflow:hidden;display:flex;align-items:center;justify-content:center}
+#captchaBox svg{width:100%;height:100%;display:block}
+#captchaBox.loading{color:var(--dim);font-size:11px;background:var(--card)}
+button.submit{width:100%;height:44px;margin-top:8px;border:1px solid #4a90d9;border-radius:6px;background:linear-gradient(135deg,#2d6aa0,#3d7fbf);color:#fff;font-size:14px;letter-spacing:4px;cursor:pointer;transition:filter .2s,transform .1s}
+button.submit:hover{filter:brightness(1.12)}
+button.submit:active{transform:translateY(1px)}
+button.submit:disabled{opacity:.6;cursor:wait}
+#msg{min-height:19px;margin-top:12px;font-size:12px;text-align:center;color:var(--red)}
+#msg.ok{color:var(--green)}
+.hint{margin-top:16px;padding-top:14px;border-top:1px solid rgba(26,45,74,.8);font-size:11px;color:var(--dim);text-align:center;line-height:1.8}
+.hint b{color:var(--accent2);font-weight:500}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">
+    <div class="dot">◈</div>
+    <h1>城市部件数据管理平台</h1>
+    <p>URBAN COMPONENT MANAGEMENT</p>
+  </div>
+  <form id="loginForm" autocomplete="on">
+    <div class="field">
+      <label for="username">账号</label>
+      <input id="username" name="username" autocomplete="username" placeholder="请输入账号" value="admin" required/>
+    </div>
+    <div class="field">
+      <label for="password">密码</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" placeholder="请输入密码" required/>
+    </div>
+    <div class="field">
+      <label for="captcha">验证码</label>
+      <div class="captcha-row">
+        <input id="captcha" name="captcha" inputmode="text" maxlength="6" placeholder="请输入验证码" autocomplete="off" required/>
+        <div id="captchaBox" title="点击刷新验证码">加载中</div>
+      </div>
+    </div>
+    <button class="submit" id="submitBtn" type="submit">登 录</button>
+    <div id="msg"></div>
+  </form>
+  <div class="hint">演示账号：<b>admin</b> / <b>admin123</b><br/>区域管理员：<b>region_admin</b> / <b>admin123</b></div>
+</div>
+<script>
+(function () {
+  var captchaId = '';
+  var box = document.getElementById('captchaBox');
+  var form = document.getElementById('loginForm');
+  var msg = document.getElementById('msg');
+  var btn = document.getElementById('submitBtn');
+
+  function setMsg(text, ok) {
+    msg.textContent = text || '';
+    msg.className = ok ? 'ok' : '';
+  }
+
+  async function loadCaptcha() {
+    box.className = 'loading';
+    box.textContent = '加载中';
+    try {
+      var resp = await fetch('/api/auth/captcha', { cache: 'no-store' });
+      var json = await resp.json();
+      if (json.code !== 200) throw new Error(json.message || '验证码加载失败');
+      captchaId = json.data.captchaId;
+      box.className = '';
+      box.innerHTML = json.data.svg;
+    } catch (e) {
+      box.className = 'loading';
+      box.textContent = '点击重试';
+      setMsg(e.message || '验证码加载失败，请点击刷新');
+    }
+  }
+
+  box.addEventListener('click', function () {
+    document.getElementById('captcha').value = '';
+    loadCaptcha();
+  });
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    setMsg('');
+    var username = document.getElementById('username').value.trim();
+    var password = document.getElementById('password').value;
+    var captcha = document.getElementById('captcha').value.trim();
+    if (!username || !password || !captcha) { setMsg('请填写完整登录信息'); return; }
+    if (!captchaId) { setMsg('验证码已失效，请刷新'); loadCaptcha(); return; }
+    btn.disabled = true;
+    btn.textContent = '登录中...';
+    try {
+      var resp = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username: username, password: password, captcha: captcha, captchaId: captchaId })
+      });
+      var json = await resp.json();
+      if (!resp.ok || json.code !== 200 || !json.data || !json.data.token) {
+        throw new Error(json.message || '登录失败');
+      }
+      localStorage.setItem('token', json.data.token);
+      localStorage.setItem('user', JSON.stringify(json.data));
+      setMsg('登录成功，正在进入平台...', true);
+      setTimeout(function () { window.location.href = '/index.html'; }, 300);
+    } catch (err) {
+      setMsg(err.message || '登录失败，请稍后重试');
+      document.getElementById('captcha').value = '';
+      loadCaptcha();
+      btn.disabled = false;
+      btn.textContent = '登 录';
+    }
+  });
+
+  loadCaptcha();
+})();
+</script>
+</body>
+</html>

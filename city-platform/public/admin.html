@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>系统管理 · 城市部件数据管理平台</title>
+<style>
+:root{--bg:#080e1a;--panel:#0d1a2d;--card:#111d33;--border:#1a2d4a;--accent:#2d6aa0;--accent2:#4a90d9;--text:#c8d6e5;--dim:#6b7d99;--green:#00c853;--red:#ff5252;--orange:#ff9100}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Microsoft YaHei","PingFang SC",sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+a{color:inherit;text-decoration:none}
+#header{height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 22px;background:linear-gradient(90deg,#050d1a,#0d1a2d 55%,#0a2540);border-bottom:1px solid var(--accent);position:sticky;top:0;z-index:20}
+#header h1{font-size:16px;letter-spacing:1.5px;color:#7ec8e3;font-weight:700}
+#header h1 span{color:var(--dim);font-size:11px;font-weight:400;letter-spacing:1px;margin-left:10px}
+.header-right{display:flex;align-items:center;gap:10px;font-size:12px;color:var(--dim)}
+.header-right b{color:var(--text);font-weight:500}
+.btn{border:1px solid var(--border);background:transparent;color:var(--text);padding:6px 13px;border-radius:4px;cursor:pointer;font-size:12px;transition:.15s}
+.btn:hover{border-color:var(--accent2);color:var(--accent2)}
+.btn.primary{background:var(--accent);border-color:var(--accent2);color:#fff}
+.btn.danger:hover{border-color:var(--red);color:var(--red)}
+#layout{display:flex;min-height:calc(100vh - 54px)}
+#side{width:190px;flex:0 0 190px;background:var(--panel);border-right:1px solid var(--border);padding:14px 10px}
+.nav-item{display:flex;align-items:center;gap:9px;padding:10px 12px;margin-bottom:4px;border-radius:5px;font-size:13px;color:var(--dim);cursor:pointer;border-left:2px solid transparent;transition:.15s}
+.nav-item:hover{background:rgba(45,106,160,.12);color:var(--text)}
+.nav-item.active{background:rgba(45,106,160,.2);color:#7ec8e3;border-left-color:var(--accent2)}
+#main{flex:1;padding:20px 24px;overflow:auto}
+.page-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:14px}
+.page-head h2{font-size:17px;font-weight:600}
+.page-head p{font-size:11px;color:var(--dim);margin-top:4px}
+.toolbar{display:flex;gap:8px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+.toolbar input,.toolbar select{height:32px;padding:0 10px;background:var(--card);border:1px solid var(--border);border-radius:4px;color:var(--text);font-size:12px;outline:none;min-width:150px}
+.toolbar input:focus,.toolbar select:focus{border-color:var(--accent2)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.stat{background:linear-gradient(160deg,var(--card),#0c1729);border:1px solid var(--border);border-radius:8px;padding:14px 16px}
+.stat .num{font-size:24px;font-weight:700;color:#7ec8e3;line-height:1.2}
+.stat .label{font-size:11px;color:var(--dim);margin-top:4px}
+.table-wrap{background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:auto}
+table{width:100%;border-collapse:collapse;font-size:12px;min-width:720px}
+th{background:#0a1628;color:var(--accent2);text-align:left;padding:10px 12px;font-weight:600;white-space:nowrap;border-bottom:1px solid var(--accent);font-size:11px}
+td{padding:9px 12px;border-bottom:1px solid rgba(26,45,74,.55);white-space:nowrap}
+tbody tr:hover td{background:rgba(45,106,160,.08)}
+tbody tr:last-child td{border-bottom:none}
+.badge{display:inline-block;padding:1px 8px;border-radius:10px;font-size:10px;font-weight:600}
+.on{background:rgba(0,200,83,.14);color:var(--green);border:1px solid rgba(0,200,83,.3)}
+.off{background:rgba(255,82,82,.14);color:var(--red);border:1px solid rgba(255,82,82,.3)}
+.muted{color:var(--dim)}
+.actions{display:flex;gap:5px}
+.actions button{font-size:10px;padding:3px 8px;border-radius:3px;border:1px solid var(--border);background:transparent;color:var(--dim);cursor:pointer}
+.actions button:hover{color:var(--accent2);border-color:var(--accent2)}
+.actions button.danger:hover{color:var(--red);border-color:var(--red)}
+.empty{padding:40px;text-align:center;color:var(--dim);font-size:12px}
+.pager{display:flex;justify-content:center;align-items:center;gap:10px;padding:12px;font-size:11px;color:var(--dim)}
+.pager button{font-size:11px;padding:4px 10px;border:1px solid var(--border);background:transparent;color:var(--text);border-radius:3px;cursor:pointer}
+.pager button:disabled{opacity:.3;cursor:default}
+#toast{position:fixed;right:22px;bottom:22px;background:#12233d;border:1px solid var(--accent2);color:var(--text);padding:11px 16px;border-radius:6px;font-size:12px;box-shadow:0 8px 30px rgba(0,0,0,.5);opacity:0;transform:translateY(10px);pointer-events:none;transition:.25s;z-index:50;max-width:360px}
+#toast.show{opacity:1;transform:none}
+@media(max-width:800px){#side{display:none}#main{padding:14px}.stats{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<header id="header">
+  <h1>城市部件数据管理平台 <span>系统管理 / ADMIN CONSOLE</span></h1>
+  <div class="header-right">
+    <span>👤 <b id="userName">-</b></span>
+    <span id="userRole" class="muted">-</span>
+    <button class="btn" onclick="location.href='/index.html'">返回平台</button>
+    <button class="btn danger" id="logoutBtn">退出</button>
+  </div>
+</header>
+<div id="layout">
+  <aside id="side">
+    <div class="nav-item active" data-view="accounts">👤 账号管理</div>
+    <div class="nav-item" data-view="roles">🛡️ 角色权限</div>
+    <div class="nav-item" data-view="regions">🗺️ 行政区域</div>
+    <div class="nav-item" data-view="departments">🏢 部门管理</div>
+    <div class="nav-item" data-view="logs">📋 操作日志</div>
+  </aside>
+  <main id="main">
+    <div class="page-head">
+      <div><h2 id="pageTitle">账号管理</h2><p id="pageDesc">查看、启停账号与重置密码</p></div>
+      <button class="btn" id="refreshBtn">刷新</button>
+    </div>
+    <div class="stats" id="stats"></div>
+    <div class="toolbar" id="toolbar"></div>
+    <div class="table-wrap"><table id="dataTable"><thead></thead><tbody></tbody></table></div>
+    <div class="pager" id="pager"></div>
+  </main>
+</div>
+<div id="toast"></div>
+<script>
+(function () {
+  var token = localStorage.getItem('token');
+  if (!token) { location.href = '/login.html'; return; }
+  var state = { view: 'accounts', page: 1, pageSize: 10, total: 0, rows: [], user: null };
+  var titles = {
+    accounts: ['账号管理', '查看、启停账号与重置密码'],
+    roles: ['角色权限', '平台角色与区域数据范围'],
+    regions: ['行政区域', '四级行政区划与区域编码'],
+    departments: ['部门管理', '业务部门与负责人信息'],
+    logs: ['操作日志', '系统关键操作审计记录']
+  };
+
+  function $(id) { return document.getElementById(id); }
+  function esc(v) {
+    return String(v == null ? '' : v).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function toast(msg) {
+    var t = $('toast'); t.textContent = msg; t.classList.add('show');
+    clearTimeout(t._timer); t._timer = setTimeout(function () { t.classList.remove('show'); }, 2600);
+  }
+  async function api(url, opts) {
+    opts = opts || {};
+    opts.headers = Object.assign({ 'Authorization': 'Bearer ' + token }, opts.headers || {});
+    if (opts.body && !opts.headers['Content-Type']) opts.headers['Content-Type'] = 'application/json';
+    var resp = await fetch(url, opts);
+    if (resp.status === 401) { localStorage.removeItem('token'); location.href = '/login.html'; throw new Error('登录已失效'); }
+    var json = await resp.json().catch(function () { return {}; });
+    if (!resp.ok || json.code !== 200) throw new Error(json.message || ('请求失败 ' + resp.status));
+    return json.data;
+  }
+  function badge(v) { return v == 1 ? '<span class="badge on">启用</span>' : '<span class="badge off">停用</span>'; }
+  function emptyRow(cols) { return '<tr><td colspan="' + cols + '"><div class="empty">暂无数据</div></td></tr>'; }
+  function setStats(items) {
+    $('stats').innerHTML = items.map(function (x) {
+      return '<div class="stat"><div class="num">' + esc(x[0]) + '</div><div class="label">' + esc(x[1]) + '</div></div>';
+    }).join('');
+  }
+  function setToolbar(html) { $('toolbar').innerHTML = html; }
+  function render(headers, rows, rowFn) {
+    $('dataTable').querySelector('thead').innerHTML = '<tr>' + headers.map(function (h) { return '<th>' + esc(h) + '</th>'; }).join('') + '</tr>';
+    var tbody = $('dataTable').querySelector('tbody');
+    if (!rows.length) { tbody.innerHTML = emptyRow(headers.length); return; }
+    tbody.innerHTML = rows.map(rowFn).join('');
+  }
+  function renderPager() {
+    if (state.view !== 'accounts' && state.view !== 'departments' && state.view !== 'logs') { $('pager').innerHTML = ''; return; }
+    var pages = Math.max(1, Math.ceil(state.total / state.pageSize));
+    $('pager').innerHTML = '<button id="prevPage"' + (state.page <= 1 ? ' disabled' : '') + '>上一页</button>' +
+      '<span>第 ' + state.page + ' / ' + pages + ' 页 · 共 ' + state.total + ' 条</span>' +
+      '<button id="nextPage"' + (state.page >= pages ? ' disabled' : '') + '>下一页</button>';
+    var prev = $('prevPage'), next = $('nextPage');
+    if (prev) prev.onclick = function () { state.page--; load(); };
+    if (next) next.onclick = function () { state.page++; load(); };
+  }
+
+  async function loadAccounts() {
+    var kw = (document.getElementById('accountKw') || {}).value || '';
+    var status = (document.getElementById('accountStatus') || {}).value || '';
+    var q = '?page=' + state.page + '&pageSize=' + state.pageSize + '&username=' + encodeURIComponent(kw) + '&status=' + encodeURIComponent(status);
+    var data = await api('/api/accounts' + q);
+    state.total = data.total;
+    setStats([[data.total, '账号总数'], [data.list.filter(function (x) { return x.status === 1; }).length, '当前页启用'], [data.list.length, '当前页显示'], [state.pageSize, '每页条数']]);
+    setToolbar('<input id="accountKw" placeholder="搜索账号" value="' + esc(kw) + '"/>' +
+      '<select id="accountStatus"><option value="">全部状态</option><option value="1"' + (status === '1' ? ' selected' : '') + '>启用</option><option value="0"' + (status === '0' ? ' selected' : '') + '>停用</option></select>' +
+      '<button class="btn primary" id="accountSearch">查询</button>');
+    $('accountSearch').onclick = function () { state.page = 1; load(); };
+    $('accountKw').onkeydown = function (e) { if (e.key === 'Enter') { state.page = 1; load(); } };
+    render(['账号', '姓名', '角色', '区域', '部门', '状态', '创建时间', '操作'], data.list, function (a) {
+      return '<tr><td>' + esc(a.username) + '</td><td>' + esc(a.real_name) + '</td><td>' + esc(a.role_name || '-') + '</td><td>' + esc(a.region_name || '-') + '</td><td class="muted">' + esc(a.deptNames || '-') + '</td><td>' + badge(a.status) + '</td><td class="muted">' + esc(a.created_at) + '</td>' +
+        '<td><div class="actions"><button data-act="status" data-id="' + a.account_id + '" data-status="' + a.status + '">' + (a.status === 1 ? '停用' : '启用') + '</button>' +
+        '<button data-act="reset" data-id="' + a.account_id + '" data-name="' + esc(a.username) + '" class="danger">重置密码</button></div></td></tr>';
+    });
+    $('dataTable').querySelector('tbody').onclick = async function (e) {
+      var btn = e.target.closest('button[data-act]'); if (!btn) return;
+      var id = btn.getAttribute('data-id');
+      try {
+        if (btn.getAttribute('data-act') === 'status') {
+          var next = btn.getAttribute('data-status') === '1' ? 0 : 1;
+          await api('/api/accounts/' + id + '/status', { method: 'PUT', body: JSON.stringify({ status: next }) });
+          toast(next === 1 ? '账号已启用' : '账号已停用');
+        } else {
+          if (!confirm('确定重置账号「' + btn.getAttribute('data-name') + '」的密码？')) return;
+          var r = await api('/api/accounts/' + id + '/reset-password', { method: 'PUT' });
+          alert('新密码：' + r.newPassword + '\n请通知用户首次登录后修改。');
+        }
+        load();
+      } catch (err) { toast(err.message); }
+    };
+    renderPager();
+  }
+
+  async function loadRoles() {
+    var data = await api('/api/roles');
+    setStats([[data.length, '角色总数'], [data.filter(function (x) { return x.status === 1; }).length, '启用角色'], [data.filter(function (x) { return x.role_type === 1; }).length, '超级管理员'], [data.filter(function (x) { return x.role_type === 2; }).length, '管理角色']]);
+    setToolbar('');
+    render(['ID', '角色名称', '编码', '区域范围', '类型', '状态', '描述'], data, function (r) {
+      return '<tr><td>' + r.role_id + '</td><td>' + esc(r.role_name) + '</td><td class="muted">' + esc(r.role_code) + '</td><td>' + esc(r.region_scope) + '</td><td>' + (r.role_type === 1 ? '超级管理员' : '业务角色') + '</td><td>' + badge(r.status) + '</td><td class="muted">' + esc(r.description || '-') + '</td></tr>';
+    });
+    $('pager').innerHTML = '';
+  }
+
+  async function loadRegions() {
+    var data = await api('/api/regions');
+    setStats([[data.length, '区域节点'], [data.filter(function (x) { return x.level === 1; }).length, '省级'], [data.filter(function (x) { return x.level === 2; }).length, '市级'], [data.filter(function (x) { return x.status === 1; }).length, '启用']]);
+    setToolbar('');
+    render(['ID', '区域名称', '编码', '层级', '上级ID', '排序', '状态'], data, function (r) {
+      return '<tr><td>' + r.region_id + '</td><td>' + esc(r.name) + '</td><td class="muted">' + esc(r.code) + '</td><td>' + esc(r.level) + '</td><td>' + esc(r.parent_id) + '</td><td>' + esc(r.sort_order) + '</td><td>' + badge(r.status) + '</td></tr>';
+    });
+    $('pager').innerHTML = '';
+  }
+
+  async function loadDepartments() {
+    var data = await api('/api/departments?page=' + state.page + '&pageSize=' + state.pageSize);
+    state.total = data.total;
+    setStats([[data.total, '部门总数'], [data.list.filter(function (x) { return x.status === 1; }).length, '当前页启用'], [data.list.length, '当前页显示'], [state.pageSize, '每页条数']]);
+    setToolbar('');
+    render(['ID', '部门名称', '编码', '负责人', '电话', '排序', '状态'], data.list, function (d) {
+      return '<tr><td>' + d.dept_id + '</td><td>' + esc(d.name) + '</td><td class="muted">' + esc(d.code) + '</td><td>' + esc(d.leader || '-') + '</td><td class="muted">' + esc(d.phone || '-') + '</td><td>' + esc(d.sort_order) + '</td><td>' + badge(d.status) + '</td></tr>';
+    });
+    renderPager();
+  }
+
+  async function loadLogs() {
+    var data = await api('/api/logs/operation?page=' + state.page + '&pageSize=' + state.pageSize);
+    state.total = data.total;
+    setStats([[data.total, '日志总数'], [data.list.length, '当前页显示'], [new Set(data.list.map(function (x) { return x.op_module; })).size, '涉及模块'], [new Set(data.list.map(function (x) { return x.operator_name; })).size, '操作人']]);
+    setToolbar('');
+    render(['时间', '操作人', '类型', '模块', '描述', 'IP'], data.list, function (l) {
+      return '<tr><td class="muted">' + esc(l.created_at) + '</td><td>' + esc(l.operator_name || '-') + '</td><td>' + esc(l.op_type) + '</td><td>' + esc(l.op_module) + '</td><td>' + esc(l.description) + '</td><td class="muted">' + esc(l.op_ip || '-') + '</td></tr>';
+    });
+    renderPager();
+  }
+
+  async function load() {
+    var t = titles[state.view];
+    $('pageTitle').textContent = t[0]; $('pageDesc').textContent = t[1];
+    document.querySelectorAll('.nav-item').forEach(function (n) { n.classList.toggle('active', n.getAttribute('data-view') === state.view); });
+    try {
+      if (state.view === 'accounts') await loadAccounts();
+      else if (state.view === 'roles') await loadRoles();
+      else if (state.view === 'regions') await loadRegions();
+      else if (state.view === 'departments') await loadDepartments();
+      else await loadLogs();
+    } catch (err) { toast(err.message); }
+  }
+
+  document.querySelectorAll('.nav-item').forEach(function (n) {
+    n.onclick = function () { state.view = n.getAttribute('data-view'); state.page = 1; load(); };
+  });
+  $('refreshBtn').onclick = load;
+  $('logoutBtn').onclick = function () { localStorage.removeItem('token'); localStorage.removeItem('user'); location.href = '/login.html'; };
+
+  (async function init() {
+    try {
+      var p = await api('/api/auth/profile');
+      state.user = p;
+      $('userName').textContent = p.realName || p.username;
+      $('userRole').textContent = p.roleName || '';
+      await load();
+    } catch (err) { toast(err.message); }
+  })();
+})();
+</script>
+</body>
+</html>

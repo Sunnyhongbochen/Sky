@@ -1,5 +1,5 @@
 # Hugo 生成的静态文件
-public/
+/public/
 resources/_gen/
 .tmp*/
 
@@ -33,8 +33,12 @@ node_modules/
 .env
 .env.local
 
-# 城市部件管理平台（city-platform）：本地演示应用，含约 140MB 模拟数据截图，不纳入站点仓库
-city-platform/
+# 城市部件管理平台：源码、页面、瓦片与演示数据入库；依赖和运行产物不入库
+city-platform/node_modules/
+city-platform/*.log
+city-platform/platform.db-shm
+city-platform/platform.db-wal
+city-platform/.trae/
 *.bak-*
 
 # 会记 HuiJi：Web 产物随站点发布，排除大体积安装包
